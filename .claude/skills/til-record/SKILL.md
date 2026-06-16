@@ -1,18 +1,16 @@
 ---
 name: til-record
-description: 부트캠프 TIL/작업 기록을 노션 캠프 양식(TIL DB + 회고 본문)에 맞춰 기록하고 worklogs/에 로컬 미러를 남긴다. 사용자가 "TIL 기록/오늘 작업 노션에 올려/회고 작성/일일 기록" 하거나 하루 학습·작업을 마감할 때 사용한다. 노션 기록은 Notion MCP(plugin_engineering_notion)를 사용한다.
+description: 부트캠프 TIL/작업 기록을 캠프 노션 양식에 맞춰 작성해 worklogs/에 일자별로 저장한다. 사용자가 "TIL 기록/오늘 작업 정리/회고 작성/일일 기록" 하거나 하루 학습·작업을 마감할 때 사용한다. 노션에는 사용자가 직접 붙여넣으므로 MCP 자동 기록은 하지 않는다.
 ---
 
-# TIL 작업 기록 스킬 (노션 양식 + 로컬 미러)
+# TIL 작업 기록 스킬 (노션 양식 → 로컬 일자별 저장)
 
-이스트소프트 AI 퀀트 4기 **TIL 작성 양식**에 맞춰 노션에 기록하고, 같은 내용을 `worklogs/`에 마크다운으로 보관한다.
+이스트소프트 AI 퀀트 4기 **TIL 작성 양식**에 맞춘 본문을 작성해, `worklogs/`에 **일자별 마크다운**으로 저장한다.
 
-## 사전 1회 세팅 (중요)
-노션 MCP integration이 **TIL 개인 공간 페이지에 연결**돼 있어야 읽기/쓰기가 된다.
-- TIL 개인 공간 페이지 → `•••` → 연결(Connections) → 사용하는 Notion 커넥션 추가
-- 연결 후 TIL **데이터베이스(표)의 URL/ID**를 [`notion-config.md`](notion-config.md)에 적어둔다.
-- 게스트 권한으로 연결이 막히면 운영진에 integration 연결 허용을 요청한다.
-- 연결 전까지는 로컬 미러(`worklogs/`)만 먼저 만들고, 연결 후 노션 동기화한다.
+## ⚠️ 노션 입력 방식 (중요)
+- **노션 TIL은 사용자가 직접 입력한다.** (Notion MCP로 개인 공간 접근이 안 되므로 자동 기록하지 않는다.)
+- Claude의 역할: 노션에 **그대로 붙여넣을 수 있는 본문**을 캠프 양식에 맞춰 작성해 `worklogs/YYYY-MM-DD_주제.md`로 저장한다.
+- 따라서 `notion-create-pages` 등 노션 쓰기 MCP는 호출하지 않는다. (요청 시에도 "직접 붙여넣기" 안내)
 
 ## 노션 TIL 양식 (캠프 샘플 `(Sample) 홍길동 (1)` 기준)
 
@@ -50,12 +48,11 @@ description: 부트캠프 TIL/작업 기록을 노션 캠프 양식(TIL DB + 회
 > 정확한 양식은 [`til-template.md`](til-template.md)를 단일 기준으로 사용한다.
 
 ## 절차
-1. [`notion-config.md`](notion-config.md)에서 TIL DB URL/ID를 읽는다. (없으면 사용자에게 요청)
-2. **노션 기록**: `notion-create-pages`로 TIL DB에 항목을 추가한다.
-   - properties: `날짜`, `Subject`, `title`, `피드백 요청`(기본 false)
-   - 본문: 위 ② 구조를 실제 내용으로 채운다.
-   - DB 스키마가 바뀌었을 수 있으니 먼저 `notion-fetch`로 현재 컬럼을 확인 후 매핑한다.
-3. **로컬 미러**: 같은 내용을 [`til-template.md`](til-template.md) 기반으로 `worklogs/YYYY-MM-DD_주제.md`에 저장한다.
+1. 오늘 한 학습·작업 내용을 사용자와 정리한다 (산출물 경로: `learning/`, `assignments/`, `projects/`).
+2. **일자별 로컬 저장 (핵심)**: [`til-template.md`](til-template.md) 양식으로 본문을 채워 `worklogs/YYYY-MM-DD_주제.md`에 저장한다.
+   - 파일 상단의 `날짜`·`Subject`·`title`·`피드백 요청`은 노션 컬럼과 동일하게 적어, 사용자가 그대로 옮겨 적기 쉽게 한다.
+   - 본문(📝/💭/📚/🔍)은 **노션에 그대로 복붙 가능한 형태**로 작성한다.
+3. **사용자에게 노션 붙여넣기 안내**: 저장한 파일 내용을 보여주고 "이 내용을 노션 TIL에 붙여넣으세요"라고 안내한다. (Claude는 노션에 직접 쓰지 않는다.)
 4. (연계) GitHub 반영은 `bootcamp-worklog` 또는 `github-flow` 스킬로 처리한다.
 
 ## 작성 원칙 (캠프 TIL Tip)
