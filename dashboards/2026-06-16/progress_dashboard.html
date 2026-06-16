@@ -109,9 +109,9 @@
       <div class="overall">
         <div class="overall-head">
           <span style="font-weight:700;">전체 기초 세팅 진행률</span>
-          <span class="overall-pct">35%</span>
+          <span class="overall-pct">70%</span>
         </div>
-        <div class="progress-track"><div class="progress-fill now" style="width:35%"></div></div>
+        <div class="progress-track"><div class="progress-fill now" style="width:70%"></div></div>
       </div>
     </section>
 
@@ -133,28 +133,28 @@
             <li>교재 PDF·zip은 .gitignore로 제외 (저작권)</li>
           </ul>
         </article>
-        <article class="task-card now">
+        <article class="task-card done">
           <div class="task-head">
             <span class="task-title">2. GitHub 업로드</span>
-            <span class="task-pct">0%</span>
+            <span class="task-pct">100%</span>
           </div>
-          <span class="badge now">다음 차례</span>
+          <span class="badge done">완료</span>
           <ul>
-            <li>git init → 개인 레포 연결</li>
-            <li>브랜치 전략 적용 (pull → branch → commit → push → PR → merge)</li>
-            <li>최초 구조 커밋 푸시</li>
+            <li>git init → Public 레포 연결 (default: main)</li>
+            <li>최초 구조 커밋 5ea9b7f push (교재 제외 확인)</li>
+            <li>이후 작업부터 branch → PR → merge 규칙 적용</li>
           </ul>
         </article>
-        <article class="task-card todo">
+        <article class="task-card now">
           <div class="task-head">
             <span class="task-title">3. Claude/Codex 규칙·스킬</span>
-            <span class="task-pct">0%</span>
+            <span class="task-pct">50%</span>
           </div>
-          <span class="badge todo">대기</span>
+          <span class="badge now">진행중</span>
           <ul>
-            <li>CLAUDE.md / AGENTS.md 작성 (GitHub·작업·대시보드 규칙)</li>
-            <li>작업별 커스텀 스킬 벤치마킹·생성</li>
-            <li>대시보드 자동 생성 스킬화</li>
+            <li>✅ AGENTS.md / CLAUDE.md 규칙 문서 (PR #1 머지)</li>
+            <li>⬜ 작업별 커스텀 스킬 벤치마킹·생성</li>
+            <li>⬜ 대시보드 자동 생성 스킬화</li>
           </ul>
         </article>
       </div>
@@ -209,10 +209,24 @@
           </div>
         </div>
         <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>GitHub 업로드 (Task 2)</h3>
+            <p>git init → Public 레포 연결 → 최초 커밋 5ea9b7f push. 교재·시크릿 제외 확인.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>AGENTS.md / CLAUDE.md 규칙 문서 (Task 3-A)</h3>
+            <p>브랜치 → 커밋 → PR #1 → merge 흐름으로 협업·작업·대시보드 규칙 문서화. 협업 규칙 첫 실적용.</p>
+          </div>
+        </div>
+        <div class="log-item">
           <div class="log-rail"><div class="log-dot" style="background:var(--blue)">→</div><div class="log-line"></div></div>
           <div class="log-body">
-            <h3>다음: GitHub 업로드 (사용자 확인 대기)</h3>
-            <p>git 초기화 및 개인 레포 연결·푸시 진행 예정.</p>
+            <h3>다음: 작업별 커스텀 스킬 (Task 3-B, 사용자 확인 대기)</h3>
+            <p>실무 레포 벤치마킹 후 대시보드 생성·GitHub 플로우·학습노트 스킬화 예정.</p>
           </div>
         </div>
       </div>
