@@ -16,6 +16,14 @@ git switch -c <type>/<short-description>  # 새 브랜치 생성
 - 브랜치 `type`: `feat` · `fix` · `docs` · `chore` · `study` · `assignment`
 - 예: `study/04-time-series`, `assignment/02-backtest`, `feat/skill-xxx`
 
+> **브랜치 ↔ PR 정합 (중요)**: 브랜치명과 PR 제목의 `type`·주제를 **반드시 일치**시킨다 (되돌리기·추적 시 혼선 방지).
+> 예: 브랜치 `feat/til-template-tips` ↔ PR `feat: TIL 템플릿 팁 추가`.
+> 워크트리가 자동 생성한 `claude/xxx` 브랜치로 작업했다면, **PR 만들기 전** 아래로 규칙명 브랜치로 맞춘다:
+> ```powershell
+> git branch -m claude/xxxxxx <type>/<short-description>   # 로컬 리네임
+> git push -u origin <type>/<short-description>            # 새 이름으로 푸시
+> ```
+
 ## 작업 후 (반영)
 ```powershell
 git add <변경파일>

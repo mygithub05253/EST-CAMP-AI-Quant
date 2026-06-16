@@ -41,6 +41,9 @@
 3. 작업 후 **`commit` → `push` → `PR`** 순으로 진행한다.
    - 커밋 메시지: [Conventional Commits](https://www.conventionalcommits.org/) `type: 한국어 요약`
    - 예: `study: 01단원 Python 기초 정리`, `feat: 백테스트 모듈 추가`
+   - **브랜치 ↔ PR 정합(중요)**: 나중에 되돌리기·추적이 헷갈리지 않도록 **브랜치명과 PR 제목의 `type`·주제를 반드시 일치**시킨다.
+     - 브랜치 `feat/til-template-tips` ↔ PR 제목 `feat: TIL 템플릿 팁 추가` (같은 `type`, 같은 주제)
+     - 자동 생성된 워크트리 브랜치(예: `claude/xxx`)로 작업했다면, **PR 생성 전 규칙명으로 새 브랜치를 만들거나 리네임**해서 `type/주제`를 맞춘다.
 4. PR 생성 후 **auto-merge** 를 수행한다 (GitHub MCP 활용 권장). merge 후 로컬 `main`을 pull로 동기화.
 
 > ⚠️ 커밋 메시지에 시크릿·교재 원문을 포함하지 않는다. `.gitignore` 적용 범위를 항상 확인한다.
