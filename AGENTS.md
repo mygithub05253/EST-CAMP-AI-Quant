@@ -57,9 +57,10 @@
 2. **작업 단위로 대시보드 기록** (아래 5번 규칙).
 3. **한 작업 단위로 진행**: 한 작업이 끝나면 → 대시보드에 기록 → 사용자에게 보고 → 확인 → 다음 진행. 자동 모드라도 한 번에 전부 처리하지 않는다.
 4. **막히면 질문**: 작업 중 결정이 필요하거나 모호하면 멈추고 사용자에게 질문한 뒤 진행한다.
-5. **노션 TIL 기록 (작업 마감 시)**: 학습·과제·프로젝트 작업이 끝나면 캠프 TIL 양식에 맞춰 노션에 기록하고, `worklogs/`에 로컬 미러를 남긴 뒤 GitHub에 푸시한다.
-   - 흐름: 노션 TIL 기록 → 로컬 미러 → GitHub 푸시 (스킬: `bootcamp-worklog` = `til-record` + `github-flow` 조합)
-   - 노션 양식·연결 1회 세팅은 `.claude/skills/til-record/`(SKILL.md, notion-config.md) 참조.
+5. **작업 마감 기록 (작업 마감 시)**: 학습·과제·프로젝트 작업이 끝나면 ① 캠프 TIL 양식 본문을 `worklogs/YYYY-MM-DD_주제.md`에 **일자별로 저장**하고, ② 오늘 날짜 **대시보드를 갱신**한 뒤, ③ GitHub에 푸시한다.
+   - 흐름: TIL 일자별 저장(+노션 붙여넣기 안내) → 대시보드 갱신 → GitHub 푸시 (스킬: `bootcamp-worklog` = `til-record` + `dashboard-create` + `github-flow` 조합)
+   - **노션은 사용자가 직접 입력한다.** Notion MCP로 개인 공간 접근이 안 되므로 자동 기록하지 않고, Claude는 붙여넣기용 본문만 일자별로 저장·제공한다.
+   - 노션 양식은 `.claude/skills/til-record/`(SKILL.md, til-template.md) 참조.
    - 이 규칙은 강의 시작 후 적용 (OT 기간은 준비만).
 
 ---
