@@ -1,6 +1,6 @@
 ---
 name: bootcamp-worklog
-description: 부트캠프 일일/작업 마감을 한 번에 처리하는 오케스트레이터. 노션 TIL 기록 → 로컬 worklogs 미러 → GitHub 푸시까지 묶어 실행한다. 사용자가 "오늘 작업 마감/하루 정리해서 다 올려줘/TIL 기록하고 깃허브까지" 하거나 하루를 마무리할 때 사용한다.
+description: 부트캠프 일일/작업 마감을 한 번에 처리하는 오케스트레이터. 노션 TIL 기록 → 로컬 worklogs 미러 → GitHub 푸시(commit→push→PR→auto merge→main pull)까지 묶어 실행한다. 사용자가 "수업 마무리했어/수업 끝났어/오늘 작업 마감/하루 정리해서 다 올려줘/TIL 기록하고 깃허브까지" 하거나 하루를 마무리할 때 사용한다.
 ---
 
 # 부트캠프 작업 마감 오케스트레이터
@@ -28,8 +28,9 @@ description: 부트캠프 일일/작업 마감을 한 번에 처리하는 오케
 - 진행률·작업 로그 갱신이 필요하면 오늘 날짜 대시보드를 생성/갱신한다.
 
 ### [5] GitHub 푸시  → `github-flow` 스킬
-- `study/<주제>` 또는 `chore/worklog-YYYY-MM-DD` 브랜치를 파서 commit → push → PR → merge.
+- `study/<주제>` 또는 `chore/worklog-YYYY-MM-DD` 브랜치를 파서 **commit → push → PR → auto merge → main pull** 까지 완료한다.
 - 커밋 메시지 예: `study: 2026-06-17 TIL 01단원 정리`
+- auto merge 후 로컬 `main` 으로 체크아웃 후 `git pull` 하여 동기화한다.
 
 ## 마감 체크리스트
 - [ ] 노션 TIL 기록 완료 (또는 미연결 사유 안내)
