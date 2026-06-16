@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────
+# EST-Camp-AI-Quant .gitignore
+# ─────────────────────────────────────────────
+
+# 📁 교재·저작권 자료 (이스트소프트 자료 — 로컬 전용, git 제외)
+docs/book/
+docs/pdf/
+docs/zip/
+*.pdf
+*.zip
+!docs/README.md
+
+# 📊 데이터 (Cookiecutter DS — 데이터 불변성, 원본은 git 제외)
+projects/**/data/raw/*
+projects/**/data/interim/*
+projects/**/data/external/*
+projects/**/data/processed/*
+!**/.gitkeep
+
+# 🔐 시크릿·환경설정
+.env
+.env.*
+*.key
+secrets.*
+config.local.*
+
+# 🤖 모델 아티팩트
+projects/**/models/*
+!projects/**/models/.gitkeep
+*.pkl
+*.h5
+*.pt
+*.ckpt
+
+# 🐍 Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# 💻 OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 📦 데이터 대용량 포맷
+*.csv
+*.parquet
+*.feather
+!learning/**/*.csv
