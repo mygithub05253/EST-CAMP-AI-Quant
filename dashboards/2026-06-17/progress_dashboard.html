@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-06-17</title>
+  <style>
+    :root {
+      --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
+      --text: #0f172a; --muted: #64748b;
+      --blue: #2563eb; --blue-soft: #eff6ff;
+      --emerald: #059669; --emerald-soft: #ecfdf5;
+      --amber: #d97706; --amber-soft: #fffbeb;
+      --slate-soft: #f1f5f9; --violet: #7c3aed; --violet-soft: #f5f3ff;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; }
+    code { border-radius: 5px; background: var(--slate-soft); padding: 1px 5px; color: #334155; font-size: 0.92em; }
+    header { border-bottom: 1px solid var(--border); background: #fff; }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 16px; display: flex; align-items: center; gap: 12px; }
+    .logo-badge { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; background: var(--blue); color: #fff; font-size: 13px; font-weight: 800; }
+    .logo-title { font-size: 15px; font-weight: 800; }
+    .logo-sub { font-size: 12px; color: var(--muted); }
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+    section { margin-top: 30px; }
+    .card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 20px; }
+    .section-label { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .section-title { margin-top: 4px; font-size: 21px; font-weight: 800; }
+    .section-desc { margin-top: 6px; color: var(--muted); font-size: 14px; }
+    h1 { font-size: 26px; font-weight: 800; line-height: 1.35; margin-top: 8px; }
+    .lede { margin-top: 10px; color: var(--muted); max-width: 760px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .pill { border: 1px solid var(--border); border-radius: 999px; background: #fff; padding: 4px 11px; color: var(--muted); font-size: 12px; }
+
+    .overall { margin-top: 18px; }
+    .overall-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .overall-pct { font-size: 30px; font-weight: 800; color: var(--blue); }
+    .progress-track { height: 12px; margin-top: 10px; overflow: hidden; border-radius: 999px; background: var(--slate-soft); }
+    .progress-fill { height: 100%; border-radius: 999px; background: var(--blue); transition: width 700ms ease; }
+    .progress-fill.done { background: var(--emerald); }
+    .progress-fill.now { background: var(--blue); }
+    .progress-fill.todo { background: var(--amber); }
+
+    .task-grid { display: grid; gap: 14px; margin-top: 18px; }
+    @media (min-width: 760px) { .task-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .task-card { border: 1px solid var(--border); border-radius: var(--radius); background: #fff; padding: 16px; }
+    .task-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .task-title { font-size: 15px; font-weight: 800; }
+    .task-pct { font-size: 20px; font-weight: 800; white-space: nowrap; }
+    .task-card.done .task-pct { color: var(--emerald); }
+    .task-card.now .task-pct { color: var(--blue); }
+    .task-card.todo .task-pct { color: var(--amber); }
+    .task-card ul { margin: 10px 0 0 17px; color: var(--muted); font-size: 13px; }
+    .task-card li { margin-top: 3px; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 3px 9px; margin-top: 8px; }
+    .badge.done { background: var(--emerald-soft); color: var(--emerald); }
+    .badge.now { background: var(--blue-soft); color: var(--blue); }
+    .badge.todo { background: var(--amber-soft); color: var(--amber); }
+
+    .rules { margin-top: 14px; border-left: 4px solid var(--violet); border-radius: 0 10px 10px 0;
+      background: var(--violet-soft); padding: 14px 16px; }
+    .rules h3 { font-size: 14px; font-weight: 800; color: #5b21b6; }
+    .rules ul { margin: 8px 0 0 18px; color: #5b21b6; font-size: 13px; }
+    .rules li { margin-top: 4px; }
+
+    .log { display: grid; gap: 0; margin-top: 16px; }
+    .log-item { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }
+    .log-rail { display: flex; flex-direction: column; align-items: center; }
+    .log-dot { width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+      background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+    .log-line { width: 2px; flex: 1; margin: 4px 0; background: var(--border); }
+    .log-item:last-child .log-line { display: none; }
+    .log-body { padding-bottom: 16px; }
+    .log-body h3 { font-size: 14px; font-weight: 700; }
+    .log-body p { margin-top: 3px; color: var(--muted); font-size: 13px; }
+    footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo-badge">AQ</span>
+      <span>
+        <div class="logo-title">EST AI퀀트 4기 · 작업 대시보드</div>
+        <div class="logo-sub">기준일 2026-06-17 (KST) · Python 기초 (변수·컬렉션·제어문)</div>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <p class="section-label">2026-06-17 · Python 기초 2일차</p>
+      <h1>Python 기초 — 변수 · 컬렉션 · 제어문 + 실습 과제</h1>
+      <p class="lede">
+        어제 자료형(int/float/str/bool)에 이어 오늘은 <strong>변수와 복합 대입 연산자, 컬렉션
+        (리스트·튜플·세트·딕셔너리), 제어문(조건문 if)</strong>을 학습했습니다.
+        Day01(자료형 종합)·Day02(컬렉션 응용) 실습 과제를 풀고 노트북으로 정리했습니다.
+      </p>
+      <div class="pill-row">
+        <span class="pill">AI 퀀트 4기</span>
+        <span class="pill">2026-06-16 ~ 2026-11-11</span>
+        <span class="pill">단원: 01-python-basic</span>
+        <span class="pill">작업 유형: 학습 + 과제</span>
+      </div>
+
+      <div class="overall">
+        <div class="overall-head">
+          <span style="font-weight:700;">오늘 학습·과제 진행률</span>
+          <span class="overall-pct">100%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill done" style="width:100%"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Tasks</p>
+      <h2 class="section-title">작업별 진행 현황</h2>
+      <p class="section-desc">한 작업이 끝날 때마다 확인 후 다음으로 진행합니다. (작업 규칙)</p>
+      <div class="task-grid">
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">1. 변수 · 컬렉션 · 제어문 학습</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>변수 + 복합 대입 연산자(<code>+= -= *= /=</code>)</li>
+            <li>형변환 <code>int()</code>·<code>float()</code>·<code>str()</code></li>
+            <li>컬렉션 4종(리스트/튜플/세트/딕셔너리) 비교</li>
+            <li>리스트 인덱싱·슬라이싱·중첩 리스트</li>
+            <li>조건문 <code>if</code>/<code>if-else</code>, <code>in</code>/<code>not in</code></li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">2. 실습 과제 Day01 · Day02</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>Day01: 홀짝 판별·주민번호 슬라이싱·비밀번호 생성기</li>
+            <li>Day02: 리스트 속 딕셔너리 값 추출(<code>[위치][키]</code>)</li>
+            <li><code>assignments/Day01.ipynb</code>, <code>Day02.ipynb</code></li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">3. TIL 작성 + GitHub 반영</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>TIL <code>worklogs/2026-06-17_변수-컬렉션-제어문.md</code></li>
+            <li>대시보드 갱신(본 문서)</li>
+            <li>branch → commit → PR → merge</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Rules</p>
+      <h2 class="section-title">적용 규칙</h2>
+      <div class="rules">
+        <h3>작업 마감 규칙</h3>
+        <ul>
+          <li>TIL 본문을 <code>worklogs/YYYY-MM-DD_주제.md</code>에 일자별 저장</li>
+          <li>노션 TIL은 사용자가 직접 붙여넣기 (MCP 자동 기록 안 함)</li>
+          <li>날짜별 대시보드 생성·갱신 필수</li>
+          <li>실습 노트북·과제는 항상 커밋 (교재·시크릿 제외)</li>
+          <li><code>pull → branch → commit → push → PR → merge → main pull</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Work Log</p>
+      <h2 class="section-title">오늘의 작업 로그</h2>
+      <div class="log">
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>변수 + 복합 대입 연산자 + 형변환</h3>
+            <p><code>+=</code> 등 복합 대입 연산자, <code>int()</code>/<code>float()</code>/<code>str()</code> 형변환 학습. <code>learning/01-python-basic/2. 변수.ipynb</code> 실습.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>컬렉션 자료형 (리스트·튜플·세트·딕셔너리)</h3>
+            <p>4종 컬렉션의 특징(수정 가능 여부·중복·순서) 비교, 리스트 인덱싱/슬라이싱·중첩 리스트 학습. <code>3. 컬렉션.ipynb</code> 실습.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>제어문 — 조건문(if)</h3>
+            <p><code>if</code>·<code>if-else</code> 분기, 포함 연산자 <code>in</code>/<code>not in</code> 학습. <code>4. 제어문.ipynb</code> 실습.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>실습 과제 Day01 · Day02</h3>
+            <p>Day01 자료형 종합(홀짝·주민번호 슬라이싱·비밀번호 생성기), Day02 컬렉션 응용(리스트 속 딕셔너리 값 추출) 풀이.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">★</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>TIL 작성 + 대시보드 갱신 + GitHub 반영</h3>
+            <p><code>worklogs/2026-06-17_변수-컬렉션-제어문.md</code>에 TIL 정리, 본 대시보드 생성, 노트북·과제 커밋 후 PR→merge. 내일 반복문(for/while) 예정.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-06-17 EOD (KST)<br />
+      한 작업 완료 시마다 갱신 · 날짜별 폴더로 버전 관리
+    </footer>
+  </main>
+</body>
+</html>
