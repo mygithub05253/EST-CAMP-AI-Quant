@@ -47,6 +47,7 @@ env/
 .DS_Store
 Thumbs.db
 .idea/
+.serena/
 .vscode/
 *.swp
 
