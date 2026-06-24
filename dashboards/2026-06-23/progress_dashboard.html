@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-06-23</title>
+  <style>
+    :root {
+      --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
+      --text: #0f172a; --muted: #64748b;
+      --blue: #2563eb; --blue-soft: #eff6ff;
+      --emerald: #059669; --emerald-soft: #ecfdf5;
+      --amber: #d97706; --amber-soft: #fffbeb;
+      --slate-soft: #f1f5f9; --violet: #7c3aed; --violet-soft: #f5f3ff;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px;
+    }
+    code { border-radius: 5px; background: var(--slate-soft); padding: 1px 5px; color: #334155; font-size: 0.92em; }
+    header { border-bottom: 1px solid var(--border); background: #fff; }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 16px; display: flex; align-items: center; gap: 12px; }
+    .logo-badge {
+      width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; background: var(--blue); color: #fff; font-size: 13px; font-weight: 800;
+    }
+    .logo-title { font-size: 15px; font-weight: 800; }
+    .logo-sub { font-size: 12px; color: var(--muted); }
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+    section { margin-top: 30px; }
+    .card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 20px; }
+    .section-label { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .section-title { margin-top: 4px; font-size: 21px; font-weight: 800; }
+    .section-desc { margin-top: 6px; color: var(--muted); font-size: 14px; }
+    h1 { font-size: 26px; font-weight: 800; line-height: 1.35; margin-top: 8px; }
+    .lede { margin-top: 10px; color: var(--muted); max-width: 780px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .pill { border: 1px solid var(--border); border-radius: 999px; background: #fff; padding: 4px 11px; color: var(--muted); font-size: 12px; }
+    .overall { margin-top: 18px; }
+    .overall-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .overall-pct { font-size: 30px; font-weight: 800; color: var(--emerald); }
+    .progress-track { height: 12px; margin-top: 10px; overflow: hidden; border-radius: 999px; background: var(--slate-soft); }
+    .progress-fill { height: 100%; border-radius: 999px; transition: width 700ms ease; }
+    .progress-fill.done { background: var(--emerald); }
+    .task-grid { display: grid; gap: 14px; margin-top: 18px; }
+    @media (min-width: 760px) { .task-grid { grid-template-columns: 1fr 1fr; } }
+    .task-card { border: 1px solid var(--border); border-radius: var(--radius); background: #fff; padding: 16px; }
+    .task-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .task-title { font-size: 15px; font-weight: 800; }
+    .task-pct { font-size: 20px; font-weight: 800; white-space: nowrap; }
+    .task-card.done .task-pct { color: var(--emerald); }
+    .task-card ul { margin: 10px 0 0 17px; color: var(--muted); font-size: 13px; }
+    .task-card li { margin-top: 3px; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 3px 9px; margin-top: 8px; }
+    .badge.done { background: var(--emerald-soft); color: var(--emerald); }
+    .rules {
+      margin-top: 14px; border-left: 4px solid var(--violet); border-radius: 0 10px 10px 0;
+      background: var(--violet-soft); padding: 14px 16px;
+    }
+    .rules h3 { font-size: 14px; font-weight: 800; color: #5b21b6; }
+    .rules ul { margin: 8px 0 0 18px; color: #5b21b6; font-size: 13px; }
+    .rules li { margin-top: 4px; }
+    .log { display: grid; gap: 0; margin-top: 16px; }
+    .log-item { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }
+    .log-rail { display: flex; flex-direction: column; align-items: center; }
+    .log-dot {
+      width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+      background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800; flex-shrink: 0;
+    }
+    .log-line { width: 2px; flex: 1; margin: 4px 0; background: var(--border); }
+    .log-item:last-child .log-line { display: none; }
+    .log-body { padding-bottom: 16px; }
+    .log-body h3 { font-size: 14px; font-weight: 700; }
+    .log-body p { margin-top: 3px; color: var(--muted); font-size: 13px; }
+    footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo-badge">AQ</span>
+      <span>
+        <div class="logo-title">EST AI퀀트 4기 · 작업 대시보드</div>
+        <div class="logo-sub">기준일 2026-06-23 (KST) · 데이터 전처리·시각화 모듈 시작</div>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <p class="section-label">2026-06-23 · 데이터 전처리·시각화 1일차</p>
+      <h1>판다스 자료구조(Series · DataFrame) + 파이썬 기초 테스트</h1>
+      <p class="lede">
+        파이썬 기초 단원을 테스트로 마무리하고, 데이터 전처리·시각화 모듈을 시작했습니다.
+        판다스의 1차원 <strong>Series</strong>와 2차원 <strong>DataFrame</strong> 구조,
+        행/열 선택(<strong>loc · iloc</strong>)·변경·삭제·추가까지 학습했습니다.
+      </p>
+      <div class="pill-row">
+        <span class="pill">AI 퀀트 4기</span>
+        <span class="pill">단원: 02-preprocessing-viz</span>
+        <span class="pill">작업 유형: 학습 + 기초 테스트</span>
+        <span class="pill">산출물: 노트북 2개 + TIL + 대시보드</span>
+      </div>
+      <div class="overall">
+        <div class="overall-head">
+          <span style="font-weight:700;">전체 학습·실습 진행률</span>
+          <span class="overall-pct">100%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill done" style="width:100%"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Tasks</p>
+      <h2 class="section-title">작업별 진행 현황</h2>
+      <p class="section-desc">수업 노트북의 실행 코드와 결과를 기준으로 완료 상태를 기록했습니다.</p>
+      <div class="task-grid">
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">1. 파이썬 기초 테스트</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>튜플 슬라이싱으로 원소 선택</li>
+            <li>중첩 딕셔너리에서 값 추출</li>
+            <li>박스오피스 데이터 반복문 출력</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">2. Series</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>인덱스–값 1:1 대응 1차원 배열</li>
+            <li>리스트 → Series 변환·자동 인덱스</li>
+            <li>원소 선택·슬라이싱·인덱스 이름</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">3. DataFrame</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>여러 Series의 2차원 묶음</li>
+            <li>행=레코드 · 열=속성</li>
+            <li>행/열 인덱스 변경(<code>rename</code>)</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">4. 선택·삭제·추가</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li><code>loc</code>(이름)·<code>iloc</code>(위치) 선택</li>
+            <li><code>drop</code>(axis·inplace) 행/열 삭제</li>
+            <li>새 열 추가 및 TIL·대시보드 작성</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Rules</p>
+      <h2 class="section-title">규칙·요구사항·기한</h2>
+      <div class="rules">
+        <h3>학습 및 저장소 마감 기준</h3>
+        <ul>
+          <li>Series는 인덱스–값 1:1 대응 구조로 이해하고, 딕셔너리와 연결해 학습</li>
+          <li>DataFrame은 여러 Series의 묶음 — 열 하나를 떼면 Series가 됨</li>
+          <li>선택은 <code>loc</code>(이름) / <code>iloc</code>(위치)로 구분, 반환 타입(Series/DataFrame) 유의</li>
+          <li><code>rename</code>·<code>drop</code>은 복사 기반이며 원본 반영은 <code>inplace=True</code></li>
+          <li>교재·시크릿 제외 후 <code>branch → commit → push → PR → auto-merge</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Work Log</p>
+      <h2 class="section-title">오늘의 작업 로그</h2>
+      <div class="log">
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>파이썬 기초 테스트로 단원 마무리</h3>
+            <p>튜플 슬라이싱, 중첩 딕셔너리 값 추출, 박스오피스 데이터 반복문 출력 문제를 풀었습니다.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>판다스 Series 학습</h3>
+            <p>인덱스–값 1:1 대응 구조와 리스트 변환, 원소 선택·슬라이싱·인덱스 이름 활용을 익혔습니다.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>판다스 DataFrame 학습</h3>
+            <p>여러 Series의 2차원 묶음 구조와 행/열 인덱스 변경(<code>rename</code>)을 실습했습니다.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>행/열 선택·삭제·추가</h3>
+            <p><code>loc</code>·<code>iloc</code> 선택, <code>drop</code> 삭제, 새 열 추가까지 데이터프레임 조작을 익혔습니다.</p>
+          </div>
+        </div>
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">★</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>TIL·대시보드 작성 및 GitHub 반영</h3>
+            <p><code>worklogs/2026-06-23_판다스-자료구조.md</code>와 본 대시보드를 생성하고 수업 산출물을 PR로 반영했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-06-23 EOD (KST)<br />
+      한 작업 완료 시마다 갱신 · 날짜별 폴더로 버전 관리
+    </footer>
+  </main>
+</body>
+</html>
