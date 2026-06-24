@@ -51,6 +51,9 @@ Thumbs.db
 .vscode/
 *.swp
 
+# 🤖 Claude/에이전트 툴링 (스킬 정의 복사본 — git 제외)
+.agents/
+
 # 📦 데이터 대용량 포맷
 *.csv
 *.parquet
