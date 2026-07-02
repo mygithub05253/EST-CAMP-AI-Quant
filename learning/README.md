@@ -7,14 +7,15 @@
 | # | 단원 | 폴더 |
 |---|------|------|
 | 01 | Python 프로그래밍 | [`01-python-basic`](01-python-basic/) |
-| 02 | Python 전처리 및 시각화 | [`02-preprocessing-viz`](02-preprocessing-viz/) |
-| 03 | AI·퀀트 기초 수학·통계 | [`03-math-statistics`](03-math-statistics/) |
-| 04 | 시계열 데이터 분석 | [`04-time-series`](04-time-series/) |
-| 05 | 데이터 크롤링 | [`05-data-crawling`](05-data-crawling/) |
-| 06 | 머신러닝과 딥러닝 | [`06-ml-dl`](06-ml-dl/) |
-| 07 | 투자분석 기초 방법론 | [`07-investment-analysis`](07-investment-analysis/) |
-| 08 | 퀀트를 위한 금융 필수 지식 | [`08-finance-essentials`](08-finance-essentials/) |
-| 09 | 데이터 활용 퀀트 모델링 | [`09-quant-modeling`](09-quant-modeling/) |
+| 02 | Python 데이터 전처리 | [`02-preprocessing`](02-preprocessing/) |
+| 03 | 데이터 시각화 | [`03-vizualization`](03-vizualization/) |
+| 04 | AI·퀀트 기초 수학·통계 | [`04-math-statistics`](04-math-statistics/) |
+| 05 | 시계열 데이터 분석 | [`05-time-series`](05-time-series/) |
+| 06 | 데이터 크롤링 | [`06-data-crawling`](06-data-crawling/) |
+| 07 | 머신러닝과 딥러닝 | [`07-ml-dl`](07-ml-dl/) |
+| 08 | 투자분석 기초 방법론 | [`08-investment-analysis`](08-investment-analysis/) |
+| 09 | 퀀트를 위한 금융 필수 지식 | [`09-finance-essentials`](09-finance-essentials/) |
+| 10 | 데이터 활용 퀀트 모델링 | [`10-quant-modeling`](10-quant-modeling/) |
 
 ## 작성 규칙
 
