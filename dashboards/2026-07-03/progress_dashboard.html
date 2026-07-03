@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-07-03</title>
+  <style>
+    :root {
+      --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
+      --text: #0f172a; --muted: #64748b;
+      --blue: #2563eb; --blue-soft: #eff6ff;
+      --emerald: #059669; --emerald-soft: #ecfdf5;
+      --amber: #d97706; --amber-soft: #fffbeb;
+      --slate-soft: #f1f5f9; --violet: #7c3aed; --violet-soft: #f5f3ff;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; }
+    code { border-radius: 5px; background: var(--slate-soft); padding: 1px 5px; color: #334155; font-size: 0.92em; }
+    header { border-bottom: 1px solid var(--border); background: #fff; }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 16px; display: flex; align-items: center; gap: 12px; }
+    .logo-badge { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: var(--blue); color: #fff; font-size: 13px; font-weight: 800; }
+    .logo-title { font-size: 15px; font-weight: 800; }
+    .logo-sub { font-size: 12px; color: var(--muted); }
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+    section { margin-top: 30px; }
+    .card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 20px; }
+    .section-label { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .section-title { margin-top: 4px; font-size: 21px; font-weight: 800; }
+    .section-desc { margin-top: 6px; color: var(--muted); font-size: 14px; }
+    h1 { font-size: 26px; font-weight: 800; line-height: 1.35; margin-top: 8px; }
+    .lede { margin-top: 10px; color: var(--muted); max-width: 780px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .pill { border: 1px solid var(--border); border-radius: 999px; background: #fff; padding: 4px 11px; color: var(--muted); font-size: 12px; }
+    .overall { margin-top: 18px; }
+    .overall-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .overall-pct { font-size: 30px; font-weight: 800; color: var(--emerald); }
+    .progress-track { height: 12px; margin-top: 10px; overflow: hidden; border-radius: 999px; background: var(--slate-soft); }
+    .progress-fill { height: 100%; border-radius: 999px; transition: width 700ms ease; }
+    .progress-fill.done { background: var(--emerald); }
+    .task-grid { display: grid; gap: 14px; margin-top: 18px; }
+    @media (min-width: 760px) { .task-grid { grid-template-columns: 1fr 1fr; } }
+    .task-card { border: 1px solid var(--border); border-radius: var(--radius); background: #fff; padding: 16px; }
+    .task-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .task-title { font-size: 15px; font-weight: 800; }
+    .task-pct { font-size: 20px; font-weight: 800; white-space: nowrap; }
+    .task-card.done .task-pct { color: var(--emerald); }
+    .task-card ul { margin: 10px 0 0 17px; color: var(--muted); font-size: 13px; }
+    .task-card li { margin-top: 3px; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 3px 9px; margin-top: 8px; }
+    .badge.done { background: var(--emerald-soft); color: var(--emerald); }
+    .rules { margin-top: 14px; border-left: 4px solid var(--violet); border-radius: 0 10px 10px 0; background: var(--violet-soft); padding: 14px 16px; }
+    .rules h3 { font-size: 14px; font-weight: 800; color: #5b21b6; }
+    .rules ul { margin: 8px 0 0 18px; color: #5b21b6; font-size: 13px; }
+    .rules li { margin-top: 4px; }
+    .log { display: grid; gap: 0; margin-top: 16px; }
+    .log-item { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }
+    .log-rail { display: flex; flex-direction: column; align-items: center; }
+    .log-dot { width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+    .log-line { width: 2px; flex: 1; margin: 4px 0; background: var(--border); }
+    .log-item:last-child .log-line { display: none; }
+    .log-body { padding-bottom: 16px; }
+    .log-body h3 { font-size: 14px; font-weight: 700; }
+    .log-body p { margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .note { margin-top: 14px; border-left: 4px solid var(--amber); border-radius: 0 10px 10px 0; background: var(--amber-soft); padding: 12px 16px; color: #92400e; font-size: 13px; }
+    footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo-badge">AQ</span>
+      <span>
+        <div class="logo-title">EST AI퀀트 4기 · 작업 대시보드</div>
+        <div class="logo-sub">기준일 2026-07-03 (KST) · 수학·통계 모듈</div>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <p class="section-label">2026-07-03 · 수학·통계</p>
+      <h1>numpy·선형대수·데이터 분석 이해·EDA 실습 마무리</h1>
+      <p class="lede">
+        numpy 배열 연산과 선형대수 기초를 복습하고, 데이터 분석 절차·가설검정 개념을 정리한 뒤
+        Chipotle 주문 데이터로 EDA와 시각화 흐름을 실습했습니다.
+      </p>
+      <div class="pill-row">
+        <span class="pill">AI 퀀트 4기</span>
+        <span class="pill">단원: 04-math-statistics</span>
+        <span class="pill">작업 유형: 학습·과제·프로젝트</span>
+        <span class="pill">산출물: 노트북 6개 + TIL + 대시보드</span>
+      </div>
+      <div class="overall">
+        <div class="overall-head">
+          <span style="font-weight:700;">전체 학습·실습 진행률</span>
+          <span class="overall-pct">100%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill done" style="width:100%"></div></div>
+      </div>
+      <div class="note">기록 기준: 수업 마감 후 로컬 산출물 기준으로 정리. 노션 원본 페이지는 접속 지연으로 로컬 템플릿을 기준으로 작성.</div>
+    </section>
+
+    <section>
+      <p class="section-label">Tasks</p>
+      <h2 class="section-title">작업별 진행 현황</h2>
+      <p class="section-desc">수업 노트북, 과제 노트북, 프로젝트 예제를 기준으로 완료 상태를 기록했습니다.</p>
+      <div class="task-grid">
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">numpy 배열 연산</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>다차원 배열 생성·인덱싱·슬라이싱</li>
+            <li>전치·reshape·벡터화 연산</li>
+            <li>브로드캐스팅과 축(axis) 집계</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">선형대수 기초</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>스칼라·벡터 개념 구분</li>
+            <li>벡터 크기와 단위 벡터 계산</li>
+            <li><code>zeros</code>·<code>ones</code>·<code>arange</code>·<code>linspace</code></li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">데이터 분석 이해</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>데이터 과학 프로젝트 진행 과정</li>
+            <li>기술 통계와 추론 통계</li>
+            <li>가설검정, p값, 유의수준</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">Chipotle EDA</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>데이터 파악·전처리·속성 탐색</li>
+            <li>인기 메뉴 10개 분석</li>
+            <li>주문 1건당 평균 결제 금액 시각화</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">확률·평균 과제</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li>산술평균·기하평균·조화평균 비교</li>
+            <li>주사위 합 확률 시뮬레이션</li>
+            <li>시행 횟수별 경험적 확률 변화 확인</li>
+          </ul>
+        </article>
+        <article class="task-card done">
+          <div class="task-head"><span class="task-title">마감 기록</span><span class="task-pct">100%</span></div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li><code>worklogs/2026-07-03_수학통계-EDA.md</code> 작성</li>
+            <li>오늘 대시보드 생성</li>
+            <li>GitHub 반영 준비</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Rules</p>
+      <h2 class="section-title">규칙·요구사항·기한</h2>
+      <div class="rules">
+        <h3>학습 및 저장소 마감 기준</h3>
+        <ul>
+          <li>학습 산출물은 <code>learning/04-math-statistics/</code>에 단원 단위로 정리</li>
+          <li>과제 산출물은 <code>assignments/04-math-statistics/</code>, 프로젝트 실습은 <code>projects/math-statistics/</code>에 저장</li>
+          <li>수업 마감 시 TIL 본문을 <code>worklogs/</code>에 일자별 저장하고 오늘 대시보드 갱신</li>
+          <li>교재 PDF, 시크릿, 원본 저작권 자료는 커밋 제외</li>
+          <li>브랜치·커밋·PR 주제는 <code>study/04-math-statistics</code>와 <code>study: 수학·통계 학습 마감 기록</code>으로 정합 유지</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Work Log</p>
+      <h2 class="section-title">오늘의 작업 로그</h2>
+      <div class="log">
+        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>numpy·선형대수 노트북 정리</h3><p>배열 조회, 브로드캐스팅, 축 연산, 벡터 크기와 단위 벡터 계산 내용을 확인했습니다.</p></div></div>
+        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>데이터 분석 개념 정리</h3><p>기술 통계·추론 통계, 변수와 척도, 가설검정의 기본 절차를 학습 노트북으로 남겼습니다.</p></div></div>
+        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>Chipotle EDA 실습</h3><p>주문 데이터의 구조를 파악하고 인기 메뉴와 주문 평균 금액을 분석·시각화했습니다.</p></div></div>
+        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>확률·평균 과제 산출물 확인</h3><p>평균 비교와 주사위 확률 시뮬레이션 노트북을 과제·프로젝트 경로에 정리했습니다.</p></div></div>
+        <div class="log-item"><div class="log-rail"><div class="log-dot">★</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>TIL·대시보드 작성</h3><p>노션 복붙용 TIL과 날짜별 진행 대시보드를 생성하고 GitHub 반영 대상으로 정리했습니다.</p></div></div>
+      </div>
+    </section>
+
+    <footer>
+      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-07-03 EOD (KST)<br />
+      한 작업 완료 시마다 갱신 · 날짜별 폴더로 버전 관리
+    </footer>
+  </main>
+</body>
+</html>
