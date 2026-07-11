@@ -18,6 +18,9 @@
 - `3.데이터분석의이해.ipynb`
 - `4.탐색적데이터분석_chipotle.ipynb`
 - `5.탐색적데이터분석_drinks.ipynb`
+- `6.T-test.ipynb`
+- `7.ANOVA.ipynb`
+- `8.카이제곱검정(교차분석).ipynb`
 
 ## 폴더 사용법
 - 강의 노트: `YYYY-MM-DD_주제.md`

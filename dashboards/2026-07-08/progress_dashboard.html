@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="data:," />
-  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-07-07</title>
+  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-07-08</title>
   <style>
     :root {
       --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
@@ -46,10 +46,12 @@
     .task-title { font-size: 15px; font-weight: 800; }
     .task-pct { font-size: 20px; font-weight: 800; white-space: nowrap; }
     .task-card.done .task-pct { color: var(--emerald); }
+    .task-card.progress .task-pct { color: var(--amber); }
     .task-card ul { margin: 10px 0 0 17px; color: var(--muted); font-size: 13px; }
     .task-card li { margin-top: 3px; }
     .badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 3px 9px; margin-top: 8px; }
     .badge.done { background: var(--emerald-soft); color: var(--emerald); }
+    .badge.progress { background: var(--amber-soft); color: var(--amber); }
     .rules { margin-top: 14px; border-left: 4px solid var(--violet); border-radius: 0 10px 10px 0; background: var(--violet-soft); padding: 14px 16px; }
     .rules h3 { font-size: 14px; font-weight: 800; color: #5b21b6; }
     .rules ul { margin: 8px 0 0 18px; color: #5b21b6; font-size: 13px; }
@@ -73,32 +75,31 @@
       <span class="logo-badge">AQ</span>
       <span>
         <div class="logo-title">EST AI퀀트 4기 · 작업 대시보드</div>
-        <div class="logo-sub">기준일 2026-07-07 (KST) · 수학·통계 → 시계열 전환</div>
+        <div class="logo-sub">기준일 2026-07-08 (KST) · 시계열 분석 모듈</div>
       </span>
     </div>
   </header>
 
   <main>
     <section class="card">
-      <p class="section-label">2026-07-07 · 수학·통계 → 시계열 분석</p>
-      <h1>Drinks EDA 마무리 · T-test/ANOVA/카이제곱검정 시험 · time-series 전환</h1>
+      <p class="section-label">2026-07-08 · 시계열 분석</p>
+      <h1>기온데이터 EDA 마무리 · 관광데이터 EDA 진행</h1>
       <p class="lede">
-        국가별 음주 데이터(Drinks) EDA를 마무리하고, T-test·ANOVA·카이제곱검정(교차분석) 시험으로
-        04-math-statistics 단원을 마감했습니다. 이어서 05-time-series 단원으로 넘어가
-        기온데이터 EDA를 소개하고 과제로 부여했습니다.
+        전날 과제로 받은 서울 기온데이터 EDA를 마무리하고, 외국인 관광객 데이터로
+        시계열 EDA를 진행했습니다. 월별 원본 엑셀을 합치는 전처리까지 진행 중입니다.
       </p>
       <div class="pill-row">
         <span class="pill">AI 퀀트 4기</span>
-        <span class="pill">단원: 04-math-statistics → 05-time-series</span>
-        <span class="pill">작업 유형: 학습 + 시험</span>
-        <span class="pill">산출물: 노트북 5개 + 시험 2개 + TIL + 대시보드</span>
+        <span class="pill">단원: 05-time-series</span>
+        <span class="pill">작업 유형: 학습</span>
+        <span class="pill">산출물: 노트북 2개 + TIL + 대시보드</span>
       </div>
       <div class="overall">
         <div class="overall-head">
           <span style="font-weight:700;">전체 학습·실습 진행률</span>
-          <span class="overall-pct">100%</span>
+          <span class="overall-pct">70%</span>
         </div>
-        <div class="progress-track"><div class="progress-fill done" style="width:100%"></div></div>
+        <div class="progress-track"><div class="progress-fill done" style="width:70%"></div></div>
       </div>
       <div class="note">기록 기준: 수업 마감 후 로컬 산출물 기준으로 정리. 노션 TIL은 사용자가 직접 붙여넣습니다.</div>
     </section>
@@ -106,59 +107,33 @@
     <section>
       <p class="section-label">Tasks</p>
       <h2 class="section-title">작업별 진행 현황</h2>
-      <p class="section-desc">오늘 수업에서 진행한 EDA·시험·단원 전환 기준으로 완료 상태를 기록했습니다.</p>
+      <p class="section-desc">기온데이터 EDA(과제)와 관광데이터 EDA(진행 중) 기준으로 완료 상태를 기록했습니다.</p>
       <div class="task-grid">
         <article class="task-card done">
-          <div class="task-head"><span class="task-title">Drinks 데이터 EDA</span><span class="task-pct">100%</span></div>
+          <div class="task-head"><span class="task-title">기온데이터 EDA (과제)</span><span class="task-pct">100%</span></div>
           <span class="badge done">완료</span>
           <ul>
-            <li>결측치 시각화 및 <code>continent</code> 결측값 대체</li>
-            <li>상관계수 히트맵·산점도 확인</li>
-            <li>대륙별 평균 소비량, 전 세계 Top 10 국가 비교</li>
+            <li><code>seoul.csv</code> 데이터 확인</li>
+            <li>서울이 가장 더웠던 날 조회</li>
+            <li>내 생일의 기온 변화 비교</li>
+          </ul>
+        </article>
+        <article class="task-card progress">
+          <div class="task-head"><span class="task-title">관광데이터 EDA</span><span class="task-pct">40%</span></div>
+          <span class="badge progress">진행 중</span>
+          <ul>
+            <li>기준연월 컬럼 추가</li>
+            <li>국적 확인, 국적별·전체 대비 비율 계산</li>
+            <li>반복문으로 월별 엑셀 합치기(전처리 진행 중)</li>
           </ul>
         </article>
         <article class="task-card done">
-          <div class="task-head"><span class="task-title">T-test</span><span class="task-pct">100%</span></div>
+          <div class="task-head"><span class="task-title">마감 기록</span><span class="task-pct">100%</span></div>
           <span class="badge done">완료</span>
           <ul>
-            <li>대응표본 t검정(<code>ttest_rel</code>) 실습</li>
-            <li>독립표본 t검정(<code>ttest_ind</code>) 실습</li>
-            <li>두 검정 방식의 전제 조건 비교</li>
-          </ul>
-        </article>
-        <article class="task-card done">
-          <div class="task-head"><span class="task-title">ANOVA</span><span class="task-pct">100%</span></div>
-          <span class="badge done">완료</span>
-          <ul>
-            <li>일원분산분석 개념 및 <code>f_oneway</code> 실습</li>
-            <li><code>ols</code> + ANOVA 테이블 교차 검증</li>
-            <li>ANOVA 결과 해석의 한계 정리</li>
-          </ul>
-        </article>
-        <article class="task-card done">
-          <div class="task-head"><span class="task-title">카이제곱검정(교차분석)</span><span class="task-pct">100%</span></div>
-          <span class="badge done">완료</span>
-          <ul>
-            <li><code>pd.crosstab</code>으로 교차표 생성</li>
-            <li><code>chi2_contingency</code> 연관성 검정</li>
-            <li>상관분석과의 차이 정리</li>
-          </ul>
-        </article>
-        <article class="task-card done">
-          <div class="task-head"><span class="task-title">math-statistics 시험</span><span class="task-pct">100%</span></div>
-          <span class="badge done">완료</span>
-          <ul>
-            <li>T-test·ANOVA·카이제곱검정 종합 시험 진행</li>
-            <li>04-math-statistics 단원 마무리</li>
-          </ul>
-        </article>
-        <article class="task-card done">
-          <div class="task-head"><span class="task-title">time-series 전환</span><span class="task-pct">100%</span></div>
-          <span class="badge done">완료</span>
-          <ul>
-            <li>05-time-series 단원 소개</li>
-            <li><code>1.탐색적데이터분석(기온데이터)</code> 간단 설명</li>
-            <li>기온데이터 EDA 과제 부여</li>
+            <li><code>worklogs/2026-07-08_시계열EDA-기온데이터-관광데이터.md</code> 작성</li>
+            <li>오늘 대시보드 생성</li>
+            <li>GitHub 반영 전 변경 목록 점검</li>
           </ul>
         </article>
       </div>
@@ -170,7 +145,7 @@
       <div class="rules">
         <h3>학습 및 저장소 마감 기준</h3>
         <ul>
-          <li>학습 산출물은 <code>learning/04-math-statistics/</code>, <code>learning/05-time-series/</code>에 단원 단위로 정리</li>
+          <li>학습 산출물은 <code>learning/05-time-series/</code>에 단원 단위로 정리</li>
           <li>수업 마감 시 TIL 본문을 <code>worklogs/</code>에 일자별 저장하고 오늘 대시보드 갱신</li>
           <li>노션 TIL은 자동 등록하지 않고 사용자가 저장된 본문을 직접 붙여넣기</li>
           <li>교재 PDF, 시크릿, 원본 저작권 자료는 커밋 제외</li>
@@ -183,18 +158,16 @@
       <h2 class="section-title">오늘의 작업 로그</h2>
       <div class="log">
         <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
-          <div class="log-body"><h3>Drinks EDA 마무리</h3><p>국가별 음주 데이터의 상관관계·시각화 분석을 마무리했습니다.</p></div></div>
-        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
-          <div class="log-body"><h3>T-test·ANOVA·카이제곱검정 시험</h3><p>Golf_test·smoker 데이터로 통계 검정 시험을 진행하고 math-statistics 단원을 마무리했습니다.</p></div></div>
-        <div class="log-item"><div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
-          <div class="log-body"><h3>time-series 단원 전환</h3><p>기온데이터 EDA를 간단히 소개하고 과제로 부여했습니다.</p></div></div>
+          <div class="log-body"><h3>기온데이터 EDA 마무리</h3><p>과제로 받은 서울 기온 데이터 EDA를 완성했습니다.</p></div></div>
+        <div class="log-item"><div class="log-rail"><div class="log-dot">→</div><div class="log-line"></div></div>
+          <div class="log-body"><h3>관광데이터 EDA 진행</h3><p>월별 관광객 데이터를 정리하고 국적별 비율 계산, 다수 엑셀 합치기를 진행했습니다.</p></div></div>
         <div class="log-item"><div class="log-rail"><div class="log-dot">★</div><div class="log-line"></div></div>
           <div class="log-body"><h3>TIL·대시보드 작성</h3><p>노션 복붙용 TIL과 날짜별 진행 대시보드를 생성하고 GitHub 반영 전 변경 범위를 정리했습니다.</p></div></div>
       </div>
     </section>
 
     <footer>
-      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-07-07 EOD (KST)<br />
+      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-07-08 EOD (KST)<br />
       한 작업 완료 시마다 갱신 · 날짜별 폴더로 버전 관리
     </footer>
   </main>
