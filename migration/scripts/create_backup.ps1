@@ -428,7 +428,11 @@ try {
   $sourceBeforeById = @{}
   foreach ($worktree in @($worktreesBefore.worktrees)) {
     $isActive = $worktree.sourcePath.Equals($workingTreeFullPath, [System.StringComparison]::OrdinalIgnoreCase)
-    $excludedPaths = if ($isActive) { $activeExcludedPaths } else { @() }
+    # if/else 식으로 @()를 할당하면 언롤링으로 $null이 되므로 직접 할당으로 빈 배열을 유지한다.
+    $excludedPaths = @()
+    if ($isActive) {
+      $excludedPaths = $activeExcludedPaths
+    }
     $sourceBefore = Get-BackupTreeManifest -RootPath $worktree.sourcePath -ExcludedPaths $excludedPaths -ExcludeGitEntries $true
     if ($sourceBefore.reparsePointCount -ne 0) {
       throw "worktree에 reparse point가 있습니다: $($worktree.sourcePath)"
@@ -440,7 +444,11 @@ try {
 
   foreach ($worktree in @($worktreesBefore.worktrees)) {
     $isActive = $worktree.sourcePath.Equals($workingTreeFullPath, [System.StringComparison]::OrdinalIgnoreCase)
-    $excludedPaths = if ($isActive) { $activeExcludedPaths } else { @() }
+    # if/else 식으로 @()를 할당하면 언롤링으로 $null이 되므로 직접 할당으로 빈 배열을 유지한다.
+    $excludedPaths = @()
+    if ($isActive) {
+      $excludedPaths = $activeExcludedPaths
+    }
     $snapshotPath = Join-Path $snapshotsDirectory $worktree.id
     Copy-BackupTree -Source $worktree.sourcePath -Destination $snapshotPath -ExcludedDirectoryPaths $excludedPaths | Out-Null
     $snapshotManifest = Get-BackupTreeManifest -RootPath $snapshotPath -ExcludeGitEntries $true
@@ -569,10 +577,10 @@ try {
   $codexRefCount = @($localRefsBefore.refs | Where-Object { $_.refName -match '^refs/codex/' }).Count
   $localLfsFilesResult = Invoke-BackupGit -RepositoryPath $workingTreeFullPath -Arguments @("lfs", "ls-files", "--all", "--name-only")
   $localLfsPointerCount = @($localLfsFilesResult.lines | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }).Count
-  $missingTotal = [int](($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.missingFileCount + $_.sourceBeforeVsSnapshot.missingDirectoryCount } | Measure-Object -Sum).Sum)
-  $extraTotal = [int](($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.extraFileCount + $_.sourceBeforeVsSnapshot.extraDirectoryCount } | Measure-Object -Sum).Sum)
-  $sizeMismatchTotal = [int](($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.sizeMismatchCount } | Measure-Object -Sum).Sum)
-  $hashMismatchTotal = [int](($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.hashMismatchCount } | Measure-Object -Sum).Sum)
+  $missingTotal = [int](Get-BackupInt64Sum -Values @($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.missingFileCount + $_.sourceBeforeVsSnapshot.missingDirectoryCount }))
+  $extraTotal = [int](Get-BackupInt64Sum -Values @($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.extraFileCount + $_.sourceBeforeVsSnapshot.extraDirectoryCount }))
+  $sizeMismatchTotal = [int](Get-BackupInt64Sum -Values @($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.sizeMismatchCount }))
+  $hashMismatchTotal = [int](Get-BackupInt64Sum -Values @($workingTreeRecords | ForEach-Object { $_.sourceBeforeVsSnapshot.hashMismatchCount }))
 
   $checksumEntries = New-Object 'System.Collections.Generic.List[string]'
   $checksumEntries.Add("manifest.json")
