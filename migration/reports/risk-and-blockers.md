@@ -10,7 +10,7 @@
 | Gate A 신규 완전 백업 | **PASS — 4차 시도 성공** |
 | Phase 1 백업 실행 | **PASS — `before-transfer-20260721-111152-14277f98fb22`** |
 | Repository Transfer | **PASS — 2026-07-21 완료** (`EST-Bootcamp-AI-Quant/EST-CAMP-AI-Quant`) |
-| Private 저장소·LFS upload | **BLOCKED — LFS 용량 초과** (아래 참조) |
+| Private 저장소·LFS upload | **PASS — 2026-07-21 완료** (`EST-Bootcamp-AI-Quant/est-camp-archive`) |
 
 ## Stage A (Organization Transfer) 완료 기록 — 2026-07-21
 
@@ -61,11 +61,68 @@
 | 169 MB | `07-4. 투자분석 기초 방법론(기술적 분석).pdf` |
 
 대상 조직 플랜은 **free = LFS 저장 1 GB / 대역폭 1 GB**다. 자료 총량이 약 1,024 MB이므로
-**추가 조치 없이는 들어가지 않는다.** Stage B 진행 전 아래 중 하나를 사용자가 선택해야 한다.
+그대로는 들어가지 않았다. **해소 방법: `docs/zip` 제외.**
 
-1. LFS Data Pack 구매 (50 GB 단위 유료)
-2. `docs/zip`(480 MB) 제외 — 해당 zip이 `docs/book` PDF들의 묶음인지 중복 확인 후 결정
-3. 교재는 외부(로컬·클라우드) 백업만 유지하고 Private 레포에는 데이터만 이관
+`AI퀀트과정_교재.zip`(480 MB)은 `docs/book`의 **완전한 중복**임을 확인했다.
+zip 엔트리 20개를 압축 해제 스트림에서 SHA256으로 계산해 `docs/book` 원본과 대조한 결과
+**match=20 / differ=0 / missing=0**이다. 따라서 zip을 제외해도 정보 손실이 없다.
+
+제외 후 실제 이관량은 **551 MB**로 free 쿼터 안에 들어간다. **Data Pack 구매는 불필요했다.**
+
+## Stage B (Private 보관 레포) 완료 기록 — 2026-07-21
+
+`EST-Bootcamp-AI-Quant/est-camp-archive` (**private=true**) 생성 및 최초 등록 완료.
+
+| 경로 | 내용 | 크기 |
+|---|---|---|
+| `book/` | 교재 PDF 20개 (LFS) | 538 MB |
+| `pdf/` | OT 자료 1개 (LFS) | 5 MB |
+| `data/` | 실습 데이터 188개 | 8 MB |
+| **합계** | **209개 파일** | **551 MB** |
+
+`data/` 하위는 공개 저장소의 **원본 상대경로를 유지**한다(`data/` 접두어만 제거하면 복원됨).
+이는 미해결 항목인 "경로 결합"(notebook 경로 리터럴 87회)을 자극하지 않기 위한 선택이다.
+
+### 검증 결과
+
+| 검증 | 결과 |
+|---|---|
+| 원본 → 스테이징 전수 해시 | match=209 / mismatch=0 / missing=0 |
+| LFS 등록 오브젝트 | 24개 (PDF 21 + 데이터 zip 3) |
+| push | 성공, 570 MB 업로드 |
+| 원격 HEAD·tree 해시 | 로컬 빌드와 완전 일치 (`ba95eab1`) |
+| 원격 LFS OID + 경로 | 24/24 완전 일치 |
+| 원격 tracked 파일 수 | 211개 (콘텐츠 209 + README + `.gitattributes`) |
+| private 여부 | true |
+
+원격 검증은 `GIT_LFS_SKIP_SMUDGE=1` 클론으로 수행해 LFS 대역폭을 소모하지 않았다.
+
+> 검증 중 두 번의 **거짓 판정**을 만나 정정했다. 같은 실수를 반복하지 않도록 기록한다.
+> 1. `git rev-parse HEAD^{tree}`를 PowerShell에서 따옴표 없이 쓰면 `^{...}`가 ScriptBlock으로
+>    파싱돼 양쪽 모두 빈 문자열이 되고, 빈 값끼리 비교돼 "일치"로 오판된다. 반드시 `"HEAD^{tree}"`로 인용한다.
+> 2. `git lfs ls-files -l` 출력의 presence 마커(`*` 로컬 보유 / `-` 포인터만)를 그대로 비교하면
+>    skip-smudge 클론에서 항상 불일치로 나온다. OID+경로만 비교해야 한다.
+
+### 남은 제약 — LFS 대역폭
+
+free 조직의 LFS 대역폭은 **월 1 GB**다. 전체 clone 1회에 약 551 MB를 소비하므로
+**월 1~2회가 한계**다. 평소 작업은 기존 로컬 저장소를 사용하고 이 저장소는 보관용으로만 쓴다.
+데이터만 필요하면 `GIT_LFS_SKIP_SMUDGE=1` clone으로 대역폭을 소모하지 않고 받을 수 있다.
+
+### 로컬 산출물
+
+| 경로 | 처리 |
+|---|---|
+| `C:\Users\kik32\est-camp-archive-build` | 푸시한 레포의 로컬 빌드본(551 MB). 삭제 여부는 사용자 판단 대기 |
+| `C:\Users\kik32\est-camp-verify` | 검증용 클론. 삭제 완료 |
+| `docs/zip` (원본, 480 MB) | 사용자 지시에 따라 **로컬 그대로 보존** |
+
+### 확인된 리스크 발현 — Copilot 리뷰어 미동작
+
+이관된 `dynamic/agents/copilot-pull-request-reviewer` workflow가 **PR #33에서 실행되지 않았다.**
+Actions 실행 총계는 여전히 1건(2026-07-02, 이관 전 기록)이다.
+대상 조직에 Copilot App 설치가 0건인 것이 원인으로 보이며, **조직 설정에서 App 설치·승인이 필요**하다.
+과거 실행 이력 자체는 보존됐다.
 
 ## 2026-07-21 해소된 차단 요소
 
