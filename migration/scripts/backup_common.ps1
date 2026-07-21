@@ -138,6 +138,21 @@ function Test-BackupPathStrictChild {
   return Test-BackupPathSameOrChild -Candidate $candidatePath -Parent $parentPath
 }
 
+function Get-BackupInt64Sum {
+  # StrictMode Latest에서는 빈 컬렉션의 Measure-Object 결과에 Sum·Count 속성이 없어 접근 시 예외가 난다.
+  # 객체 0건도 정상 상태(LFS 미사용, 빈 트리)이므로 명시적으로 누적해 0을 반환한다.
+  param([object[]]$Values = @())
+
+  $total = [int64]0
+  foreach ($value in @($Values)) {
+    if ($null -eq $value) {
+      continue
+    }
+    $total += [int64]$value
+  }
+  return $total
+}
+
 function Get-BackupTextSha256 {
   param([Parameter(Mandatory = $true)][AllowEmptyString()][string]$Text)
 
@@ -228,7 +243,16 @@ function Get-BackupTreeManifest {
     throw "Manifest 대상 디렉터리가 없습니다: $root"
   }
 
-  $normalizedExclusions = @($ExcludedPaths | ForEach-Object { Resolve-BackupPath -Path $_ })
+  # PowerShell 5.1은 빈 배열을 출력 스트림에서 언롤링해 $null로 만들고, $null을 파이프하면
+  # 요소 1개가 흐른다. 그대로 Resolve-BackupPath에 넘기면 mandatory 파라미터 바인딩이 실패하므로
+  # Test-BackupPathExcluded와 동일하게 빈 값을 건너뛴다.
+  $normalizedExclusions = @()
+  foreach ($excludedPath in @($ExcludedPaths)) {
+    if ([string]::IsNullOrWhiteSpace($excludedPath)) {
+      continue
+    }
+    $normalizedExclusions += (Resolve-BackupPath -Path $excludedPath)
+  }
   $directories = New-Object 'System.Collections.Generic.List[string]'
   $files = New-Object 'System.Collections.Generic.List[object]'
   $reparsePoints = New-Object 'System.Collections.Generic.List[object]'
@@ -315,7 +339,7 @@ function Get-BackupTreeManifest {
     excludeGitEntries = $ExcludeGitEntries
     directoryCount = $orderedDirectories.Count
     fileCount = $orderedFiles.Count
-    sizeBytes = [int64](($orderedFiles | Measure-Object sizeBytes -Sum).Sum)
+    sizeBytes = Get-BackupInt64Sum -Values @($orderedFiles | ForEach-Object { $_.sizeBytes })
     treeSha256 = Get-BackupTextSha256 -Text $treeText
     fileManifestSha256 = Get-BackupTextSha256 -Text $fileText
     reparsePointCount = $reparsePoints.Count
@@ -676,7 +700,7 @@ function Get-BackupLfsObjectManifest {
     schemaVersion = 1
     objectRoot = $root
     objectCount = $ordered.Count
-    objectBytes = [int64](($ordered | Measure-Object sizeBytes -Sum).Sum)
+    objectBytes = Get-BackupInt64Sum -Values @($ordered | ForEach-Object { $_.sizeBytes })
     oidCount = @($ordered | Where-Object { -not [string]::IsNullOrWhiteSpace($_.oid) }).Count
     invalidOidPathCount = @($ordered | Where-Object { [string]::IsNullOrWhiteSpace($_.oid) }).Count
     oidHashMismatchCount = @($ordered | Where-Object { (-not [string]::IsNullOrWhiteSpace($_.oid)) -and (-not $_.oidMatchesContent) }).Count

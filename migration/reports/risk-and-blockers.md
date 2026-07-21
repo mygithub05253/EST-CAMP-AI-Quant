@@ -1,38 +1,63 @@
 # 차단 요소와 위험 요소
 
-> 최신 재평가: 2026-07-21 10:36 KST. 아래의 7월 20일 근거 중 SHA·수량은 역사적 참고값이며, 현재 판정은 이 절을 우선합니다.
+> 최신 재평가: 2026-07-21 11:20 KST. 아래의 7월 20일 근거 중 SHA·수량은 역사적 참고값이며, 현재 판정은 이 절을 우선합니다.
 
 ## 현재 Gate 판정
 
 | 단계 | 판정 |
 |---|---|
 | Phase 0 최신 조사 | PASS |
-| Gate A 신규 완전 백업 | 1차 실행 실패·partial 보존, 재시도 승인 대기 |
-| Phase 1 백업 실행 | **FAIL — 완전 백업 없음** |
+| Gate A 신규 완전 백업 | **PASS — 4차 시도 성공** |
+| Phase 1 백업 실행 | **PASS — `before-transfer-20260721-111152-14277f98fb22`** |
 | Private 저장소·LFS upload | 별도 B1·B2 미승인 |
-| Repository Transfer | No-Go |
+| Repository Transfer | Gate B 승인 대기 (기술적 차단 해소) |
 
-## 2026-07-21 Hard Blocker
+## 2026-07-21 해소된 차단 요소
 
-1. **현재 상태의 fresh 완전 백업이 없음**
-   - 기존 검증 세트는 `e04abb...` 기준이며 현재 `main`은 `8e3546c...`다.
-   - 기존 세트는 working tree, local-only branch, stash, linked worktree, ignored 자료를 포함하지 않는다.
+1. **완전 백업 확보 (해소)**
+   - 세트 `before-transfer-20260721-111152-14277f98fb22`, HEAD `14277f98fb22`, 1.3 GB.
+   - `complete.json` status PASS, 모든 검증 플래그 true, missing/extra/size/hash mismatch 각 0.
+   - 독립 검증: 원격·로컬 bundle 모두 `git bundle verify` 통과(`complete history`), 미러의 `main`이 `14277f9`와 일치, 스냅샷에서 실제 파일 내용 판독 성공.
+   - working tree 4개, ignored 교재 1.02 GiB(`docs/book` 539M, `docs/zip` 481M), stash, cache 모두 포함.
+   - source-before → source-after exact PASS로 백업 중 동시 편집이 없었음을 확인했다.
 
-2. **2026-07-21 10:34 Phase 1 시도 실패**
-   - 신규 partial `before-transfer-20260721-103429-8e3546c83d7d.partial-48692`를 삭제·덮어쓰기 없이 보존했다.
-   - 원인은 raw `.git` snapshot 안 303자 `refs/codex/...` 경로를 PowerShell 5.1 일반 경로 API로 재해시한 것이다.
-   - extended-length 경로 대응을 보완했고 보존된 raw `.git` 1,593개 파일·334개 디렉터리는 원본과 exact 일치했지만, `complete.json`과 전체 working snapshot이 없으므로 복구 기준이 아니다.
-   - 실패 뒤 HEAD·index·local ref·4개 worktree·non-`migration/` 지문은 실행 전과 동일하다. 새 timestamp 재시도에는 다시 편집 중단과 승인이 필요하다.
+2. **수업 파일 미추적 상태 (해소)**
+   - PR #29로 `시계열분석_풀이.ipynb`와 `docs/image/zoom-web-cam-image.webp`를 `main`에 반영했다.
+   - `docs/image/`의 두 파일은 md5가 동일한 중복이었고 실제 포맷이 WebP였으므로 1개로 정리하고 확장자를 정정했다.
+   - 수업 자료와 migration 문서는 서로 다른 commit으로 분리했다.
+   - 모든 ref의 커밋이 origin에 반영되어 로컬 전용 미푸시 작업은 없다.
 
-3. **최신 수업 파일이 미추적 상태**
-   - `assignments/05-time-series/시계열분석_풀이.ipynb` 461,845 B
-   - `docs/image/` 이미지 2개, 합계 622,120 B
-   - 손실 위험은 백업으로 먼저 제거하되 수업 파일과 migration 문서를 한 commit에 섞지 않는다.
+3. **개인정보 형식 후보 (해소 — 실제 개인정보 아님)**
+   - `assignments/01-python-basic/Day01.ipynb`의 후보 2곳은 문자열 슬라이싱 단원의 교재 예제값(`hong` 변수)이다.
+   - `learning/01-python-basic/3. 컬렉션.ipynb`의 후보 1곳은 dict 단원 예제(`{"name": "andy", ...}`)이며 `011`은 폐지된 통신사 식별번호다.
+   - 신규 커밋한 `시계열분석_풀이.ipynb`는 주민번호·전화번호·이메일·시크릿·로컬경로 스캔 결과 전부 0건이다.
+   - 실제 값은 이 보고서에 저장하지 않았다.
 
-4. **개인정보 형식 후보 미확정**
-   - tracked `assignments/01-python-basic/Day01.ipynb` source에 주민등록번호 형식 후보 2곳
-   - tracked `learning/01-python-basic/3. 컬렉션.ipynb` source에 전화번호 형식 후보 1곳
-   - 값은 보고서에 저장하지 않았다. 예제/가상값일 가능성이 있어도 history 포함 검증 전 추가 공개·복제는 No-Go다.
+4. **`stash@{0}` (해소 — 고유 작업 없음)**
+   - blob 해시가 `main`과 완전 동일(`bcb6c546...`)해 이미 머지된 PR26 내용의 중복임을 확인했다.
+
+## 백업 스크립트에서 수정한 결함
+
+Gate A 재시도 과정에서 이 환경 고유의 결함 3건을 확인하고 수정했다. 모두 스크립트가 이 환경에서 완주한 적이 없어 검증되지 않았던 경로다.
+
+| # | 실패 지점 | 원인 | 조치 |
+|---|---|---|---|
+| 1 | raw `.git` 재해시 | 303자 `refs/codex/...` 경로를 PowerShell 5.1 일반 경로 API로 처리 | extended-length(`\\?\`) 경로 변환 (이전 세션) |
+| 2 | linked worktree 매니페스트 | `if/else`로 `@()`를 할당하면 언롤링되어 `$null`이 되고, PS 5.1은 `$null` 파이프 시 요소 1개를 흘려보냄 | 직접 할당으로 빈 배열 유지 + 소비측에서 빈 값 skip |
+| 3 | LFS 오브젝트 매니페스트 | `StrictMode Latest`에서 빈 컬렉션의 `Measure-Object` 결과에 `.Sum`·`.Count` 속성이 없어 예외 | `Get-BackupInt64Sum` 헬퍼로 명시적 누적, 동일 패턴 6곳 일괄 적용 |
+
+2·3번은 같은 계열(0건·빈 값을 정상 상태로 처리하지 못함)이므로, 3번 수정 시 잔여 `Measure-Object` 사용처를 전수 조사해 함께 고쳤다. 회귀 테스트로 빈 입력에서 예외가 없고 정상 입력의 합계·제외 동작이 유지됨을 확인했다.
+
+## 보존 중인 실패 partial
+
+정책에 따라 삭제하지 않았다. 총 약 1.6 GB.
+
+| 경로 | 크기 |
+|---|---|
+| `before-transfer-e04abb769740-6f7682ed68e3.partial-30556` | 41 MB |
+| `before-transfer-20260721-103429-8e3546c83d7d.partial-48692` | 139 MB |
+| `before-transfer-20260721-110101-14277f98fb22.partial-26548` | 143 MB |
+| `before-transfer-20260721-110721-14277f98fb22.partial-47988` | 1.3 GB |
 
 5. **Organization·LFS 정책 일부 미확인**
    - `admin:org`, `admin:org_hook`, `read:project` 부족으로 조직 정책 일부를 확인하지 못했다.
