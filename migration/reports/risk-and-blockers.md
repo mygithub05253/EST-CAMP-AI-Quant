@@ -9,8 +9,63 @@
 | Phase 0 최신 조사 | PASS |
 | Gate A 신규 완전 백업 | **PASS — 4차 시도 성공** |
 | Phase 1 백업 실행 | **PASS — `before-transfer-20260721-111152-14277f98fb22`** |
-| Private 저장소·LFS upload | 별도 B1·B2 미승인 |
-| Repository Transfer | Gate B 승인 대기 (기술적 차단 해소) |
+| Repository Transfer | **PASS — 2026-07-21 완료** (`EST-Bootcamp-AI-Quant/EST-CAMP-AI-Quant`) |
+| Private 저장소·LFS upload | **BLOCKED — LFS 용량 초과** (아래 참조) |
+
+## Stage A (Organization Transfer) 완료 기록 — 2026-07-21
+
+`mygithub05253/EST-CAMP-AI-Quant` → `EST-Bootcamp-AI-Quant/EST-CAMP-AI-Quant` 이관 완료.
+
+| 검증 항목 | 결과 |
+|---|---|
+| branch 8개 (이름·SHA) | 전후 IDENTICAL |
+| workflow 1개 | 전후 IDENTICAL |
+| PR | 32개 유지 |
+| `main` | `88f85cc` — 로컬·원격 일치 |
+| 공개 여부 | public 유지 |
+| 구 경로 redirect | 동작 확인 |
+| 로컬 `origin` URL | 신 경로로 변경, fetch 성공 |
+
+- `admin:org` 스코프는 **불필요했다**. 조직 admin 역할 + `repo` 스코프로 전송이 성공했다.
+- 사전 PR 수 baseline 30은 pagination 미적용으로 잘린 값이었고, 실제 전후 모두 32개다. 손실 아님.
+- `--prune` 시 사라진 remote-tracking ref 4개는 이미 머지·삭제된 PR 브랜치의 잔재이며 데이터 손실이 아니다.
+
+### 후속 확인 필요
+
+- workflow `dynamic/agents/copilot-pull-request-reviewer`는 이관됐으나, 대상 조직에 Copilot App 설치가 0건이므로 **실제 동작 여부는 다음 PR에서 확인**해야 한다.
+- 구 경로 `mygithub05253/EST-CAMP-AI-Quant` 이름은 redirect 보존을 위해 재사용하지 않는다.
+
+## 자료 업로드 방침 (사용자 확정 — 2026-07-21)
+
+이전 문서에 "교재 PDF·ZIP은 GitHub 업로드 금지"로 잘못 기록돼 있었다. 사용자 확정 방침은 다음과 같다.
+
+- **데이터 + 교재 PDF·ZIP 모두 Private 보관 레포 이관 대상**이다.
+- 공개 레포에는 여전히 커밋하지 않는다.
+- 강사 배포 코드는 public 커밋 가능 (부트캠프 담당자 확인 목적).
+
+### Stage B 차단 요소 — LFS 용량 초과
+
+| 폴더 | 크기 | 파일 수 |
+|---|---|---|
+| `docs/book` | 538 MB | 20 |
+| `docs/zip` | 480 MB | 1 |
+| `docs/pdf` | 5 MB | 1 |
+| **합계** | **약 1,024 MB** | 22 |
+
+100 MB 초과로 **LFS가 필수인 파일 3개**:
+
+| 크기 | 파일 |
+|---|---|
+| 480 MB | `AI퀀트과정_교재.zip` |
+| 215 MB | `07-3. 투자분석 기초 방법론(기본적 분석).pdf` |
+| 169 MB | `07-4. 투자분석 기초 방법론(기술적 분석).pdf` |
+
+대상 조직 플랜은 **free = LFS 저장 1 GB / 대역폭 1 GB**다. 자료 총량이 약 1,024 MB이므로
+**추가 조치 없이는 들어가지 않는다.** Stage B 진행 전 아래 중 하나를 사용자가 선택해야 한다.
+
+1. LFS Data Pack 구매 (50 GB 단위 유료)
+2. `docs/zip`(480 MB) 제외 — 해당 zip이 `docs/book` PDF들의 묶음인지 중복 확인 후 결정
+3. 교재는 외부(로컬·클라우드) 백업만 유지하고 Private 레포에는 데이터만 이관
 
 ## 2026-07-21 해소된 차단 요소
 

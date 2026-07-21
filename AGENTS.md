@@ -90,7 +90,10 @@
 
 ## 7. 보안·주의사항
 
-- **교재·저작권 자료**(`docs/book`, `docs/pdf`, `docs/zip`, `*.pdf`, `*.zip`)는 절대 커밋하지 않는다 (`.gitignore` 적용).
+- **교재·데이터 자료**(`docs/book`, `docs/pdf`, `docs/zip`, `*.pdf`, `*.zip`, `data/raw`)는
+  **공개 레포에 커밋하지 않는다** (`.gitignore` 적용).
+  단, 조직 내 **Private 보관 레포로의 이관은 허용**한다 (사용자 확정 방침, 2026-07-21).
+  Private 이관 시에도 100 MB 초과 파일은 Git LFS가 필수이며, LFS 용량 승인 후에만 업로드한다.
 - **시크릿**(`.env`, API 키 등)은 커밋 금지.
 - 데이터 원본(`data/raw` 등)과 모델 아티팩트는 git 제외, 구조만 `.gitkeep`으로 추적.
 - 파괴적 git 작업(force push, reset --hard 등)은 사용자 확인 후에만.
