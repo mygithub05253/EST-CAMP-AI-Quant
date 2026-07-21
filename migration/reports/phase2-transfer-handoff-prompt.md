@@ -70,14 +70,12 @@ C:\Users\kik32\Backups\EST-CAMP-AI-Quant-Migration\before-transfer-20260721-1111
 
 ## 미해결 항목
 
-1. **실패 partial 4개 약 1.6 GB 보존 중** — 정리 여부 사용자 확인 필요.
-   - `before-transfer-e04abb769740-6f7682ed68e3.partial-30556` (41 MB)
-   - `before-transfer-20260721-103429-8e3546c83d7d.partial-48692` (139 MB)
-   - `before-transfer-20260721-110101-14277f98fb22.partial-26548` (143 MB)
-   - `before-transfer-20260721-110721-14277f98fb22.partial-47988` (1.3 GB)
-2. **`admin:org` 스코프 부재** — Transfer 실패 시 재인증 필요.
-3. **경로 결합** — 35개 notebook에 경로 리터럴 87회. 분리 전 현재 경로 유지 복제본으로 검증 필요.
-4. **저작권** — 교재 PDF·ZIP은 Private+LFS로도 재배포 권리가 해결되지 않는다.
+1. **`admin:org` 스코프 부재** — Transfer 실패 시 재인증 필요.
+2. **경로 결합** — 35개 notebook에 경로 리터럴 87회. 분리 전 현재 경로 유지 복제본으로 검증 필요.
+3. **저작권** — 교재 PDF·ZIP은 Private+LFS로도 재배포 권리가 해결되지 않는다.
+
+> 실패 partial 4개(약 1.6 GB)는 완전 백업 체크섬 36개 독립 재검증 후 삭제 완료.
+> 현재 백업 디렉터리에는 완결 백업 2개(1,248 MB + 40 MB)만 남아 있다.
 
 ---
 
