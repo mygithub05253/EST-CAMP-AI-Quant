@@ -77,8 +77,9 @@ zip 엔트리 20개를 압축 해제 스트림에서 SHA256으로 계산해 `doc
 |---|---|---|
 | `book/` | 교재 PDF 20개 (LFS) | 538 MB |
 | `pdf/` | OT 자료 1개 (LFS) | 5 MB |
-| `data/` | 실습 데이터 188개 | 8 MB |
-| **합계** | **209개 파일** | **551 MB** |
+| `data/` | 실습 데이터 189개 | 8 MB |
+| `lesson-pdf/` | 단원별 강의 PDF 3개 (LFS) | 3 MB |
+| **합계** | **213개 파일** | **554 MB** |
 
 `data/` 하위는 공개 저장소의 **원본 상대경로를 유지**한다(`data/` 접두어만 제거하면 복원됨).
 이는 미해결 항목인 "경로 결합"(notebook 경로 리터럴 87회)을 자극하지 않기 위한 선택이다.
@@ -113,9 +114,39 @@ free 조직의 LFS 대역폭은 **월 1 GB**다. 전체 clone 1회에 약 551 MB
 
 | 경로 | 처리 |
 |---|---|
-| `C:\Users\kik32\est-camp-archive-build` | 푸시한 레포의 로컬 빌드본(551 MB). 삭제 여부는 사용자 판단 대기 |
-| `C:\Users\kik32\est-camp-verify` | 검증용 클론. 삭제 완료 |
+| `C:\Users\kik32\est-camp-archive-build` | 로컬 빌드본. 사용자 승인 후 **삭제 완료** |
+| `C:\Users\kik32\est-camp-verify`, `-verify2` | 검증용 클론. **삭제 완료** |
 | `docs/zip` (원본, 480 MB) | 사용자 지시에 따라 **로컬 그대로 보존** |
+
+삭제 후 원본 자료(`docs/book` 538 MB, `docs/zip` 480 MB, 단원별 `pdf/`)가 모두 그대로임을 재확인했다.
+
+## gitignore 누락 자료 추가 보관 — 2026-07-21
+
+최초 등록 후 `git status --ignored` 전수 조사로 **공개 저장소에서 `.gitignore`로 제외돼
+어디에도 보관되지 않던 자료 4건**을 발견해 추가했다.
+
+| 보관 경로 | 크기 |
+|---|---|
+| `lesson-pdf/learning/04-math-statistics/pdf/` (2개) | 1.8 MB |
+| `lesson-pdf/learning/05-time-series/pdf/` (1개) | 1.4 MB |
+| `data/assignments/05-time-series/시계열_test_data.zip` | 0.1 MB |
+
+`.agents/`, `.serena/`, `.ipynb_checkpoints/`, `__pycache__/`, `.claude/worktrees/`는
+도구 캐시이므로 보관 대상에서 제외했다. 비-ignore 미추적 파일은 0건이었다.
+
+### 추가분 검증
+
+| 검증 | 결과 |
+|---|---|
+| 원본 → 스테이징 해시 | match=4 / mismatch=0 |
+| 원격 tree 해시 | 로컬과 완전 일치 (`24d8ff29`) |
+| LFS 오브젝트 | 28개 (기존 24 + 신규 4), OID·경로 완전 일치 |
+| tracked 파일 | 215개 (콘텐츠 213 + README + `.gitattributes`) |
+| private 여부 | true |
+
+> 공개 저장소의 `.gitignore`는 **변경하지 않았다.** 이 자료들은 교재·데이터에 해당하므로
+> 확정 방침("공개 레포 커밋 금지 / Private 이관")에 따라 archive 저장소에만 보관한다.
+> 공개 저장소에도 노출해야 하는 자료가 있다면 별도 승인 후 `.gitignore`를 수정한다.
 
 ### 확인된 리스크 발현 — Copilot 리뷰어 미동작
 
