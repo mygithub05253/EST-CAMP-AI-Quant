@@ -18,6 +18,17 @@ description: EST-Camp-AI-Quant 작업 진행 대시보드(progress_dashboard.htm
 3. 아래 4대 필수 요소를 채운다.
 4. (선택) 코드 변경이므로 `AGENTS.md` GitHub 규칙에 따라 브랜치→PR로 반영. 단순 기록성 갱신은 사용자 합의에 따른다.
 
+> ⚠️ **`dashboards/` 는 submodule 이다** (2026-07-21 Stage C → [est-camp-dashboards](https://github.com/EST-Bootcamp-AI-Quant/est-camp-dashboards)).
+> 부모 레포에서 `git add dashboards` 만 하면 **파일 내용이 아니라 gitlink 만** 잡힌다.
+> 반드시 아래 2단계로 커밋한다.
+>
+> ```bash
+> cd dashboards
+> git checkout main          # submodule 은 기본이 detached HEAD
+> git add . && git commit -m "docs: YYYY-MM-DD 대시보드" && git push
+> cd .. && git add dashboards   # 부모의 gitlink 갱신
+> ```
+
 ## 대시보드 필수 요소 (작업 대시보드 규칙)
 1. **무슨 작업**인지 — 유형(과제/프로젝트/학습/기획) 명시
 2. **규칙·요구사항·기한** — 운영진·강사 지침이 있으면 반드시 포함

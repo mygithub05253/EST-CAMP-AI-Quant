@@ -26,7 +26,21 @@ description: 부트캠프 일일/작업 마감을 한 번에 처리하는 오케
 - TIL 저장과 대시보드 갱신은 마감 시 **둘 다 필수**로 수행한다.
 
 ### [4] GitHub 푸시  → `github-flow` 스킬
-- `study/<주제>` 또는 `chore/worklog-YYYY-MM-DD` 브랜치를 파서 **commit → push → PR → auto merge → main pull** 까지 완료한다.
+
+> ⚠️ **`worklogs/` 와 `dashboards/` 는 submodule 이다** (2026-07-21 Stage C).
+> 이 두 경로의 변경은 **부모 레포 커밋에 잡히지 않는다.** 반드시 submodule 안에서 먼저 커밋·푸시한다.
+
+```bash
+# 1) 각 submodule 안에서 먼저 커밋·푸시 (detached HEAD 주의)
+cd worklogs   && git checkout main && git add . && git commit -m "docs: ..." && git push && cd ..
+cd dashboards && git checkout main && git add . && git commit -m "docs: ..." && git push && cd ..
+
+# 2) 부모 레포에서 학습 산출물 + gitlink 갱신을 함께 커밋
+git add learning assignments worklogs dashboards
+```
+
+- 부모 레포는 `study/<주제>` 또는 `chore/worklog-YYYY-MM-DD` 브랜치로
+  **commit → push → PR → auto merge → main pull** 까지 완료한다.
 - 커밋 메시지 예: `study: 2026-06-17 TIL 01단원 정리`
 - auto merge 후 로컬 `main` 으로 체크아웃 후 `git pull` 하여 동기화한다.
 
@@ -34,6 +48,8 @@ description: 부트캠프 일일/작업 마감을 한 번에 처리하는 오케
 - [ ] `worklogs/YYYY-MM-DD_주제.md` 일자별 저장 (TIL 본문 — 노션 붙여넣기용)
 - [ ] 사용자에게 노션 붙여넣기 안내 완료
 - [ ] `dashboards/YYYY-MM-DD/progress_dashboard.html` 갱신
+- [ ] **submodule(`worklogs`·`dashboards`) 각각 커밋·푸시 완료** ★
+- [ ] **부모 레포 gitlink 갱신 커밋 포함** ★
 - [ ] 산출물(코드/노트북) 커밋 포함 여부 확인
 - [ ] 교재·시크릿 미포함 확인 (`git status`)
 - [ ] PR merge 후 main 동기화
