@@ -1,0 +1,508 @@
+﻿{
+    "collectedAtKst":  "2026-07-20T12:48:04.2917972+09:00",
+    "sourceRepository":  "mygithub05253/EST-CAMP-AI-Quant",
+    "branches":  {
+                     "status":  "success",
+                     "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/branches?per_page=100",
+                     "exitCode":  0,
+                     "error":  null,
+                     "data":  [
+                                  {
+                                      "name":  "claude/crazy-galileo-1843d8",
+                                      "sha":  "50598714f4e1888a731c8c3d66b1430d971e3c1c",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "docs/manual-notion-and-dashboard-rule",
+                                      "sha":  "d5b507283ee89daeda0fccd431aa53b46fd2440d",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "docs/til-tips-and-branch-pr-rule",
+                                      "sha":  "15e121c68cdd29cd192527d53310c90a91328eb2",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "main",
+                                      "sha":  "e04abb769740c3d0057aac4e6baef022c503930b",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "study/01-python-basic-collections-control",
+                                      "sha":  "f96ce5fa79924ad1b2b4337345758f5cf83583ea",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "study/01-python-basic-datatypes",
+                                      "sha":  "e72d8ebd01539bce23d08f859022e96d1e9934e0",
+                                      "protected":  false
+                                  },
+                                  {
+                                      "name":  "study/2026-07-06_07-10-time-series-eda",
+                                      "sha":  "fb153d69a252df920ef7d5d303a84ec1d5c54e0d",
+                                      "protected":  false
+                                  }
+                              ]
+                 },
+    "tags":  {
+                 "status":  "success",
+                 "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/tags?per_page=100",
+                 "exitCode":  0,
+                 "error":  null,
+                 "data":  [
+
+                          ]
+             },
+    "issues":  {
+                   "status":  "success",
+                   "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/issues?state=all\u0026per_page=100",
+                   "exitCode":  0,
+                   "error":  null,
+                   "data":  [
+
+                            ]
+               },
+    "pullRequests":  {
+                         "status":  "success",
+                         "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/pulls?state=all\u0026per_page=100",
+                         "exitCode":  0,
+                         "error":  null,
+                         "data":  [
+                                      {
+                                          "id":  4073057735,
+                                          "number":  27,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-07-17T01:36:06Z",
+                                          "mergeCommitSha":  "e04abb769740c3d0057aac4e6baef022c503930b",
+                                          "headSha":  "a3778f3ad041bb46d0a12445a3c57f1ea09a763f",
+                                          "baseSha":  "fedbfced9f1b9d87c0a93adf573b7efcaee5a0fd"
+                                      },
+                                      {
+                                          "id":  4034293652,
+                                          "number":  26,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-07-11T06:26:45Z",
+                                          "mergeCommitSha":  "fedbfced9f1b9d87c0a93adf573b7efcaee5a0fd",
+                                          "headSha":  "fb153d69a252df920ef7d5d303a84ec1d5c54e0d",
+                                          "baseSha":  "a8de1cd7aabd8dd8fce043dd4565118aa1f23c6a"
+                                      },
+                                      {
+                                          "id":  4002888443,
+                                          "number":  25,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-07-06T23:47:47Z",
+                                          "mergeCommitSha":  "a8de1cd7aabd8dd8fce043dd4565118aa1f23c6a",
+                                          "headSha":  "fc310688343ccc9e1e9340be1a88de26444dceb7",
+                                          "baseSha":  "add5a5807ab4ab8c236fae60ac9e3847626118df"
+                                      },
+                                      {
+                                          "id":  3985809442,
+                                          "number":  24,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-07-03T11:55:32Z",
+                                          "mergeCommitSha":  "add5a5807ab4ab8c236fae60ac9e3847626118df",
+                                          "headSha":  "2cfd794f35d901421afb48603979351d053050cb",
+                                          "baseSha":  "b7a83219d7dbe74071ed0eca15896f6653ce3e33"
+                                      },
+                                      {
+                                          "id":  3977957493,
+                                          "number":  23,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-07-02T11:51:12Z",
+                                          "mergeCommitSha":  "b7a83219d7dbe74071ed0eca15896f6653ce3e33",
+                                          "headSha":  "a11d99153cef6e3396af7f0b58deac8aadb20bdc",
+                                          "baseSha":  "fb557de36c593bfda4b0657a4059c99e9e80fdb8"
+                                      },
+                                      {
+                                          "id":  3941523391,
+                                          "number":  22,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-26T10:13:19Z",
+                                          "mergeCommitSha":  "fb557de36c593bfda4b0657a4059c99e9e80fdb8",
+                                          "headSha":  "f023cc77e6299f1dd45f6619dbedf05b61fc0f7c",
+                                          "baseSha":  "14bfaaa12a105671bc5847731f7f4287906e802d"
+                                      },
+                                      {
+                                          "id":  3941509352,
+                                          "number":  21,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-26T10:10:43Z",
+                                          "mergeCommitSha":  "14bfaaa12a105671bc5847731f7f4287906e802d",
+                                          "headSha":  "ba4c5ece135c7585df509d2143a1b1dfdea46122",
+                                          "baseSha":  "7f5a26f1e89ce14c3cd5cc0d12674066c21139a7"
+                                      },
+                                      {
+                                          "id":  3941495898,
+                                          "number":  20,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-26T10:08:08Z",
+                                          "mergeCommitSha":  "7f5a26f1e89ce14c3cd5cc0d12674066c21139a7",
+                                          "headSha":  "edd33abc694a7f19c8d05213de4a45d9fb5939e9",
+                                          "baseSha":  "db3cd8c5bf4e6438e88861f63e137163ee796da2"
+                                      },
+                                      {
+                                          "id":  3923929882,
+                                          "number":  19,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-24T00:06:36Z",
+                                          "mergeCommitSha":  "db3cd8c5bf4e6438e88861f63e137163ee796da2",
+                                          "headSha":  "8be01c24ab73eea8bbce56ddd8275327c8eed578",
+                                          "baseSha":  "c0fbefe7d2b7f292c85d3d0d4fce042aae8e68cd"
+                                      },
+                                      {
+                                          "id":  3916181224,
+                                          "number":  18,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-23T00:13:33Z",
+                                          "mergeCommitSha":  "c0fbefe7d2b7f292c85d3d0d4fce042aae8e68cd",
+                                          "headSha":  "5c5faf72f786f7700ff751960a5817fec7305d00",
+                                          "baseSha":  "f621e07678a5dc9939bcc6f92c7cf21ed17e995d"
+                                      },
+                                      {
+                                          "id":  3916176397,
+                                          "number":  17,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-23T00:12:27Z",
+                                          "mergeCommitSha":  "f621e07678a5dc9939bcc6f92c7cf21ed17e995d",
+                                          "headSha":  "d9de60c5e8d0cf286d364d5427360a9d7338e82e",
+                                          "baseSha":  "baaef2306d3a03d8bdfc1d67ff45babb34c133f9"
+                                      },
+                                      {
+                                          "id":  3895149241,
+                                          "number":  16,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-18T23:56:20Z",
+                                          "mergeCommitSha":  "baaef2306d3a03d8bdfc1d67ff45babb34c133f9",
+                                          "headSha":  "7238ff5c9a82363099004c4b81c65254fd31512e",
+                                          "baseSha":  "1f3d205ac0ae8d4656a9e7425a852a42fbeed047"
+                                      },
+                                      {
+                                          "id":  3882178536,
+                                          "number":  15,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-17T09:14:49Z",
+                                          "mergeCommitSha":  "1f3d205ac0ae8d4656a9e7425a852a42fbeed047",
+                                          "headSha":  "f96ce5fa79924ad1b2b4337345758f5cf83583ea",
+                                          "baseSha":  "62570d9ba79021d5e6a9293d22dfde8ef95120a9"
+                                      },
+                                      {
+                                          "id":  3874138716,
+                                          "number":  14,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T08:39:02Z",
+                                          "mergeCommitSha":  "62570d9ba79021d5e6a9293d22dfde8ef95120a9",
+                                          "headSha":  "e72d8ebd01539bce23d08f859022e96d1e9934e0",
+                                          "baseSha":  "cff72d1875208e1c95e967db9e8c9b3b5945b1e9"
+                                      },
+                                      {
+                                          "id":  3874083051,
+                                          "number":  13,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T08:28:37Z",
+                                          "mergeCommitSha":  "cff72d1875208e1c95e967db9e8c9b3b5945b1e9",
+                                          "headSha":  "d5b507283ee89daeda0fccd431aa53b46fd2440d",
+                                          "baseSha":  "36455f7609e26430957074f5aaa1de065e5d67bf"
+                                      },
+                                      {
+                                          "id":  3874046314,
+                                          "number":  12,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T08:22:41Z",
+                                          "mergeCommitSha":  "36455f7609e26430957074f5aaa1de065e5d67bf",
+                                          "headSha":  "15e121c68cdd29cd192527d53310c90a91328eb2",
+                                          "baseSha":  "aae72122cdfeaedab9524c52ae90dad95ca9b90e"
+                                      },
+                                      {
+                                          "id":  3874020700,
+                                          "number":  11,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T08:18:55Z",
+                                          "mergeCommitSha":  "aae72122cdfeaedab9524c52ae90dad95ca9b90e",
+                                          "headSha":  "50598714f4e1888a731c8c3d66b1430d971e3c1c",
+                                          "baseSha":  "b28441c6acd5474b61450a4840e7b700ed1591e1"
+                                      },
+                                      {
+                                          "id":  3872247235,
+                                          "number":  10,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:41:05Z",
+                                          "mergeCommitSha":  "b28441c6acd5474b61450a4840e7b700ed1591e1",
+                                          "headSha":  "45f5d6d067bb78e3e9dd3014c7933b9ee242c435",
+                                          "baseSha":  "730ac1924af5adbaba911890a986f4de55b7632d"
+                                      },
+                                      {
+                                          "id":  3872242602,
+                                          "number":  9,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:40:02Z",
+                                          "mergeCommitSha":  "730ac1924af5adbaba911890a986f4de55b7632d",
+                                          "headSha":  "731538337b3d0246de9809ad0e027c404ae02ef6",
+                                          "baseSha":  "ffa0969d53306b600476e802176dbc266aa5f3c7"
+                                      },
+                                      {
+                                          "id":  3872238995,
+                                          "number":  8,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:39:07Z",
+                                          "mergeCommitSha":  "ffa0969d53306b600476e802176dbc266aa5f3c7",
+                                          "headSha":  "5cad1ac3c410275e31bdf660877fe7e2551d15c1",
+                                          "baseSha":  "acd0b6bdffde29b6e2b527d5c9bec24d8a415f79"
+                                      },
+                                      {
+                                          "id":  3872155842,
+                                          "number":  7,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:15:35Z",
+                                          "mergeCommitSha":  "acd0b6bdffde29b6e2b527d5c9bec24d8a415f79",
+                                          "headSha":  "12056b3ab11e5c484c09b5df89a6a25f6a4ed2b0",
+                                          "baseSha":  "1bea1956846f2c76c3d515cbd038fcb26785e569"
+                                      },
+                                      {
+                                          "id":  3872151440,
+                                          "number":  6,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:14:25Z",
+                                          "mergeCommitSha":  "1bea1956846f2c76c3d515cbd038fcb26785e569",
+                                          "headSha":  "b36a50f2538cc64888eca3f76565c0134214f2c4",
+                                          "baseSha":  "16f572a3761709adf20ee83e80fd9b853a26090c"
+                                      },
+                                      {
+                                          "id":  3872148631,
+                                          "number":  5,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:13:40Z",
+                                          "mergeCommitSha":  "16f572a3761709adf20ee83e80fd9b853a26090c",
+                                          "headSha":  "4c3d20759dea9c88476bbb4c904de75fd1b2f31d",
+                                          "baseSha":  "7fb7fc4ee86e013ceb7dec7ef9289c90179e0d41"
+                                      },
+                                      {
+                                          "id":  3872146074,
+                                          "number":  4,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:12:51Z",
+                                          "mergeCommitSha":  "7fb7fc4ee86e013ceb7dec7ef9289c90179e0d41",
+                                          "headSha":  "c2deab86b15e1015ecbe4d3ef8de7d2a8ad089b3",
+                                          "baseSha":  "2864e488a5922aca478ee7de78d442ac538ee098"
+                                      },
+                                      {
+                                          "id":  3872143002,
+                                          "number":  3,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:11:46Z",
+                                          "mergeCommitSha":  "2864e488a5922aca478ee7de78d442ac538ee098",
+                                          "headSha":  "7192bded3bbfc5ad9b36842c5dff3fcaadac8b0f",
+                                          "baseSha":  "3c826fbe15cbd6ced517e957522cc98673895683"
+                                      },
+                                      {
+                                          "id":  3872132283,
+                                          "number":  2,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:08:45Z",
+                                          "mergeCommitSha":  "3c826fbe15cbd6ced517e957522cc98673895683",
+                                          "headSha":  "3ba6ab367d88079fecc9d8cd76736b4b6e409e8e",
+                                          "baseSha":  "b5b83938658b57c9ac783d8b7322ae486f4b2a5d"
+                                      },
+                                      {
+                                          "id":  3872127450,
+                                          "number":  1,
+                                          "state":  "closed",
+                                          "mergedAt":  "2026-06-16T01:07:20Z",
+                                          "mergeCommitSha":  "b5b83938658b57c9ac783d8b7322ae486f4b2a5d",
+                                          "headSha":  "a8c98dc5f196799eb5d5e6a407baba7b3e7b4d1d",
+                                          "baseSha":  "5ea9b7fcfe5b7b2be3392c466999a200c0865d7d"
+                                      }
+                                  ]
+                     },
+    "releases":  {
+                     "status":  "success",
+                     "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/releases?per_page=100",
+                     "exitCode":  0,
+                     "error":  null,
+                     "data":  [
+
+                              ]
+                 },
+    "labels":  {
+                   "status":  "success",
+                   "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/labels?per_page=100",
+                   "exitCode":  0,
+                   "error":  null,
+                   "data":  [
+                                {
+                                    "id":  11245991207,
+                                    "name":  "bug",
+                                    "color":  "d73a4a",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991212,
+                                    "name":  "documentation",
+                                    "color":  "0075ca",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991217,
+                                    "name":  "duplicate",
+                                    "color":  "cfd3d7",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991223,
+                                    "name":  "enhancement",
+                                    "color":  "a2eeef",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991233,
+                                    "name":  "good first issue",
+                                    "color":  "7057ff",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991226,
+                                    "name":  "help wanted",
+                                    "color":  "008672",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991239,
+                                    "name":  "invalid",
+                                    "color":  "e4e669",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991245,
+                                    "name":  "question",
+                                    "color":  "d876e3",
+                                    "default":  true
+                                },
+                                {
+                                    "id":  11245991249,
+                                    "name":  "wontfix",
+                                    "color":  "ffffff",
+                                    "default":  true
+                                }
+                            ]
+               },
+    "milestones":  {
+                       "status":  "success",
+                       "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/milestones?state=all\u0026per_page=100",
+                       "exitCode":  0,
+                       "error":  null,
+                       "data":  [
+
+                                ]
+                   },
+    "environments":  {
+                         "status":  "success",
+                         "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/environments?per_page=100",
+                         "exitCode":  0,
+                         "error":  null,
+                         "data":  {
+                                      "totalCount":  1,
+                                      "items":  [
+                                                    {
+                                                        "id":  17546102497,
+                                                        "name":  "copilot",
+                                                        "protectionRuleCount":  0
+                                                    }
+                                                ]
+                                  }
+                     },
+    "actionsWorkflows":  {
+                             "status":  "success",
+                             "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/actions/workflows?per_page=100",
+                             "exitCode":  0,
+                             "error":  null,
+                             "data":  {
+                                          "totalCount":  1,
+                                          "items":  [
+                                                        {
+                                                            "id":  305959332,
+                                                            "name":  "Copilot",
+                                                            "path":  "dynamic/agents/copilot-pull-request-reviewer",
+                                                            "state":  "active"
+                                                        }
+                                                    ]
+                                      }
+                         },
+    "actionsVariables":  {
+                             "status":  "success",
+                             "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/actions/variables?per_page=100",
+                             "exitCode":  0,
+                             "error":  null,
+                             "data":  {
+                                          "totalCount":  0,
+                                          "variables":  [
+
+                                                        ],
+                                          "valuesStored":  false
+                                      }
+                         },
+    "actionsSecrets":  {
+                           "status":  "success",
+                           "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/actions/secrets?per_page=100",
+                           "exitCode":  0,
+                           "error":  null,
+                           "data":  {
+                                        "totalCount":  0,
+                                        "secrets":  [
+
+                                                    ],
+                                        "valuesStored":  false
+                                    }
+                       },
+    "deployKeys":  {
+                       "status":  "success",
+                       "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/keys?per_page=100",
+                       "exitCode":  0,
+                       "error":  null,
+                       "data":  [
+
+                                ]
+                   },
+    "webhooks":  {
+                     "status":  "success",
+                     "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/hooks?per_page=100",
+                     "exitCode":  0,
+                     "error":  null,
+                     "data":  [
+
+                              ]
+                 },
+    "pages":  {
+                  "status":  "unavailable",
+                  "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/pages",
+                  "exitCode":  1,
+                  "error":  "gh.exe : gh: Not Found (HTTP 404)",
+                  "data":  null
+              },
+    "collaborators":  {
+                          "status":  "success",
+                          "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/collaborators?affiliation=all\u0026per_page=100",
+                          "exitCode":  0,
+                          "error":  null,
+                          "data":  [
+                                       {
+                                           "login":  "mygithub05253",
+                                           "roleName":  "admin"
+                                       }
+                                   ]
+                      },
+    "rulesets":  {
+                     "status":  "success",
+                     "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/rulesets?per_page=100",
+                     "exitCode":  0,
+                     "error":  null,
+                     "data":  [
+
+                              ]
+                 },
+    "branchProtection":  {
+                             "status":  "unavailable",
+                             "endpoint":  "repos/mygithub05253/EST-CAMP-AI-Quant/branches/main/protection",
+                             "exitCode":  1,
+                             "error":  "gh.exe : gh: Branch not protected (HTTP 404)",
+                             "data":  null
+                         }
+}

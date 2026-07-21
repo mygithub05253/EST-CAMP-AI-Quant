@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.0",
+  "collectedAtKst": "2026-07-21T09:33:10+09:00",
+  "phase": "Phase 0 - 최신 상태 재조사",
+  "verdicts": {
+    "phase0": "PASS",
+    "approvalGateA": "USER_APPROVAL_REQUIRED",
+    "phase1CompleteBackup": "NO_GO_UNTIL_SCRIPT_HARDENED_AND_GATE_A_APPROVED",
+    "repositoryTransfer": "NO_GO",
+    "privateRepositoryCreation": "NOT_AUTHORIZED",
+    "privateLfsUpload": "NOT_AUTHORIZED"
+  },
+  "changesPerformed": {
+    "githubRemoteMutation": false,
+    "gitFetchOrPull": false,
+    "branchOrHeadChange": false,
+    "backupCreated": false,
+    "repositoryCreated": false,
+    "repositoryTransferred": false,
+    "lfsUpload": false,
+    "existingUserFileModified": false,
+    "migrationAllowlistReportsWritten": true
+  },
+  "sourceRepository": {
+    "nameWithOwner": "mygithub05253/EST-CAMP-AI-Quant",
+    "repositoryId": 1270665344,
+    "nodeId": "R_kgDOS7zQgA",
+    "visibility": "PUBLIC",
+    "defaultBranch": "main",
+    "mainSha": "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "apiSizeKb": 17817,
+    "permissions": {
+      "admin": true,
+      "push": true,
+      "pull": true
+    }
+  },
+  "targetOrganization": {
+    "login": "EST-Bootcamp-AI-Quant",
+    "organizationId": 306939834,
+    "nodeId": "O_kgDOEkuHug",
+    "plan": "free",
+    "authenticatedUser": "mygithub05253",
+    "membershipState": "active",
+    "membershipRole": "admin",
+    "canCreatePublicRepositories": true,
+    "canCreatePrivateRepositories": true,
+    "canChangeRepositoryVisibility": true,
+    "repositoryCount": 0,
+    "targetNameCollision": false,
+    "unknownBecauseOfOauthScope": [
+      "organization Actions 정책 및 기본 workflow 권한",
+      "organization rulesets",
+      "organization Actions secret/variable 이름",
+      "organization webhooks",
+      "Projects v2 자산"
+    ]
+  },
+  "githubAssets": {
+    "branches": 8,
+    "protectedBranches": 0,
+    "tags": 0,
+    "openIssues": 0,
+    "pullRequestsTotal": 28,
+    "openPullRequests": 0,
+    "releases": 0,
+    "labels": 9,
+    "milestones": 0,
+    "environments": 1,
+    "actionsWorkflows": 1,
+    "repositoryActionsSecretNames": 0,
+    "repositoryActionsVariableNames": 0,
+    "deployKeys": 0,
+    "webhooks": 0,
+    "collaborators": 1,
+    "repositoryRulesets": 0,
+    "pagesConfigured": false
+  },
+  "localRepository": {
+    "root": "C:\\Users\\kik32\\workspace\\EST-Camp-AI-Quant",
+    "branch": "main",
+    "headSha": "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "originMainSha": "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "liveRemoteMainSha": "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "ahead": 0,
+    "behind": 0,
+    "trackedDiffFiles": 0,
+    "stagedFiles": 0,
+    "localBranches": 10,
+    "remoteBranches": 8,
+    "tags": 0,
+    "stashes": 1,
+    "linkedWorktrees": 4,
+    "linkedWorktreesWithUntrackedToolFiles": 2,
+    "nonMigrationUntracked": [
+      {
+        "path": "assignments/05-time-series/시계열분석_풀이.ipynb",
+        "sizeBytes": 461845,
+        "sha256": "5207E9F9B254D4B1E5B6C29566952AA8037BA9FD8A3DB81B961A1E5807E38CDF"
+      },
+      {
+        "path": "docs/image/web-cam-image.jpg",
+        "sizeBytes": 311060,
+        "sha256": "6A189299ED457513B80FE9936F3AEC01DE90558F04A8623044D1C6B17FCED8AE"
+      },
+      {
+        "path": "docs/image/zoom-web-cam-image.png",
+        "sizeBytes": 311060,
+        "sha256": "6A189299ED457513B80FE9936F3AEC01DE90558F04A8623044D1C6B17FCED8AE"
+      }
+    ],
+    "gitFsckFull": "PASS_WITH_DANGLING_OBJECTS",
+    "submodules": 0,
+    "gitAttributesFileExists": false
+  },
+  "materials": {
+    "manifest": "migration/reports/material-manifest.json",
+    "manifestSha256": "99ABEA79A9836AF81BB1B0B44BEF70DF85811B53FCBE962929A9676AB7081F47",
+    "manifestExactRehash": true,
+    "fileCount": 348,
+    "sizeBytes": 1125762859,
+    "tracked": {
+      "fileCount": 263,
+      "sizeBytes": 30487473
+    },
+    "untracked": {
+      "fileCount": 3,
+      "sizeBytes": 1083965
+    },
+    "ignored": {
+      "fileCount": 82,
+      "sizeBytes": 1094191421
+    },
+    "over100MiBFiles": 3,
+    "notebookCheckpointsForBackupOnly": 53
+  },
+  "pathCoupling": {
+    "notebooks": 35,
+    "literalPathUses": 87,
+    "inputUses": 66,
+    "imageUses": 12,
+    "outputUses": 9,
+    "missingTargets": 28,
+    "missingInputTargets": 25,
+    "pathAbstractions": 0
+  },
+  "securityScan": {
+    "secretRegexCandidates": 0,
+    "secretFileNameCandidates": 0,
+    "residentRegistrationNumberFormatCandidates": 2,
+    "phoneNumberFormatCandidates": 1,
+    "candidateValuesStoredInReports": false,
+    "historyScanComplete": false,
+    "oldOwnerReferencesOutsideMigration": 0,
+    "absolutePathCleanupRequired": true
+  },
+  "gitLfs": {
+    "version": "3.5.1",
+    "filterConfigured": true,
+    "trackedPatterns": 0,
+    "pointerFiles": 0,
+    "localObjects": 0,
+    "candidateFiles": 219,
+    "candidateLogicalBytes": 1090034949,
+    "candidateUniqueObjects": 210,
+    "candidateUniqueBytes": 1088997479,
+    "organizationQuotaVerified": false
+  },
+  "disk": {
+    "drive": "C:",
+    "freeBytes": 198867787776,
+    "freeGiB": 185.21,
+    "phase1AdditionalUpperBoundGb": 1.45,
+    "weekendAdditionalUpperBoundGb": 9.3,
+    "capacityAssessment": "SUFFICIENT_RECHECK_AT_GATE_A"
+  },
+  "backup": {
+    "newPhase1BackupCreated": false,
+    "expectedRoot": "C:\\Users\\kik32\\Backups\\EST-CAMP-AI-Quant-Migration",
+    "estimatedRootSnapshotFileCount": 486,
+    "estimatedRootSnapshotBytes": 1126611563,
+    "oldVerifiedGitOnlyBackupHead": "e04abb769740c3d0057aac4e6baef022c503930b",
+    "oldBackupMatchesCurrentHead": false,
+    "currentBackupScriptRemoteMirrorBundle": "PASS",
+    "currentBackupScriptCompleteLocalState": "GAP"
+  },
+  "changesSince2026-07-20": {
+    "mainSha": "e04abb769740c3d0057aac4e6baef022c503930b -> 8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "repositorySizeKb": "14027 -> 17817",
+    "remoteBranches": "7 -> 8",
+    "pullRequests": "27 -> 28",
+    "trackedMaterialFiles": "251 -> 263",
+    "untrackedMaterialFiles": "10 -> 3",
+    "ignoredMaterialFiles": "79 -> 82",
+    "pathCoupledNotebooks": "34 -> 35",
+    "literalPathUses": "84 -> 87"
+  },
+  "hardBlockers": [
+    "현재 HEAD와 로컬 상태를 모두 포함한 fresh 완전 백업이 아직 없음",
+    "완전 백업 스크립트에 local-only refs, stash, linked worktree, working-tree SHA exact 검증 보완 필요",
+    "미추적 수업 풀이 노트북과 이미지가 있어 cutover baseline이 고정되지 않음",
+    "개인정보 형식 후보의 진위와 Git history 범위 검사가 끝나지 않음",
+    "Organization 정책 및 LFS quota 일부가 미확인",
+    "교재와 데이터의 Private 클라우드 보관 및 재배포 권리 미확인",
+    "Private 저장소 생성과 LFS 업로드는 별도 승인을 받지 않음"
+  ]
+}

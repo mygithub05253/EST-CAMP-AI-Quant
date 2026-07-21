@@ -1,0 +1,2516 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-07-21T09:24:25+09:00",
+  "repositoryRoot": "C:/Users/kik32/workspace/EST-Camp-AI-Quant",
+  "scope": {
+    "roots": [
+      "docs",
+      "learning",
+      "assignments",
+      "projects"
+    ],
+    "description": "???????????PDF????????/?? ???? data ?? ??"
+  },
+  "sourceRevalidation": {
+    "verifiedAt": "2026-07-21T09:24:27+09:00",
+    "passes": 2,
+    "exactMatch": true,
+    "fieldsCompared": [
+      "relativePath",
+      "sizeBytes",
+      "sha256",
+      "gitStatus",
+      "category"
+    ]
+  },
+  "totals": {
+    "fileCount": 348,
+    "sizeBytes": 1125762859,
+    "byGitStatus": {
+      "tracked": {
+        "fileCount": 263,
+        "sizeBytes": 30487473
+      },
+      "untracked": {
+        "fileCount": 3,
+        "sizeBytes": 1083965
+      },
+      "ignored": {
+        "fileCount": 82,
+        "sizeBytes": 1094191421
+      }
+    },
+    "byCategory": {
+      "archive": {
+        "fileCount": 5,
+        "sizeBytes": 504180917
+      },
+      "array-data": {
+        "fileCount": 7,
+        "sizeBytes": 56896
+      },
+      "image": {
+        "fileCount": 14,
+        "sizeBytes": 5214156
+      },
+      "notebook": {
+        "fileCount": 67,
+        "sizeBytes": 18398672
+      },
+      "notebook-checkpoint": {
+        "fileCount": 53,
+        "sizeBytes": 17094621
+      },
+      "other-data": {
+        "fileCount": 5,
+        "sizeBytes": 1103
+      },
+      "pdf": {
+        "fileCount": 24,
+        "sizeBytes": 572915883
+      },
+      "tabular-data": {
+        "fileCount": 173,
+        "sizeBytes": 7900611
+      }
+    }
+  },
+  "files": [
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day01-checkpoint.ipynb",
+      "sizeBytes": 4281,
+      "sha256": "61b76824498afb0c40d61730a095ac86c67d45237df9203ab95c9d795ea887d0",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day02-checkpoint.ipynb",
+      "sizeBytes": 8879,
+      "sha256": "07d82c48523293f0f3a0904270d1c7c7e72e764a5fa4389b2965bbc2e042a8e4",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day03-checkpoint.ipynb",
+      "sizeBytes": 9693,
+      "sha256": "0e870dd682e145d78b57b78df5c74d99c6579d0c9f9c73d27512f89fd5d20a88",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day04-checkpoint.ipynb",
+      "sizeBytes": 6476,
+      "sha256": "4b0e0a2e71d5f224b0b1eafdca79e62c384b332dd8f744ccf95ed4cf07f13cdc",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day05-checkpoint.ipynb",
+      "sizeBytes": 11120,
+      "sha256": "e5f7834e1ae863261f87d852c99627999ff7e1698120d6b12658f9840ef594de",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day07-checkpoint.ipynb",
+      "sizeBytes": 10933,
+      "sha256": "e7214190ec12d1c9d10406e241ae197e1dc04afbe946cc33ce3dd5135ee5831f",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/.ipynb_checkpoints/Day09_occupation_문제-checkpoint.ipynb",
+      "sizeBytes": 20718,
+      "sha256": "998f46f1ffa9d61d5a39ce6dfadd02e400af83721e27bcbe4707cffde1138051",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/01-python-basic/Day01.ipynb",
+      "sizeBytes": 4463,
+      "sha256": "88bfb2f89e536eccca05a3c55e8df4e16bd66b42642b1f1e225189e25c223c1c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/01-python-basic/Day02.ipynb",
+      "sizeBytes": 9304,
+      "sha256": "3031b120167cba711c9bf262cb49de3d3a40108208e9822e10d346aab70d2ac9",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/01-python-basic/Day03.ipynb",
+      "sizeBytes": 10160,
+      "sha256": "eec10d7a3e7fda103a5ba9e66d0f479715d70c7da90eaf7c2fcc120183c5667c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/01-python-basic/Day04.ipynb",
+      "sizeBytes": 6785,
+      "sha256": "6f9f80cf8c62995af5087320a2c8ecf50f2c1c813d13388d03aef0e070e799ad",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/01-python-basic/Day05.ipynb",
+      "sizeBytes": 11579,
+      "sha256": "5e75866e071dd73cbf836b860c6242cc0bb11fbaf69c3e354cae916fc94b8b3a",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day07.ipynb",
+      "sizeBytes": 11354,
+      "sha256": "6204d67a0247adee410b86b5419c3a34d0f508153a89ed896afea2c6c5467fd2",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_Fictional_Army_문제.ipynb",
+      "sizeBytes": 4650,
+      "sha256": "8b16cb80a6c5ed1c7ea09e9e55869e54002766b5c6cb854ba3e68658adbb1ac0",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_Fictional_Army_문제_해설.ipynb",
+      "sizeBytes": 53744,
+      "sha256": "b95e5d8d789d0e0bc0646df24cecd2da01fd281af0d31fc66434599ce38ad6cc",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_euro12_문제.ipynb",
+      "sizeBytes": 4419,
+      "sha256": "052febebbb72ddbd9c60886fd8e354882c908f1d040ecf4c35f716897c3a1f43",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_euro12_문제_해설.ipynb",
+      "sizeBytes": 87012,
+      "sha256": "9fc9b3a1b5366fbc03d25a6ddecef1d5a93d06a96b4ada445430446a577c904c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_student_alcohol_consumption_문제.ipynb",
+      "sizeBytes": 2643,
+      "sha256": "cd618b5081cac3426f90e9b55fa2b5b3bfecd47f8cc60f812d524c80fc8a5e18",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_student_alcohol_consumption_문제_해설.ipynb",
+      "sizeBytes": 46968,
+      "sha256": "45b4439e99969484dc6c1a9bf05ba3ccd98c77d74be77c7bce19449cea774a37",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_누락데이터처리.ipynb",
+      "sizeBytes": 3173,
+      "sha256": "9706352d1b7277e9553b45af155872b0d88f2c90ce7320b6ba220374054cca4c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_판다스_연습문제1.ipynb",
+      "sizeBytes": 32291,
+      "sha256": "1913423ef2804174a2357bbb22fc72469877e2b3783b571c486270c2790ace82",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day08_판다스_연습문제1_해설.ipynb",
+      "sizeBytes": 5540,
+      "sha256": "49a7100a24ffccb2dc88a4f4fe9ac99a550fba316990168a4fc2816b44bf8775",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day09_occupation_문제.ipynb",
+      "sizeBytes": 21466,
+      "sha256": "4031e5bc12e6eb93afca034c4431b4c481b817c633c6be74c17f5edba7300290",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day09_vaccine_문제.ipynb",
+      "sizeBytes": 2008,
+      "sha256": "f41c8080e3417916534d7b59051ea4aed770fe689fb3a903b20a06227aef0742",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day09_vaccine_문제_해설.ipynb",
+      "sizeBytes": 25566,
+      "sha256": "e5758667610a02661e50036c2cd39a4fcf3ecbb662f6d08dd9fe1b228e20309a",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/02-preprocessing/Day_08_누락데이터처리_해설.ipynb",
+      "sizeBytes": 18515,
+      "sha256": "6763f40cd565fba1e84ba8e6604ba6fb20b5994bb459be4e6892ad986c88b454",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/03-visualization/06-30-preprocessing-vizualization-test.ipynb",
+      "sizeBytes": 426336,
+      "sha256": "7b54283a2217c28bc2772fd1f1fe1ee643c28c8613d6874e1c0e7ae262a54e6c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/04-math-statistics/.ipynb_checkpoints/math-statistics-test-checkpoint.ipynb",
+      "sizeBytes": 43530,
+      "sha256": "06a5855f2ec5b067f48df281c4ddc1c0586ae469df86f2ba3bc77785435051bd",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/04-math-statistics/math-statistics-test.ipynb",
+      "sizeBytes": 44624,
+      "sha256": "d7e8787bba8d2eab1860b13d7978cff3a3ea67b01b722a2a8f051d66f64e06f1",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/04-math-statistics/대수의법칙_시뮬레이션.ipynb",
+      "sizeBytes": 34405,
+      "sha256": "7bdb90c889217b29a8a60fcd9111c190c9834fb4c77df0bf367a28283b84007b",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/04-math-statistics/수학_통계_test_해설.ipynb",
+      "sizeBytes": 24401,
+      "sha256": "a1ac3ac07bd42114caa8d9dacf1f88e39705bb2132647c4ce1a18d71ff596794",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/05-time-series/.ipynb_checkpoints/time-series-test-checkpoint.ipynb",
+      "sizeBytes": 948615,
+      "sha256": "150a6ac756d8ac50072849b9a152cff9237aede7cf8a401e0f7dc4a34770d187",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "assignments/05-time-series/data/csv/bandwidth.csv",
+      "sizeBytes": 193592,
+      "sha256": "429b06dd14e9e2c5e05b286e8ada518ddd66f3558ddf3f6e0eede32c6fd0d35f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "assignments/05-time-series/data/npy/test_1.npy",
+      "sizeBytes": 8128,
+      "sha256": "9070bc737a8d387413f79d2a7a018aff12f4fd2959ccd4c7576831f43bf64c6d",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "assignments/05-time-series/data/npy/test_2.npy",
+      "sizeBytes": 8128,
+      "sha256": "6395df5606fe65b8b7ee0e96a9b19eeb8f453d21611b37cdb9b58325b6fe6701",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "assignments/05-time-series/time-series-test.ipynb",
+      "sizeBytes": 951173,
+      "sha256": "fd84c12d7aa76ea09385a6fa3c87ae7108572fc1acc3bfc407e67c62b7a31dc5",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "assignments/05-time-series/시계열_test_data.zip",
+      "sizeBytes": 104146,
+      "sha256": "e43d41370734d439c4c737a9913e7d5ada1522f5db147e57c807592dcfcc703f",
+      "gitStatus": "ignored",
+      "category": "archive"
+    },
+    {
+      "relativePath": "assignments/05-time-series/시계열분석_풀이.ipynb",
+      "sizeBytes": 461845,
+      "sha256": "5207e9f9b254d4b1e5b6c29566952aa8037ba9fd8a3db81b961a1e5807e38cdf",
+      "gitStatus": "untracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/00. 목차.pdf",
+      "sizeBytes": 48639,
+      "sha256": "2d713fb280f18c98f10cc2715af8005ce6bbc1a42b4df6170027a758f33f524d",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/00. 표지(앞, 뒤).pdf",
+      "sizeBytes": 28122,
+      "sha256": "82c5a16a66e9351649d337089b77d09f113a3b1df3fa6848cec2e32959d541c8",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/01. Python 프로그래밍.pdf",
+      "sizeBytes": 1412104,
+      "sha256": "3b51cfee9f2f9174e8016e689cf60480569fa23a9b2b958846ee679fb044b189",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/02. Python 전처리 및 시각화.pdf",
+      "sizeBytes": 2318313,
+      "sha256": "bec964664c442625c00ffa9cf392030c1a728918ab28c62e09172fb34617b020",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/03-1. AI 및 퀀트 모델링을 위한 기초 수학-통계.pdf",
+      "sizeBytes": 3569313,
+      "sha256": "d078399e9f29c9d9eff4f7ff0be34d5f0b53b5a406bac5211fb846fb82a188a0",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/03-2. AI 및 퀀트 모델링을 위한 기초 수학-통계.pdf",
+      "sizeBytes": 1764508,
+      "sha256": "c1b7a39e1eb0d1dbc0890166bd17dd350298521ae283932d8a3cab672cdab1d1",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/04. 시계열 데이터 분석.pdf",
+      "sizeBytes": 5152035,
+      "sha256": "b593c81f7a4e48ba64a1fe35d14584a629ac04889567da4d3a89c966b3a0333b",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/05. 데이터 크롤링.pdf",
+      "sizeBytes": 14490333,
+      "sha256": "bb2f5b3652c414d3c299cf98bac67e0210ffed35bca613580d96074d73c5c9ae",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/06-1. 퀀트를 위한 머신러닝과 딥러닝.pdf",
+      "sizeBytes": 4762972,
+      "sha256": "63d47f08ec764411e856b139ff32a9e6a581a5e8f6db603e9239bed778e540f8",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/06-2. 퀀트를 위한 머신러닝과 딥러닝.pdf",
+      "sizeBytes": 5043744,
+      "sha256": "6a5af25c34a9660848c0a6ab29fb7cc060a0a39618ccef2ed9b8375abd26551d",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/07-1. 투자분석 기초 방법론(매크로 분석).pdf",
+      "sizeBytes": 39592333,
+      "sha256": "e7b2fb2966bb055d3c30e30f554123cbfd35fa268658aae4ab6ebc4b5e4723fd",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/07-2. 투자분석 기초 방법론(산업 분석).pdf",
+      "sizeBytes": 22944940,
+      "sha256": "928bd7f07c73e409dbaf9952ac9906f4eb08770711e26968a7bdfdad0598cc77",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/07-3. 투자분석 기초 방법론(기본적 분석).pdf",
+      "sizeBytes": 225432665,
+      "sha256": "cf93df41dd23dd5059751fc5d05003cfbeb2fe840d67ce933f824459e3c55948",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/07-4. 투자분석 기초 방법론(기술적 분석).pdf",
+      "sizeBytes": 176871524,
+      "sha256": "0521a244f9a5ba36533e22c0d1019fa5023aff159e308666b13b1996c7dddd0e",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/08-1. 퀀트를 위한 금융 필수 지식(금융상품의 이해).pdf",
+      "sizeBytes": 19575291,
+      "sha256": "03e8bbc7b843a7c335665c0a23ac2d328ae3e2d8a2811ab034960730d517efe7",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/08-2. 퀀트를 위한 금융 필수 지식(자산배분의 기초).pdf",
+      "sizeBytes": 5109631,
+      "sha256": "d20cb3343050dd7796ee3005c16131e43da1bc3aaaa2f7ab60dcdca9d2bd1c0c",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/08-3. 퀀트를 위한 금융 필수 지식(자산배분의 심화).pdf",
+      "sizeBytes": 2962057,
+      "sha256": "3afcf6e371460d6667e1bd4a55cb3c40358ad2202a0b083c682104abdfdd61db",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/09-1. 데이터 활용 퀀트 모델링(이론).pdf",
+      "sizeBytes": 7807086,
+      "sha256": "b3694aa4633b70a537a0c30a3f03991b60db3061477344d71f89ec69a8dbd823",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/09-2. 데이터 활용 퀀트 모델링(이론).pdf",
+      "sizeBytes": 12317717,
+      "sha256": "88c321d3dd867dff97ef7451c09ae8fe08153b56e0c0761c9d483fe99e42cb4a",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/book/AI퀀트과정_교재/목차별/09-3. 데이터 활용 퀀트 모델링(실습).pdf",
+      "sizeBytes": 12948928,
+      "sha256": "e2d9a47fb12c1709f9f26c988d6d3c07014f1e7bca3c585a6e81880e4ca6a418",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/image/web-cam-image.jpg",
+      "sizeBytes": 311060,
+      "sha256": "6a189299ed457513b80fe9936f3aec01de90558f04a8623044d1c6b17fced8ae",
+      "gitStatus": "untracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "docs/image/zoom-web-cam-image.png",
+      "sizeBytes": 311060,
+      "sha256": "6a189299ed457513b80fe9936f3aec01de90558f04a8623044d1c6b17fced8ae",
+      "gitStatus": "untracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "docs/pdf/OT자료_AI퀀트_4기_260616-261111.pdf",
+      "sizeBytes": 5429256,
+      "sha256": "3c91ade09d62d58e81996cf921bc037d3105098dfdaee6aedfcf06c6e3d60753",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "docs/zip/AI퀀트과정_교재.zip",
+      "sizeBytes": 503495497,
+      "sha256": "a194b90bc857ccbf26364c5f324e8150beb893786f7a612586998913d6db20e7",
+      "gitStatus": "ignored",
+      "category": "archive"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/1.자료형-checkpoint.ipynb",
+      "sizeBytes": 34830,
+      "sha256": "fc44422e735db4021e2ff1b77c4a7f65e09e473286ed56625ceae12d8428ac30",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/10. 예외처리-checkpoint.ipynb",
+      "sizeBytes": 26854,
+      "sha256": "7646db5939dd16555fb38165aa2b8d5c1be41c8dc0760795cd2267823a3cb9c8",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/11. 파이썬 기초 테스트-checkpoint.ipynb",
+      "sizeBytes": 27714,
+      "sha256": "a0a5d43dbf4d0970eb18b64197feb64e88b4c12deace48f2eed85efae271df32",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/2. 변수-checkpoint.ipynb",
+      "sizeBytes": 9421,
+      "sha256": "9c9a30723d1fe7acabf2afce94489a7a3646f82a81f2984a63a7bbfa7a81af2f",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/3. 컬렉션-checkpoint.ipynb",
+      "sizeBytes": 31441,
+      "sha256": "cf946fe1e604c8d35c8a6b486de8918de951b9139a88ec1fad4e77b27efbfeb7",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/4. 제어문-checkpoint.ipynb",
+      "sizeBytes": 27006,
+      "sha256": "c3dd7e166dc5b157088bd0536c74db1de08c841ab9d24c2b2a0d297c1e1b99ca",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/5. 함수-checkpoint.ipynb",
+      "sizeBytes": 45256,
+      "sha256": "eed087b30f30a7062f5a0b50688226b84593e51af9aaef514c1d6f2ead2f1b6c",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/6. 데이터 입출력-checkpoint.ipynb",
+      "sizeBytes": 10937,
+      "sha256": "b1e7cba8f9a621970ca83b96b8393658838cb0fbb997012e5560037fb1ebb1a5",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/7. 클래스 기본-checkpoint.ipynb",
+      "sizeBytes": 14503,
+      "sha256": "fcf3bb1d5099c760ebf0250a7532886fe397057c2707e966431981fba0612607",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/8. 클래스 심화-checkpoint.ipynb",
+      "sizeBytes": 37879,
+      "sha256": "93c7c7ed353ade12901bb035a87154e091ff688a165f121718f68c3f06ee08ea",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/.ipynb_checkpoints/9. 모듈-checkpoint.ipynb",
+      "sizeBytes": 28862,
+      "sha256": "c0a6acc03739eb01fa8b207ae47d6a3697aa84ec931d16dd018a384b3d214e9a",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/01-python-basic/1.자료형.ipynb",
+      "sizeBytes": 36317,
+      "sha256": "7a3dbb255fb1e89ebfe7470ed2ec4058a09cfa0bd84c7326a46b6806f4dd21dd",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/10. 예외처리.ipynb",
+      "sizeBytes": 27911,
+      "sha256": "1279168ee0a24b3dfcc462e60bbb532908bd72ab6214b55321e24b5ca68e9cb0",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/11. 파이썬 기초 테스트.ipynb",
+      "sizeBytes": 28479,
+      "sha256": "087887531b1faaa85483f0a43abdfe9b4f4cb2c20d8061aae2a64ec2c2246141",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/2. 변수.ipynb",
+      "sizeBytes": 9796,
+      "sha256": "535e3d14cc6b5f00b8d54e0a4b060fd1b40063d5e7b48c6bef5713e119e77c29",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/3. 컬렉션.ipynb",
+      "sizeBytes": 32884,
+      "sha256": "205d4f5065713540396ee2e49b3901858313dd87254a5d0de7adfe3e906f3c62",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/4. 제어문.ipynb",
+      "sizeBytes": 28254,
+      "sha256": "50b77395908d850c87adc5fc1f0f30212f22d3b403c1ea9e061e7f09c9b1f9be",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/5. 함수.ipynb",
+      "sizeBytes": 47367,
+      "sha256": "c02ff8c2b8cf86f176b8c9be89d67b4e941d4ff179e7fd393364865ec27f12ad",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/6. 데이터 입출력.ipynb",
+      "sizeBytes": 11488,
+      "sha256": "0690bf691290149a8a1e1669fb9df5b1ee5fc4e0b34aa77354d9b5e828a1c2a3",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/7. 클래스 기본.ipynb",
+      "sizeBytes": 15057,
+      "sha256": "ba80afc9eb1dd90ad11da140e333a634c7c80753c5c8b3aae29373e2ef906f1c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/8. 클래스 심화.ipynb",
+      "sizeBytes": 39432,
+      "sha256": "b6d021a6a75e5581850fc36fa60dcd7418ca2cbeacd3469d464d968669b78a89",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/9. 모듈.ipynb",
+      "sizeBytes": 30277,
+      "sha256": "f184ba77867c9899822396f894a35320e617a99710d9884f2343b3a86a5f58f7",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/01-python-basic/image/control.png",
+      "sizeBytes": 101674,
+      "sha256": "a44442da93f06b0a1eea36e024b4d5169aa91b79eb862d262d5540add9008976",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/1. 판다스_자료구조-checkpoint.ipynb",
+      "sizeBytes": 161246,
+      "sha256": "3ec649dba52e11dd64d8ecad1085231c92a3e9e1b4f7c14820e05c7759702a5b",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/2. 판다스_데이터입출력-checkpoint.ipynb",
+      "sizeBytes": 59624,
+      "sha256": "48abacb103f90c549bce78c538320304aec6efabae4951602c77d8b181e8f6fa",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/3. 판다스_데이터탐색-checkpoint.ipynb",
+      "sizeBytes": 388400,
+      "sha256": "ac677abbeab309f6217eacf0b6e46a0ebcb674aebe29410b7989e65a36cace21",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/4. 판다스_데이터전처리-checkpoint.ipynb",
+      "sizeBytes": 31365,
+      "sha256": "4269a76e080a0e65deb0befdc03cc893b6d71aab60b0395a9bb8f5c9d0ff22c6",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/5. 판다스_데이터프레임응용-checkpoint.ipynb",
+      "sizeBytes": 205948,
+      "sha256": "71d19263ade927219b0bad9ecc83166b6f21494778c5d6cf55e6af04f072b891",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/6. 데이터시각화_기초-checkpoint.ipynb",
+      "sizeBytes": 542936,
+      "sha256": "a5663ec7789ea3ab4267b4df329f9ac7df68f7d3313c842bdb826185312ab3b8",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/.ipynb_checkpoints/7. 그래프_기초-checkpoint.ipynb",
+      "sizeBytes": 1496,
+      "sha256": "bd488aaea21e372b1dd27ed09cb7d234c4eeaf455bfabe96d0d01eb7754efc91",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/1. 판다스_자료구조.ipynb",
+      "sizeBytes": 167626,
+      "sha256": "379bb6578d06681b44d4b23b1cbfab29aed9eea09187c6b943525923b894303d",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/2. 판다스_데이터입출력.ipynb",
+      "sizeBytes": 61758,
+      "sha256": "73c2865ca84fa62a13add6cf2337383547c6566da331704a4926d4b12bf77b95",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/3. 판다스_데이터탐색.ipynb",
+      "sizeBytes": 391335,
+      "sha256": "56c15303d1b3fe60f403253ecf2a601381f1e890db9a9ead1708678b70ab64c7",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/4. 판다스_데이터전처리.ipynb",
+      "sizeBytes": 88061,
+      "sha256": "9efd1d7a59a56aa688f23ef15c733ca6149ae44da4a56876bcc74d93a9bd1d6f",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/5. 판다스_데이터프레임응용.ipynb",
+      "sizeBytes": 205948,
+      "sha256": "71d19263ade927219b0bad9ecc83166b6f21494778c5d6cf55e6af04f072b891",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/Euro_2012_stats_TEAM.csv",
+      "sizeBytes": 2335,
+      "sha256": "b3dbf6c3bd7cec0c417fc82b75eac16f3f0ced8a6231213b6cec60bfd234a09c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/auto-mpg.csv",
+      "sizeBytes": 21913,
+      "sha256": "893c28234f96dcaba15b33462bae71d1719493d2bb31d5ae756c1caa65dc375b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/cars1.csv",
+      "sizeBytes": 10163,
+      "sha256": "0e07d62caae31b2cb4cc2fe5bf2e2f1934bee0bbc0986790b6c13b6b383948b4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/cars2.csv",
+      "sizeBytes": 9383,
+      "sha256": "3ff6a48aedbca975ae87c4399aef695d9e02f0be6e74dae00839b53d37eee84c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/df_sample.csv",
+      "sizeBytes": 49,
+      "sha256": "ec9be765871c25bfecf2da38d7434302463679ed46792f9741f811b5c487457f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/iris.csv",
+      "sizeBytes": 4005,
+      "sha256": "0748a9d0749262ea87a04be4b085393f91c368071d8ff64c1057ec46d639b557",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/read_csv_sample.csv",
+      "sizeBytes": 43,
+      "sha256": "8ccee64f7ee40d566d6ad88f62a2bb27f51fff13ced537e9d6f92833f48d68f6",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/stock-data.csv",
+      "sizeBytes": 885,
+      "sha256": "30f93980608cc9a5ccc37a7a6d1019a205603806863f87e50b8e132f9003603b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/student-mat.csv",
+      "sizeBytes": 42379,
+      "sha256": "235f58adaf87f909b6d9b423cdb48cc9b3d392e47b1ac7fd592d9a39fde3cc7d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/vaccine.csv",
+      "sizeBytes": 10063,
+      "sha256": "55a529db53af10068188644ea6785daa25cad6ec7043a7120b8152975364eefe",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/csv/주요발생국가주간동향(4월2째주).csv",
+      "sizeBytes": 621,
+      "sha256": "361439f5a672f2797eeaf4bd1ba26e656756b5758ecccad3926518ef612cdd13",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/html/sample.html",
+      "sizeBytes": 1103,
+      "sha256": "a985083980a7c5bde0487af025bbd4ca4322160b0fe0ed3b727c4a05d22d67ce",
+      "gitStatus": "tracked",
+      "category": "other-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/json/df_sample.json",
+      "sizeBytes": 100,
+      "sha256": "0bec987a8955cfecf023360eb54b89e170c4a0309ec860ba303834ae5792e196",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/json/read_json_sample.json",
+      "sizeBytes": 472,
+      "sha256": "94a0108eb638e8b38f34c73bd19a4863d6d2caa0c576c7fddc84d9943a18adcf",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/tsv/chipotle.tsv",
+      "sizeBytes": 369598,
+      "sha256": "ec8d79a0caa0e74647644d8c7f745b13cdbc2add418e96e3b6dcba0b9afc8f3d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/tsv/occupation.tsv",
+      "sizeBytes": 23611,
+      "sha256": "a23ad9901ef3ebb9a625c9f3f33634f4b5b938a65e6fad3767afb5742fe161b4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/df_excelwriter.xlsx",
+      "sizeBytes": 5552,
+      "sha256": "aa521eb5a3eaf9e2cda629b62775014db5daeabe54273b6f8bd159eaab050eac",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/df_sample.xlsx",
+      "sizeBytes": 5001,
+      "sha256": "9f83e7f75a03512e5f8d4b7f75a7c0331ee0f43625ea5fcd120468b425fe7ca7",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/stock price.xlsx",
+      "sizeBytes": 10027,
+      "sha256": "ff68b7ddf35969dc12c4974efb296c66d353f1c94b8608eda08add523fa22a2b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/stock valuation.xlsx",
+      "sizeBytes": 10501,
+      "sha256": "64e18f3426157710af905aed08d097e777b4f169321f654b4a9e6a269becb18a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/남북한발전전력량.xlsx",
+      "sizeBytes": 11662,
+      "sha256": "298fda65b91f1332349f41ff128e15bc2fca5cf26f28022df7c68bb4e509fecf",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/시도별 전출입 인구수.xlsx",
+      "sizeBytes": 107864,
+      "sha256": "160f000c8b8d1acf0917f194e7cffc1f5e8f3aba97a25156616f45b271becea5",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/xlsx/주가데이터.xlsx",
+      "sizeBytes": 10793,
+      "sha256": "aa892898594c1562d8b5cff1d71ccfe49bcbd8785b7d13c021ba649ec08fca71",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/data/zip/pandas_data.zip",
+      "sizeBytes": 205651,
+      "sha256": "6e1ab2bba09858a11aa96057170dea299cc5b7eb6e041893dd14173bacaa9f31",
+      "gitStatus": "ignored",
+      "category": "archive"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/image/dataframe.jpg",
+      "sizeBytes": 40215,
+      "sha256": "27b3e32a7315eeea7643b45ab549c6f2e2c3c1dbdf01189438d6452ffdf0cb62",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/02-preprocessing/image/series.jpg",
+      "sizeBytes": 25904,
+      "sha256": "9ecbaa8cf2d6480de74515a78f3a93e68f30c93caa719902b38eb10344ddc708",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/03-vizualization/.ipynb_checkpoints/1. 데이터시각화_기초-checkpoint.ipynb",
+      "sizeBytes": 542936,
+      "sha256": "a5663ec7789ea3ab4267b4df329f9ac7df68f7d3313c842bdb826185312ab3b8",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/03-vizualization/.ipynb_checkpoints/2. 그래프_기초-checkpoint.ipynb",
+      "sizeBytes": 2523474,
+      "sha256": "ab210b4861b49a5033109261609d5304060b0311060fa91c46efc022f102c42a",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/03-vizualization/.ipynb_checkpoints/3.matplotlib_예제-checkpoint.ipynb",
+      "sizeBytes": 1260911,
+      "sha256": "95ec5e232f0b1601f9c2df399f94096469ab153d489645381b4db257f751c32a",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/03-vizualization/1. 데이터시각화_기초.ipynb",
+      "sizeBytes": 544435,
+      "sha256": "bcca544b155c5d0230797b80fb7f93c8296c44ff377ad60361ea72400b909fa3",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/03-vizualization/2. 그래프_기초.ipynb",
+      "sizeBytes": 2528236,
+      "sha256": "c02fa5900fec3d19f4f38a4d0b1fa710c704a2bcfc55486e5f61ee8f1b25d513",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/03-vizualization/3.matplotlib_예제.ipynb",
+      "sizeBytes": 1260911,
+      "sha256": "95ec5e232f0b1601f9c2df399f94096469ab153d489645381b4db257f751c32a",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/csv/auto-mpg.csv",
+      "sizeBytes": 21913,
+      "sha256": "893c28234f96dcaba15b33462bae71d1719493d2bb31d5ae756c1caa65dc375b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/csv/주요발생국가주간동향(4월2째주).csv",
+      "sizeBytes": 621,
+      "sha256": "361439f5a672f2797eeaf4bd1ba26e656756b5758ecccad3926518ef612cdd13",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/folium/경기도인구데이터.xlsx",
+      "sizeBytes": 14130,
+      "sha256": "a98bc6b2dfdf3e36a3efd20eb17c6fce41260504bd7fbd173560c433e27dd28a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/folium/경기도행정구역경계.json",
+      "sizeBytes": 116471,
+      "sha256": "ca3ad352d4b37df193547fa9ab6bd2dfed1f1ccef459e68bca17316a5fae5b94",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/folium/서울지역 대학교 위치.xlsx",
+      "sizeBytes": 7030,
+      "sha256": "6cc4a8b5eac4cd053237ebf3105ae9a0accc3cd7fdf2b50f396768ee6d8d3f20",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/json/경기도행정구역경계.json",
+      "sizeBytes": 116471,
+      "sha256": "ca3ad352d4b37df193547fa9ab6bd2dfed1f1ccef459e68bca17316a5fae5b94",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/fine_dust.xlsx",
+      "sizeBytes": 11459,
+      "sha256": "1b9ab1a7ad207590100578e2e2825327bb7a7170b0df0212e0cbebed1ab24f71",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/health_screenings_2020_1000ea.xlsx",
+      "sizeBytes": 145007,
+      "sha256": "c4800cef2c52b78a5a8570693e11f8f757bae8e61d091691dafaefeeea42a13d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/경기도인구데이터.xlsx",
+      "sizeBytes": 14130,
+      "sha256": "a98bc6b2dfdf3e36a3efd20eb17c6fce41260504bd7fbd173560c433e27dd28a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/남북한발전전력량.xlsx",
+      "sizeBytes": 11662,
+      "sha256": "298fda65b91f1332349f41ff128e15bc2fca5cf26f28022df7c68bb4e509fecf",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/서울지역 대학교 위치.xlsx",
+      "sizeBytes": 7030,
+      "sha256": "6cc4a8b5eac4cd053237ebf3105ae9a0accc3cd7fdf2b50f396768ee6d8d3f20",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/xlsx/시도별 전출입 인구수.xlsx",
+      "sizeBytes": 107864,
+      "sha256": "160f000c8b8d1acf0917f194e7cffc1f5e8f3aba97a25156616f45b271becea5",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/zip/folium.zip",
+      "sizeBytes": 35533,
+      "sha256": "99890a0875fba2b7a15c65310c73bd882daac52e41dc632b671669b756e7f628",
+      "gitStatus": "ignored",
+      "category": "archive"
+    },
+    {
+      "relativePath": "learning/03-vizualization/data/zip/vis_data.zip",
+      "sizeBytes": 340090,
+      "sha256": "12c5301289a8572a30c8d253fe7a41d590b37f86e7db06912a0d8f0217de78fd",
+      "gitStatus": "ignored",
+      "category": "archive"
+    },
+    {
+      "relativePath": "learning/03-vizualization/image/matplotlib_set_marker.png",
+      "sizeBytes": 138596,
+      "sha256": "5747018f915a0349b7497782c5bb6cf65164d7131aa3940c8b7d7bc14c6597d0",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/1.넘파이_기초-checkpoint.ipynb",
+      "sizeBytes": 71868,
+      "sha256": "5ece776cee59a02be1296a1fa6bc588f2dbe8cbea0eb46e1185250f74a49b631",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/2.선형대수_기초-checkpoint.ipynb",
+      "sizeBytes": 20867,
+      "sha256": "b91ca61ecd3ed4909f35013fd1bbc476679dad2fba136bae0397f44fd9e9ef5c",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/3.데이터분석의이해-checkpoint.ipynb",
+      "sizeBytes": 21912,
+      "sha256": "f0691b9fcdec3702ca5d7b1cf22f7f596f4462b5e45686bc515a236b2a0baf8b",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/4.탐색적데이터분석_chipotle-checkpoint.ipynb",
+      "sizeBytes": 176089,
+      "sha256": "f56e9146061350c2379392c6211520646475b07393c56eb02d268fe5ef3171b6",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/4.탐색적데이터분석_chipotle_강사님-checkpoint.ipynb",
+      "sizeBytes": 125381,
+      "sha256": "27fb298e0a4709aae7bb370f1f00b84e61af93a5c316615e3c3cc70e773ebbb0",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/5.탐색적데이터분석_drinks-checkpoint.ipynb",
+      "sizeBytes": 314969,
+      "sha256": "7bab9eeb757afaa935a65b2663aadc3f863baf10ab7c0992209e60332ea5df6d",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/5.탐색적데이터분석_drinks_강사님-checkpoint.ipynb",
+      "sizeBytes": 371035,
+      "sha256": "30635eec8f78afc06ff7b6990bb6a2337e933d0b3cacf27e04c0429c194ff8ea",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/6.T-test-checkpoint.ipynb",
+      "sizeBytes": 46649,
+      "sha256": "a358eec611cec83ad9abd9097208bac0126bd404c95a4c3ee4c9a0416d720bd0",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/7.ANOVA-checkpoint.ipynb",
+      "sizeBytes": 41692,
+      "sha256": "3882b06ba470f85e98229f4ec82e0517c19e664f2a701892c5107e03a0f86cc3",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/.ipynb_checkpoints/8.카이제곱검정(교차분석)-checkpoint.ipynb",
+      "sizeBytes": 27679,
+      "sha256": "ee3107e9a9e817d55e88e602bbc2e25beb74eb48f2818f3d75d29704215bf8de",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/1.넘파이_기초.ipynb",
+      "sizeBytes": 80869,
+      "sha256": "18ff83cefa44b79225e045c9f2bfd3ca9644ecfdc66dc351aa9bdac217bb273c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/2.선형대수_기초.ipynb",
+      "sizeBytes": 24497,
+      "sha256": "9535d1be0f5b24b539762ee276883a6945176d491f88fa71cc19dcfb48ab30a3",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/3.데이터분석의이해.ipynb",
+      "sizeBytes": 22323,
+      "sha256": "a3cfdd70052b6a3233c536096169b48f6805fe658fdb14db03c0147d5747f532",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/4.탐색적데이터분석_chipotle.ipynb",
+      "sizeBytes": 178129,
+      "sha256": "09535e74957c4309348d9b8f4b5f66a0545029d196b1cf70d5a07299f7a4b9c1",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/4.탐색적데이터분석_chipotle_강사님.ipynb",
+      "sizeBytes": 127773,
+      "sha256": "24a8c2ee319c225c9be0f61efadc36331a194df517edae3874c114d2c8e99ed3",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/5.탐색적데이터분석_drinks.ipynb",
+      "sizeBytes": 316678,
+      "sha256": "a26130645c2ea1db75661913ead9e8faa42c4e0da5df2f4d74da73cca49f1d48",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/5.탐색적데이터분석_drinks_강사님.ipynb",
+      "sizeBytes": 373024,
+      "sha256": "4a9f358dce063f735faf45fe6d7e4c9385ec8581f86d7e3eaa55105105d64733",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/6.T-test.ipynb",
+      "sizeBytes": 47468,
+      "sha256": "3732fda89dbae1226dec151624e60528c41060f689bfe3ba0b164553b81d90a5",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/7.ANOVA.ipynb",
+      "sizeBytes": 42231,
+      "sha256": "f3aab110f9de0766169a37741048a567bd398c9366fecd79b2845aa5e5c7488c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/8.카이제곱검정(교차분석).ipynb",
+      "sizeBytes": 28108,
+      "sha256": "d69d46cc42a9b77dc70e41b4eaf5061967fc1c2bb7c939d78548ef98ecb7771f",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/data/csv/Golf_test.csv",
+      "sizeBytes": 1326,
+      "sha256": "4b80348ec41861b88ae89b66d0f1238391e3464108e306073c2d70324c7d5da2",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/data/csv/drinks.csv",
+      "sizeBytes": 5167,
+      "sha256": "5796f0fbfca427bd2b43bde61fc9f251b2e718378bc1e6663069592edae77add",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/data/csv/smoker.csv",
+      "sizeBytes": 2198,
+      "sha256": "f13d2e909985b9712afd56016aec9c3aa47e6166ef4e66a58d996e22fa5a6852",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/data/tsv/chipotle.tsv",
+      "sizeBytes": 369598,
+      "sha256": "ec8d79a0caa0e74647644d8c7f745b13cdbc2add418e96e3b6dcba0b9afc8f3d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/image/anova_charts.jpg",
+      "sizeBytes": 44622,
+      "sha256": "9fc76d1571c85a7333a632b76ef81215c0a5e29da59047b95574a5e49d276b53",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/pdf/1_기술통계_1_데이터의유형과정리.pdf",
+      "sizeBytes": 786933,
+      "sha256": "b57e703e4e6adb5ceebb5883b5d54fa1cf6aedece90f3ff2f86eedc19d6d9045",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "learning/04-math-statistics/pdf/1_기술통계_2_기술통계량.pdf",
+      "sizeBytes": 1104821,
+      "sha256": "4f7da9cf98029528fe539a789169c2556ef290005b97111cf0b27ea5999adae6",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/1.탐색적데이터분석(기온데이터)-checkpoint.ipynb",
+      "sizeBytes": 4043,
+      "sha256": "b0fefc6fe6cd6d07a5947bd39e550a2870831e536b0888d51a64cc8dbb64620c",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/10.비정상시계열예측-checkpoint.ipynb",
+      "sizeBytes": 537301,
+      "sha256": "d21994e730955c899a9fe7bd3a2faaa669fc1310639233b0bbf8367d684314bb",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/11.계절성고려하기-checkpoint.ipynb",
+      "sizeBytes": 908424,
+      "sha256": "67dc1a4e98260d46bcf40a840ca920b7f0b74120fba5183a2b21e585a035984b",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/2.탐색적데이터분석(관광데이터)-checkpoint.ipynb",
+      "sizeBytes": 1744162,
+      "sha256": "e30ac1a61232d4f441b73521fc8a6ceb77c361dc1d834e5db690dd4a7529c5b6",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/3.시간시각화-checkpoint.ipynb",
+      "sizeBytes": 274955,
+      "sha256": "a0f41935683b11bdd908525ffea63695a8e18b21f9988b4a81fe9b988b2ea5c3",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/4.분해시계열-checkpoint.ipynb",
+      "sizeBytes": 561560,
+      "sha256": "052c10f8ee3d9e7de49018882d8f88a859ad6601e35ed5ac5a0e99bd87d4e0f8",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/5.단순한미래예측-checkpoint.ipynb",
+      "sizeBytes": 444904,
+      "sha256": "4639adb0ddaafbff596b3396421e5232421a1e4ed88fbc99df8a9e870bd85a5e",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/6.확률보행-checkpoint.ipynb",
+      "sizeBytes": 801778,
+      "sha256": "fcd8405c9d3205b5de97dabbd92d04caa876af00ef245ce15cbe3ac322b245f0",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/7.이동평균프로세스-checkpoint.ipynb",
+      "sizeBytes": 862305,
+      "sha256": "453c0d0166cb4565c37d2df006598a43c8734de4ae2a3beca712fa9e5320d45b",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/8.자기회귀프로세스-checkpoint.ipynb",
+      "sizeBytes": 1112881,
+      "sha256": "fb1ab6b0b7fd9f69b87b1766aa903ad43fc09fd3eb709fc710c85c4704a0c1c1",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/.ipynb_checkpoints/9.복잡한시계열모델링-checkpoint.ipynb",
+      "sizeBytes": 1507203,
+      "sha256": "573574c2608ca59586609e24df506c9f47f8a8aa42a3502c5acec1fdb9359f9d",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "learning/05-time-series/1.탐색적데이터분석(기온데이터).ipynb",
+      "sizeBytes": 320055,
+      "sha256": "9f379dcac0f73c0164a56cb7aced954af123da234acdf99c37ac69a94302ebd2",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/10.비정상시계열예측.ipynb",
+      "sizeBytes": 539619,
+      "sha256": "8fd76952375e70598d2d281b02875bff86ac017706134de8588bba548b088214",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/11.계절성고려하기.ipynb",
+      "sizeBytes": 910699,
+      "sha256": "3a111443db92e649c30dc47eb7a2b25fd113bc49d5a0ba6be341f1b4ae162fdd",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/2.탐색적데이터분석(관광데이터).ipynb",
+      "sizeBytes": 1744162,
+      "sha256": "e30ac1a61232d4f441b73521fc8a6ceb77c361dc1d834e5db690dd4a7529c5b6",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/3.시간시각화.ipynb",
+      "sizeBytes": 274956,
+      "sha256": "5170134367bcdeb6dc5ce411f364069502aa4ce324b2e605b425e9db80f6c651",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/4.분해시계열.ipynb",
+      "sizeBytes": 572869,
+      "sha256": "02f387542ac4665810bda4262693394b594e9639505fb3df1a77d3c52503ac11",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/5.단순한미래예측.ipynb",
+      "sizeBytes": 446373,
+      "sha256": "b23fb549a2c7194ea28821ccecbe2860acf1fda8354a72f3eee3d6de6dd6b111",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/6.확률보행.ipynb",
+      "sizeBytes": 804807,
+      "sha256": "4e836b5c9a67827c24ba49b4b59dc19dcea5c713a5a0767b10eed8f3736a493f",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/7.이동평균프로세스.ipynb",
+      "sizeBytes": 1023897,
+      "sha256": "8b6e0aee92374dc449385f245c66ae91ea4c22bffc9d284c63cd3d1cb3ced253",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/8.자기회귀프로세스.ipynb",
+      "sizeBytes": 1112881,
+      "sha256": "fb1ab6b0b7fd9f69b87b1766aa903ad43fc09fd3eb709fc710c85c4704a0c1c1",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/9.복잡한시계열모델링.ipynb",
+      "sizeBytes": 1507203,
+      "sha256": "573574c2608ca59586609e24df506c9f47f8a8aa42a3502c5acec1fdb9359f9d",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/GOOGL.csv",
+      "sizeBytes": 20273,
+      "sha256": "3360d61906cd5d38fd36c2e2aaf049ec5f73c956ee65ae7054e9adae1e9a5b51",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/air-passengers.csv",
+      "sizeBytes": 1893,
+      "sha256": "d3251ad2392e951ac202a8eea175ece9229ea4bb4fae76739374fe1e64b92b08",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/bandwidth.csv",
+      "sizeBytes": 193592,
+      "sha256": "429b06dd14e9e2c5e05b286e8ada518ddd66f3558ddf3f6e0eede32c6fd0d35f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/foot_traffic.csv",
+      "sizeBytes": 19213,
+      "sha256": "1956fc81454ee583d09eaa8c5abca45061c53da1c37ad784e0eb752b0ae61471",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/jj.csv",
+      "sizeBytes": 1608,
+      "sha256": "1a8595be838c06bf2bff59aae4d2e0fa04ba3e209bdf1f33a3ef4da4c25ad0b6",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/seoul.csv",
+      "sizeBytes": 1395103,
+      "sha256": "82fd6d9191f720959eb29f03bb083dbc76a01754599e650cd4897421c0d010ed",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/superstore.csv",
+      "sizeBytes": 2139490,
+      "sha256": "2f7bb311a7646e45f967ff51747335616cd9105bc80d4d9866308d318d132cb1",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/csv/widget_sales.csv",
+      "sizeBytes": 9644,
+      "sha256": "c7f6837e6e6375592d659972accd4a5b2ae8fa966899765ebe941fa9348d3981",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/npy/q4-1.npy",
+      "sizeBytes": 8128,
+      "sha256": "738945eb2bdf3e4ffaf02c48f88b0a4509d6f8aea56ab8e08cf1cc27322ac5f6",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/npy/q4-2.npy",
+      "sizeBytes": 8128,
+      "sha256": "14fdb7a78197e18d0aff17fd4dae2691d609137362b47d1dc419404a3a5cabf8",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/npy/q5-1.npy",
+      "sizeBytes": 8128,
+      "sha256": "46b2aab04f09e884a7c6aec3e7c424892ad857ebc9907cd7ea76f02853f3ef2a",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/npy/q5-2.npy",
+      "sizeBytes": 8128,
+      "sha256": "16444b91400e0cec942a0b6038054949f98121ca116eefaeac9b200c522b3632",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/npy/q6-2.npy",
+      "sizeBytes": 8128,
+      "sha256": "f4063b823194fa3df8046381b39852a14201e163e472a669797e0fedcf1b87f5",
+      "gitStatus": "tracked",
+      "category": "array-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/xlsx/kto_total.xlsx",
+      "sizeBytes": 410126,
+      "sha256": "7b78d533278cdfb1ac4713d4889ad24263d09fc6324f696977955c8b13047959",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201001.xlsx",
+      "sizeBytes": 15045,
+      "sha256": "e09190297a1f499c83989dfa9049cd4bf7ff01293131d1f70922d288431f0f8f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201002.xlsx",
+      "sizeBytes": 15052,
+      "sha256": "5777f2e0a8e6373182615ecfaa7725eb4b2756b6fa16c6c607321685b1796f2e",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201003.xlsx",
+      "sizeBytes": 15083,
+      "sha256": "f96f3ff68df96bc92bb115f687b2b9147a2c8250b9225bdb80af7f6a96dd94db",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201004.xlsx",
+      "sizeBytes": 15075,
+      "sha256": "146b74952e34f48978303a008e89484c18be6eb76d4e8e4f29822e2b8960062a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201005.xlsx",
+      "sizeBytes": 15086,
+      "sha256": "da5405dd583b1e9176ae58a996437335e1dac7c2eb01f5346f9c30ef1e27d0f1",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201006.xlsx",
+      "sizeBytes": 15077,
+      "sha256": "17c60bdcc6cfa5bbe7a1a7350842614f71f3811db215507ee031b9bb6b104cf8",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201007.xlsx",
+      "sizeBytes": 15087,
+      "sha256": "532fd3a3da0f3a3678c11f7693a9f62701720a3bce1978d321b176ca21bf1fe9",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201008.xlsx",
+      "sizeBytes": 15082,
+      "sha256": "337093d96a88f58202d2106efb391135f9cebf514b615facf8397879c582abd3",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201009.xlsx",
+      "sizeBytes": 15070,
+      "sha256": "c30e2849bc190bb27f937ea402acc03fb9ca49e0f18464d39ba0d02efb7a8ca9",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201010.xlsx",
+      "sizeBytes": 15106,
+      "sha256": "506e59d4fdd5a671c8c2abe6e93fdf9d0e9948bcd8adafe864d2241224632ceb",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201011.xlsx",
+      "sizeBytes": 15880,
+      "sha256": "5d9580243a8437eb8a94ad41fe517be3fc66fa8c9bf8fbc7043259cab8e493bd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201012.xlsx",
+      "sizeBytes": 15045,
+      "sha256": "bc2f4d931f751a3b70b22aa029b5bc92dbda2d26949cc3256eea644dfc2faeee",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201101.xlsx",
+      "sizeBytes": 15075,
+      "sha256": "42f1f821b78bc29cf0082f148a7316321ce3d483fa8c98b0d9b58376a9556bec",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201102.xlsx",
+      "sizeBytes": 15052,
+      "sha256": "831bfd502beea29c09306923e92f6851d10327f36a0250cfdbbff6944bbd24dd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201103.xlsx",
+      "sizeBytes": 15106,
+      "sha256": "7bac4e45f318c3770a69dd2ce337bdb3fc1ea33a09ab29dfbbfda8918bde85dd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201104.xlsx",
+      "sizeBytes": 15071,
+      "sha256": "ffb9da0ab239de1cc9ee18c6e16968a1d8761dd4cddbcce79bca419c89e82ac4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201105.xlsx",
+      "sizeBytes": 15088,
+      "sha256": "9794e9f19d95809a0f80abc13d873fa750c605862dc2594da02753c5e55a02a1",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201106.xlsx",
+      "sizeBytes": 15114,
+      "sha256": "b4a27905400ab56813aee5ca4c78dff553e32be2f70d73d1be1d2d95e670505f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201107.xlsx",
+      "sizeBytes": 15088,
+      "sha256": "4111a62932593c2b3bbc314ce9abd2cfba0d18eef01ce32f10eea31a498d0728",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201108.xlsx",
+      "sizeBytes": 15133,
+      "sha256": "4f759098cc071406405103d08651093d2a1b63cce49f5f4a341841b2b8aad7e9",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201109.xlsx",
+      "sizeBytes": 15139,
+      "sha256": "1d4bbba5081e13f00745b65f9fc7eb2a6e9e6f3ab750a16891e36b530aa6af3f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201110.xlsx",
+      "sizeBytes": 15110,
+      "sha256": "78741d4f09a2a961dd297857ec930bbf4061a074fe3d51abe44397efcbb85d86",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201111.xlsx",
+      "sizeBytes": 15898,
+      "sha256": "b3bf0383ea1fc052cacb93391a0fc13d4dd20bdf534c87091cb4d6d793646fd4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201112.xlsx",
+      "sizeBytes": 15007,
+      "sha256": "de5f08fa4000beff2269e2fe92bcc7120cfad58e353818f6def56be959aaf3bd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201201.xlsx",
+      "sizeBytes": 15091,
+      "sha256": "9fafa8831f8f3fa2399d62b84d42775d0115eaa1ff0f85b320c3e4078a04ffe0",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201202.xlsx",
+      "sizeBytes": 15065,
+      "sha256": "1471fcecc841029e0fa6f5f90d9eb50d24c0601e26923f64a8f35d6c2ac09e4c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201203.xlsx",
+      "sizeBytes": 15113,
+      "sha256": "2fbbf6734fa6ac7c1a109bcffc67408076218c4c48a60255692ad61054bf1afb",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201204.xlsx",
+      "sizeBytes": 15154,
+      "sha256": "a80e25b60a92cc6554aed754b365dbc0d264146a934309c75c502e1ea52ed790",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201205.xlsx",
+      "sizeBytes": 15113,
+      "sha256": "3657ce000fab9e7cf794a0347bbe08fe67c9948907cde840275d25209989dcd5",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201206.xlsx",
+      "sizeBytes": 15087,
+      "sha256": "63ad72113fd47dac947e2aaa43045d0c9d057c7440ebe1210f5ee1efd12ab2bc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201207.xlsx",
+      "sizeBytes": 15144,
+      "sha256": "7c5c9a4f4ec398f645d7104fe294077c83ec2f7d28fefcbf7056a335a2c9f07d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201208.xlsx",
+      "sizeBytes": 15159,
+      "sha256": "1047d3b421af9f5ac2df054306e9fc21c7d09dc149bad7ba1b15098b5da0541b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201209.xlsx",
+      "sizeBytes": 15113,
+      "sha256": "83cc03d5147701d9484a55d0dc24635ae981a1e0214c50a39e0e1408c54dae46",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201210.xlsx",
+      "sizeBytes": 15160,
+      "sha256": "2c44838684a3dacb7de313d1bee6f58581575ac3480109ab67505d9a8f93ab8e",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201211.xlsx",
+      "sizeBytes": 15879,
+      "sha256": "89615156c5452b9db1f10286afea2c8b8cd72d2be55dc6c3451783ae0dd39c2e",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201212.xlsx",
+      "sizeBytes": 15074,
+      "sha256": "597cb6d30f70d09c139b27dcc557e15ba8cc688e7e3157f3bfad316741256f61",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201301.xlsx",
+      "sizeBytes": 15114,
+      "sha256": "785388d3a4151810afadb1727b8b547771f9b3d970fd66aa3aa9158e19d5e87b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201302.xlsx",
+      "sizeBytes": 15132,
+      "sha256": "b5095002f53e2defb835fa9cad074ee1d50a32e05bcdc5809747edc9c3475ad6",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201303.xlsx",
+      "sizeBytes": 15156,
+      "sha256": "406b9cc67d8bbc363a171dd7a4ab3ab30db4853c42115dcbe2dee8087f83685e",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201304.xlsx",
+      "sizeBytes": 15133,
+      "sha256": "b19d72a16987de271be80e1819b9ed55d67d96dc753ecc3f61dad550d8dcaf07",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201305.xlsx",
+      "sizeBytes": 15133,
+      "sha256": "c42f933d3842e06b380cfedb8daa3c5189f5334e7e99664ba77b9ec4bcca67dd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201306.xlsx",
+      "sizeBytes": 15199,
+      "sha256": "296ceff39f6aca653c8edd395f83b5784ea3919ed92c2231bf743ab4dcc0cbd4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201307.xlsx",
+      "sizeBytes": 15174,
+      "sha256": "1e4700896b41540b3f2a9de8d2e68161ced608a537cb7dd26112d5a8e867df45",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201308.xlsx",
+      "sizeBytes": 15222,
+      "sha256": "b6dc81926d161c27cb083b5f6935058fb0e1f3814af71b4518e6f59732ed8ab3",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201309.xlsx",
+      "sizeBytes": 15204,
+      "sha256": "e01a970319759df70cb92852e955b9fbebf80682f17ac2c9743acc8139619899",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201310.xlsx",
+      "sizeBytes": 15206,
+      "sha256": "44073378d7f6d74d4f435b9c8c41d542f4e9948f42e96e567026129f51a0e393",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201311.xlsx",
+      "sizeBytes": 15942,
+      "sha256": "568157305bde6c2a382bc1ff3e6a97d4a39e0d0692c97cc486de2b7f4f34deba",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201312.xlsx",
+      "sizeBytes": 15103,
+      "sha256": "913b2be0764adef707724efdbc57b043d97d6d3d73c0b26da51e806c467bb080",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201401.xlsx",
+      "sizeBytes": 15106,
+      "sha256": "e100f6bb94700ccd3f246e4555b46214188ad6c6731a60ddca089e25daebdb0c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201402.xlsx",
+      "sizeBytes": 15109,
+      "sha256": "4c174dd9df8ecce76bc5db5699a9bad5db86e5ccce01f190f042d300cf94bc3f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201403.xlsx",
+      "sizeBytes": 15177,
+      "sha256": "e19db0b429e00e22ec16bf604cd345ff3703ac735bf68f34b9ce88057a45aec0",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201404.xlsx",
+      "sizeBytes": 15160,
+      "sha256": "02d36beeb46b8efb37ff8b9b57b66e221954b70792395cef9393564f9bf0c549",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201405.xlsx",
+      "sizeBytes": 15188,
+      "sha256": "fc733429f44d8a7201afc7f7fca9c480be285620be2c73d6f8c141a802e42b96",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201406.xlsx",
+      "sizeBytes": 15217,
+      "sha256": "ae70e3f9f1793281315163524bd311895eff6969b5aab39befa125ba66e518d2",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201407.xlsx",
+      "sizeBytes": 15182,
+      "sha256": "2a93ba3b046c973c1318c8eb36991e7c7ad0c8ce71df7b3cb461340cfcfd611f",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201408.xlsx",
+      "sizeBytes": 15217,
+      "sha256": "fe764d3322f9e3c74adcbeddf3e026708491d604f9d1ed6bf6f55d7f382316dc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201409.xlsx",
+      "sizeBytes": 15192,
+      "sha256": "83372bb723c3de5f287da07231c416f3a7939bd63739c7cef890ac4d4c26f811",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201410.xlsx",
+      "sizeBytes": 15218,
+      "sha256": "0e1950a5f4032b968546f2e85739bb0481bfdd3c69107792a92e6bb96fefe859",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201411.xlsx",
+      "sizeBytes": 15952,
+      "sha256": "2f80a3648e32e1b9d4cab7966fab744448051168406ca9790ebaf5ad5371acd2",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201412.xlsx",
+      "sizeBytes": 15151,
+      "sha256": "f844f6782ea73eeb00503003e12be9571a7824e3dbfefe78bb03e5847f1b682c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201501.xlsx",
+      "sizeBytes": 15080,
+      "sha256": "5afe42449ec72211c7e4dedd83f723366b88a47acfe6633fb4d879553c9cb8ab",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201502.xlsx",
+      "sizeBytes": 15168,
+      "sha256": "f420452f3ea10083acaeb9dd998cc5e39de73881936277298342c0d865598511",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201503.xlsx",
+      "sizeBytes": 15186,
+      "sha256": "046cf0174ba9345c3366ca5c139c6301ac39ecdca13399de3ebc26f6f205b295",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201504.xlsx",
+      "sizeBytes": 15182,
+      "sha256": "3202a6a21f40b7b79f07508b4c753a6599d1b85c19e2a5eda756606212e5f8be",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201505.xlsx",
+      "sizeBytes": 15197,
+      "sha256": "f6f854eacc467c95afc5afb6c613d5b7bcb65757770d2bf17ac2b16b77fe27e7",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201506.xlsx",
+      "sizeBytes": 15235,
+      "sha256": "753e805bdb2233c0896ec0a7522a98db09631655a4b0368ee3ce2103c36eb3c0",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201507.xlsx",
+      "sizeBytes": 15197,
+      "sha256": "452f2a3c70f1aa1b67c503f8e1c3e3c98b2304b5dea0972558a567e0a5166986",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201508.xlsx",
+      "sizeBytes": 15239,
+      "sha256": "ad508dbfaa1e9f212e57047100c7f6cc921f5fba829271bb7ac9e33fa730c82d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201509.xlsx",
+      "sizeBytes": 15229,
+      "sha256": "db91dccc78e17fe121c2eff925bd0c99508074bc1cd9a501d5de5213ae104629",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201510.xlsx",
+      "sizeBytes": 15164,
+      "sha256": "eab40c366eb43ca08ff2cabc2c5fd2236d1d0b65a11a09bc01fff026f5494076",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201511.xlsx",
+      "sizeBytes": 15932,
+      "sha256": "53e2c20df9fee5b3df8f1c24661493714713627a9ac9660380020da3d79249c6",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201512.xlsx",
+      "sizeBytes": 15128,
+      "sha256": "5c2634f254bd487123749da7909779efe27c435fd8ae7b4a040c746c6d76833c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201601.xlsx",
+      "sizeBytes": 15147,
+      "sha256": "9ca23502fdedaf28dae055370c0e126db06419e46f7814ec31aa13421ee4d484",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201602.xlsx",
+      "sizeBytes": 15164,
+      "sha256": "1c04eff981957bacfa099d9f9e3454a4e093587c0e7815e3788a7b2c0af0c45d",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201603.xlsx",
+      "sizeBytes": 15155,
+      "sha256": "0ef082c436bb99707315adcd4d445cc3369c3c85ba9a7e6b27a8989b24ec267b",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201604.xlsx",
+      "sizeBytes": 15201,
+      "sha256": "d8f83dacd7ccbba1dead9f876442646029e2e0ac33534a0caeff8acee89691cb",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201605.xlsx",
+      "sizeBytes": 15223,
+      "sha256": "7c78c5aa260aecb599746a083b2d8c96a0a41fc299ceaee9293cce5f888051eb",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201606.xlsx",
+      "sizeBytes": 15178,
+      "sha256": "77bae0b35518a2d6601099a8d4e08de724bff901859e851fe2d2aad45f56f0fc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201607.xlsx",
+      "sizeBytes": 15190,
+      "sha256": "358c07833bcafd6cf267673cbcf290da83fd6bcaaab2f13a1e74f4355a4481b0",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201608.xlsx",
+      "sizeBytes": 15286,
+      "sha256": "bd29fd349f7216e32e0cb11cc702e8fbf7c3862544b245a76784fca5c14415a4",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201609.xlsx",
+      "sizeBytes": 15215,
+      "sha256": "a4e1c2472627736ed035e67757cdd0dd6587f983f494f205289208966e6c1610",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201610.xlsx",
+      "sizeBytes": 15179,
+      "sha256": "4e3307a3e934b366aa5cf1c41a3ad66750b3c889d82a1ba75ad1e41c0ea83aab",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201611.xlsx",
+      "sizeBytes": 15992,
+      "sha256": "a205295fd26312928a85a13a7378747c4a31625d7d817d477b6a84388de9ac03",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201612.xlsx",
+      "sizeBytes": 15146,
+      "sha256": "fa83041eccf68dbeac2a497a748b2516556f4fd64f60eb3523c1994ec957d90a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201701.xlsx",
+      "sizeBytes": 15160,
+      "sha256": "031c9d3fa18a84963228a9c5dfc42ecd4f1757bda2e264240ebd99b36fced056",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201702.xlsx",
+      "sizeBytes": 15176,
+      "sha256": "d035ad7358b0bac40b82e6444d59299cdd0a87e37df4f622e3ba29d5401ad542",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201703.xlsx",
+      "sizeBytes": 15179,
+      "sha256": "8e28a2f7adedb309717803c288971b32ef9d07d40fc7b0b873997817baf9fef1",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201704.xlsx",
+      "sizeBytes": 15217,
+      "sha256": "72690e1e393a79b7d4ea5c287045f05bded3441f816963583b4991eb17407197",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201705.xlsx",
+      "sizeBytes": 15242,
+      "sha256": "3156218c8a4c7954a91833ed6e049b4b385323ba293d8bce6e7cba8f0c41e5be",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201706.xlsx",
+      "sizeBytes": 15267,
+      "sha256": "e4d8f2ecd5764dcc41e33e36f6738ad39f87fb36598db2cdf2720a33c5dc51ef",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201707.xlsx",
+      "sizeBytes": 15277,
+      "sha256": "77a93853e0d43e96dbc86d28745eddc5763f91a7bfcf3d2b0d7ac42b92d7c1cc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201708.xlsx",
+      "sizeBytes": 15247,
+      "sha256": "1aebddac9ded55849b1515573deddeef2bdb474fa0b455e994574578098a8d77",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201709.xlsx",
+      "sizeBytes": 15257,
+      "sha256": "08b35d9374cc63a6c35227674484c8a3d38cf957e28b410d679c4dbaedd88bf1",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201710.xlsx",
+      "sizeBytes": 15267,
+      "sha256": "2a208bc6876957d477efcae97a3c9a7b376a98431667065e1875933104b7adc9",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201711.xlsx",
+      "sizeBytes": 16003,
+      "sha256": "5ae94d6253a8d80a258ee611b062f085c599326656a82095d7398bee76f70528",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201712.xlsx",
+      "sizeBytes": 15169,
+      "sha256": "3f6046a01d0aaf91131201001d8f2c106beca19aea976cfb1b8474defec1b4ad",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201801.xlsx",
+      "sizeBytes": 15155,
+      "sha256": "6e804383e78317a1511719c47a74eaf3d63a626d5c521ecdbec47adc31dbc859",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201802.xlsx",
+      "sizeBytes": 15259,
+      "sha256": "5d289b7b2b711130b333cbf2769f3b578f9430a70da7f5c4e98e2eeaa46129d6",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201803.xlsx",
+      "sizeBytes": 15209,
+      "sha256": "711c006da6c97422e48c503653e1a19882e536a27bbfd842039cb70aa0ae8a04",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201804.xlsx",
+      "sizeBytes": 15209,
+      "sha256": "fad093557649a0acac1c7d71cb27e760e9e1afbdf12363fcf115efb3d065c043",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201805.xlsx",
+      "sizeBytes": 15236,
+      "sha256": "480c3905b22cc07639ce70d184d5cafa7164e654b9f821da7b8e9ddf4934d292",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201806.xlsx",
+      "sizeBytes": 15208,
+      "sha256": "aca95e84655ba85b913693831a5c782ad9fc7b76a0e22baf9c3e31b942490512",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201807.xlsx",
+      "sizeBytes": 15193,
+      "sha256": "e506079c3299d7e07da37f1b2a84e5c786aa681268252f8a02395d086eaead86",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201808.xlsx",
+      "sizeBytes": 15246,
+      "sha256": "3666990cd00b515fdef2df4e2dc2f525cfbba88821ed4a32e131c2c021f14aaa",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201809.xlsx",
+      "sizeBytes": 15209,
+      "sha256": "a1094ffd65f6ce4562f93795d489280c129fac83ec583bd3b07fabb1de8ba067",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201810.xlsx",
+      "sizeBytes": 15245,
+      "sha256": "7c71a3259c9b46ddd823afef2912f15ee3793174aae20235041ac3a9384b287e",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201811.xlsx",
+      "sizeBytes": 15994,
+      "sha256": "ffc421e79b38740e4fd8c1b2712cd73eafc4ddf1a98182ede4050ea68031aece",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201812.xlsx",
+      "sizeBytes": 15165,
+      "sha256": "91de57c03e1d907e51327fed7247c6ec2e313d6872b85066e2ade15dbe843e7a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201901.xlsx",
+      "sizeBytes": 15947,
+      "sha256": "1a4479cb57f63712809985339aee2fa71dcdff5bc54fadd00a4b0e405b67f814",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201902.xlsx",
+      "sizeBytes": 15169,
+      "sha256": "f8327575a6e3345209578bb3b96578cc7862b86cca9b05e4cae5e1d1aff32206",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201903.xlsx",
+      "sizeBytes": 15130,
+      "sha256": "841c70aeb643934e9b29c8e2443ca64c85b1584ec9f8a14d1795ea2bb9d5efcc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201904.xlsx",
+      "sizeBytes": 15152,
+      "sha256": "bacbb3cf4aa814f505cd28392d3316ce8a4f2c3bc9b1313edd49b4dd0fe3d14c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201905.xlsx",
+      "sizeBytes": 15197,
+      "sha256": "2509fa7159771ec0afe2b60053171690b49a216111e6953ebbb314fe5308a8bd",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201906.xlsx",
+      "sizeBytes": 15162,
+      "sha256": "6e7b29ca9a4711f3b4c328ac4cbd13dc337462977d0a8801511f5c52207e7f7c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201907.xlsx",
+      "sizeBytes": 15172,
+      "sha256": "79be74b554bdd37f37c6443b31ef92f004b51ca29fe76a925e7e3dc99a2dba16",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201908.xlsx",
+      "sizeBytes": 15257,
+      "sha256": "e71ccff28855e042f8cbe7facc7967024bde26012080379833eb1ed031012d8c",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201909.xlsx",
+      "sizeBytes": 16421,
+      "sha256": "e28ddf8592810cd16d685e9dfaa081b88312ae57de15ae13ef18b847741337c8",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201910.xlsx",
+      "sizeBytes": 15460,
+      "sha256": "cf36cfdc7558828b20b23c516389c11055dd7410777917103850d8ab0ceec6fc",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201911.xlsx",
+      "sizeBytes": 15403,
+      "sha256": "73c2c37f839321bca229431a54f57607e63b96c65796a7f8ec70224e4e6655ce",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_201912.xlsx",
+      "sizeBytes": 15393,
+      "sha256": "28f5c38b6fe945a7530f66678cfb15d52cd5bebc3a9b7c7a47cce5b51eb43c97",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_202001.xlsx",
+      "sizeBytes": 15418,
+      "sha256": "fa85e8b6a2dadeca9ef12043d897bea4a0373313ea2ec523ca38ed7bd722df5a",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_202002.xlsx",
+      "sizeBytes": 15451,
+      "sha256": "f1ad22f0e83fb267c42e6117e824a3cab37ab26ef9f1e6881a1b935ae06326ad",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_202003.xlsx",
+      "sizeBytes": 16158,
+      "sha256": "650e93765f2f204e032bfac14fcf1b98f9c043af8ff7159321838668b6420b40",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_202004.xlsx",
+      "sizeBytes": 15025,
+      "sha256": "4b13b93a05e249a992f428f798e19932784d119a9754747da7794ee78f230123",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/data/외국인관광객_실습데이터/kto_202005.xlsx",
+      "sizeBytes": 15955,
+      "sha256": "1f90ffb04a96776b11c8553a4cf0abc46e4c35d2ae0a7568becf959f31d4dee3",
+      "gitStatus": "tracked",
+      "category": "tabular-data"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/MA차수_식별.png",
+      "sizeBytes": 531607,
+      "sha256": "7a1ed8ceece567d7f6dfe52760c29ca81ba2273e32aeb86642f9f81366f173bc",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/arima모델링_절차.png",
+      "sizeBytes": 471803,
+      "sha256": "3f210c18904514a94ceb1e8659ed703380b3e8e1b16cb77af0a177e262b72284",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/arma_식별.png",
+      "sizeBytes": 662543,
+      "sha256": "90c268207678720fa100ce482d6caee77deeb37da9c47509426ca082f995ef90",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/arma모델링_절차.png",
+      "sizeBytes": 420937,
+      "sha256": "964ec76618c677cf87bfb70afc907ab1ebd00214e4e198246841c920e1ce13fa",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/ar차수_식별.png",
+      "sizeBytes": 662462,
+      "sha256": "67af724aced4354b9e72683f27c60494de2e2d40057726f9361ba43f4bf08675",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/sarima모델링_절차.png",
+      "sizeBytes": 561624,
+      "sha256": "c919a7ad9c7a56fde9775a3d99092bdb86e4cefb249adb70a194239264a930c3",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/image/확률보행프로세스_식별.png",
+      "sizeBytes": 930049,
+      "sha256": "d5f495958f865f896c8af97584f229fbd56f141a1ff2e2f3a1ce2beec13643b5",
+      "gitStatus": "tracked",
+      "category": "image"
+    },
+    {
+      "relativePath": "learning/05-time-series/pdf/1_시계열예측의이해.pdf",
+      "sizeBytes": 1442618,
+      "sha256": "f10a0b539857c74276bc6cfd0a7ae27d2678a9af6de6fad9484e5c73b31c59b1",
+      "gitStatus": "ignored",
+      "category": "pdf"
+    },
+    {
+      "relativePath": "projects/_template/data/external/.gitkeep",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitStatus": "tracked",
+      "category": "other-data"
+    },
+    {
+      "relativePath": "projects/_template/data/interim/.gitkeep",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitStatus": "tracked",
+      "category": "other-data"
+    },
+    {
+      "relativePath": "projects/_template/data/processed/.gitkeep",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitStatus": "tracked",
+      "category": "other-data"
+    },
+    {
+      "relativePath": "projects/_template/data/raw/.gitkeep",
+      "sizeBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitStatus": "tracked",
+      "category": "other-data"
+    },
+    {
+      "relativePath": "projects/math-statistics/.ipynb_checkpoints/통계_테스트_예제_프로젝트-checkpoint.ipynb",
+      "sizeBytes": 31375,
+      "sha256": "dc675cf5e7d82f6beec82c2b5ee74a11074204e6e4e3e932471c393da7418e6d",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "projects/math-statistics/통계_테스트_예제_프로젝트.ipynb",
+      "sizeBytes": 31496,
+      "sha256": "61630d47a5267cfb4c9617cfb2e0ad8e54cd2bf2ad39b75c2fc3bf3389789bc3",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    },
+    {
+      "relativePath": "projects/python-basic-project/.ipynb_checkpoints/주소록_프로젝트-checkpoint.ipynb",
+      "sizeBytes": 8305,
+      "sha256": "f27842ca0a2e886859713fbe27f5f380c83dc1f427791060ad673ca21f515b49",
+      "gitStatus": "ignored",
+      "category": "notebook-checkpoint"
+    },
+    {
+      "relativePath": "projects/python-basic-project/주소록_프로젝트.ipynb",
+      "sizeBytes": 8559,
+      "sha256": "d294acd9b62b542b61e6cb0404b728bd4cbf072b299229191535bc4d0c397c7c",
+      "gitStatus": "tracked",
+      "category": "notebook"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+﻿{
+    "id":  1270665344,
+    "node_id":  "R_kgDOS7zQgA",
+    "full_name":  "mygithub05253/EST-CAMP-AI-Quant",
+    "owner":  "mygithub05253",
+    "visibility":  "public",
+    "default_branch":  "main",
+    "main_sha":  "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+    "size_kb":  17817,
+    "created_at":  "2026-06-15T23:57:10Z",
+    "updated_at":  "2026-07-20T07:43:22Z",
+    "pushed_at":  "2026-07-20T07:43:04Z",
+    "description":  "[이스트소프트 부트캠프] AI Quant 4기",
+    "homepage":  null,
+    "topics":  [
+
+               ],
+    "fork":  false,
+    "archived":  false,
+    "disabled":  false,
+    "has_issues":  true,
+    "has_projects":  true,
+    "has_wiki":  true,
+    "has_pages":  false,
+    "has_discussions":  false,
+    "allow_merge_commit":  true,
+    "allow_squash_merge":  true,
+    "allow_rebase_merge":  true,
+    "allow_auto_merge":  false,
+    "delete_branch_on_merge":  false,
+    "allow_update_branch":  false,
+    "network_count":  0,
+    "forks_count":  0,
+    "watchers_count":  1,
+    "license_spdx":  null,
+    "permissions":  {
+                        "admin":  true,
+                        "push":  true,
+                        "pull":  true
+                    },
+    "security":  {
+                     "secret_scanning":  "enabled",
+                     "push_protection":  "enabled",
+                     "dependabot_security_updates":  "disabled"
+                 }
+}

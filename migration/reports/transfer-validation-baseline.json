@@ -1,0 +1,201 @@
+﻿{
+    "schemaVersion":  1,
+    "repository":  {
+                       "id":  1270665344,
+                       "nodeId":  "R_kgDOS7zQgA",
+                       "fullName":  "mygithub05253/EST-CAMP-AI-Quant",
+                       "owner":  "mygithub05253",
+                       "visibility":  "public",
+                       "defaultBranch":  "main",
+                       "mainSha":  "e04abb769740c3d0057aac4e6baef022c503930b",
+                       "sizeKb":  14027,
+                       "isFork":  false,
+                       "archived":  false,
+                       "hasIssues":  true,
+                       "hasProjects":  true,
+                       "hasWiki":  true,
+                       "hasPages":  false,
+                       "hasDiscussions":  false,
+                       "allowMergeCommit":  true,
+                       "allowSquashMerge":  true,
+                       "allowRebaseMerge":  true,
+                       "allowAutoMerge":  false,
+                       "deleteBranchOnMerge":  false,
+                       "permissions":  {
+                                           "admin":  true,
+                                           "push":  true,
+                                           "pull":  true
+                                       }
+                   },
+    "assets":  {
+                   "collectedAtKst":  "2026-07-20T12:56:07.1739526+09:00",
+                   "repository":  "mygithub05253/EST-CAMP-AI-Quant",
+                   "assets":  [
+                                  {
+                                      "name":  "branches",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "claude/crazy-galileo-1843d8|50598714f4e1888a731c8c3d66b1430d971e3c1c",
+                                                   "docs/manual-notion-and-dashboard-rule|d5b507283ee89daeda0fccd431aa53b46fd2440d",
+                                                   "docs/til-tips-and-branch-pr-rule|15e121c68cdd29cd192527d53310c90a91328eb2",
+                                                   "main|e04abb769740c3d0057aac4e6baef022c503930b",
+                                                   "study/01-python-basic-collections-control|f96ce5fa79924ad1b2b4337345758f5cf83583ea",
+                                                   "study/01-python-basic-datatypes|e72d8ebd01539bce23d08f859022e96d1e9934e0",
+                                                   "study/2026-07-06_07-10-time-series-eda|fb153d69a252df920ef7d5d303a84ec1d5c54e0d"
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "tags",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "issues",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "pullRequests",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "3872127450|1|closed|2026-06-16T01:07:20Z|b5b83938658b57c9ac783d8b7322ae486f4b2a5d",
+                                                   "3872132283|2|closed|2026-06-16T01:08:45Z|3c826fbe15cbd6ced517e957522cc98673895683",
+                                                   "3872143002|3|closed|2026-06-16T01:11:46Z|2864e488a5922aca478ee7de78d442ac538ee098",
+                                                   "3872146074|4|closed|2026-06-16T01:12:51Z|7fb7fc4ee86e013ceb7dec7ef9289c90179e0d41",
+                                                   "3872148631|5|closed|2026-06-16T01:13:40Z|16f572a3761709adf20ee83e80fd9b853a26090c",
+                                                   "3872151440|6|closed|2026-06-16T01:14:25Z|1bea1956846f2c76c3d515cbd038fcb26785e569",
+                                                   "3872155842|7|closed|2026-06-16T01:15:35Z|acd0b6bdffde29b6e2b527d5c9bec24d8a415f79",
+                                                   "3872238995|8|closed|2026-06-16T01:39:07Z|ffa0969d53306b600476e802176dbc266aa5f3c7",
+                                                   "3872242602|9|closed|2026-06-16T01:40:02Z|730ac1924af5adbaba911890a986f4de55b7632d",
+                                                   "3872247235|10|closed|2026-06-16T01:41:05Z|b28441c6acd5474b61450a4840e7b700ed1591e1",
+                                                   "3874020700|11|closed|2026-06-16T08:18:55Z|aae72122cdfeaedab9524c52ae90dad95ca9b90e",
+                                                   "3874046314|12|closed|2026-06-16T08:22:41Z|36455f7609e26430957074f5aaa1de065e5d67bf",
+                                                   "3874083051|13|closed|2026-06-16T08:28:37Z|cff72d1875208e1c95e967db9e8c9b3b5945b1e9",
+                                                   "3874138716|14|closed|2026-06-16T08:39:02Z|62570d9ba79021d5e6a9293d22dfde8ef95120a9",
+                                                   "3882178536|15|closed|2026-06-17T09:14:49Z|1f3d205ac0ae8d4656a9e7425a852a42fbeed047",
+                                                   "3895149241|16|closed|2026-06-18T23:56:20Z|baaef2306d3a03d8bdfc1d67ff45babb34c133f9",
+                                                   "3916176397|17|closed|2026-06-23T00:12:27Z|f621e07678a5dc9939bcc6f92c7cf21ed17e995d",
+                                                   "3916181224|18|closed|2026-06-23T00:13:33Z|c0fbefe7d2b7f292c85d3d0d4fce042aae8e68cd",
+                                                   "3923929882|19|closed|2026-06-24T00:06:36Z|db3cd8c5bf4e6438e88861f63e137163ee796da2",
+                                                   "3941495898|20|closed|2026-06-26T10:08:08Z|7f5a26f1e89ce14c3cd5cc0d12674066c21139a7",
+                                                   "3941509352|21|closed|2026-06-26T10:10:43Z|14bfaaa12a105671bc5847731f7f4287906e802d",
+                                                   "3941523391|22|closed|2026-06-26T10:13:19Z|fb557de36c593bfda4b0657a4059c99e9e80fdb8",
+                                                   "3977957493|23|closed|2026-07-02T11:51:12Z|b7a83219d7dbe74071ed0eca15896f6653ce3e33",
+                                                   "3985809442|24|closed|2026-07-03T11:55:32Z|add5a5807ab4ab8c236fae60ac9e3847626118df",
+                                                   "4002888443|25|closed|2026-07-06T23:47:47Z|a8de1cd7aabd8dd8fce043dd4565118aa1f23c6a",
+                                                   "4034293652|26|closed|2026-07-11T06:26:45Z|fedbfced9f1b9d87c0a93adf573b7efcaee5a0fd",
+                                                   "4073057735|27|closed|2026-07-17T01:36:06Z|e04abb769740c3d0057aac4e6baef022c503930b"
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "releases",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "labels",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "11245991207|bug|d73a4a",
+                                                   "11245991212|documentation|0075ca",
+                                                   "11245991217|duplicate|cfd3d7",
+                                                   "11245991223|enhancement|a2eeef",
+                                                   "11245991226|help wanted|008672",
+                                                   "11245991233|good first issue|7057ff",
+                                                   "11245991239|invalid|e4e669",
+                                                   "11245991245|question|d876e3",
+                                                   "11245991249|wontfix|ffffff"
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "milestones",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "workflows",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "305959332|dynamic/agents/copilot-pull-request-reviewer|active"
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "environments",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "17546102497|copilot"
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "actionsSecrets",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "actionsVariables",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "deployKeys",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "webhooks",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "rulesets",
+                                      "status":  "PASS",
+                                      "keys":  [
+
+                                               ],
+                                      "error":  null
+                                  },
+                                  {
+                                      "name":  "collaborators",
+                                      "status":  "PASS",
+                                      "keys":  [
+                                                   "mygithub05253|admin"
+                                               ],
+                                      "error":  null
+                                  }
+                              ],
+                   "pages":  {
+                                 "status":  "not-configured-or-inaccessible",
+                                 "apiStatus":  "UNKNOWN",
+                                 "error":  "gh.exe : gh: Not Found (HTTP 404)"
+                             }
+               }
+}
