@@ -9,8 +9,120 @@
 | Phase 0 최신 조사 | PASS |
 | Gate A 신규 완전 백업 | **PASS — 4차 시도 성공** |
 | Phase 1 백업 실행 | **PASS — `before-transfer-20260721-111152-14277f98fb22`** |
-| Private 저장소·LFS upload | 별도 B1·B2 미승인 |
-| Repository Transfer | Gate B 승인 대기 (기술적 차단 해소) |
+| Repository Transfer | **PASS — 2026-07-21 완료** (`EST-Bootcamp-AI-Quant/EST-CAMP-AI-Quant`) |
+| Private 저장소·LFS upload | **PASS — 2026-07-21 완료** (`EST-Bootcamp-AI-Quant/est-camp-archive`) |
+
+## Stage A (Organization Transfer) 완료 기록 — 2026-07-21
+
+`mygithub05253/EST-CAMP-AI-Quant` → `EST-Bootcamp-AI-Quant/EST-CAMP-AI-Quant` 이관 완료.
+
+| 검증 항목 | 결과 |
+|---|---|
+| branch 8개 (이름·SHA) | 전후 IDENTICAL |
+| workflow 1개 | 전후 IDENTICAL |
+| PR | 32개 유지 |
+| `main` | `88f85cc` — 로컬·원격 일치 |
+| 공개 여부 | public 유지 |
+| 구 경로 redirect | 동작 확인 |
+| 로컬 `origin` URL | 신 경로로 변경, fetch 성공 |
+
+- `admin:org` 스코프는 **불필요했다**. 조직 admin 역할 + `repo` 스코프로 전송이 성공했다.
+- 사전 PR 수 baseline 30은 pagination 미적용으로 잘린 값이었고, 실제 전후 모두 32개다. 손실 아님.
+- `--prune` 시 사라진 remote-tracking ref 4개는 이미 머지·삭제된 PR 브랜치의 잔재이며 데이터 손실이 아니다.
+
+### 후속 확인 필요
+
+- workflow `dynamic/agents/copilot-pull-request-reviewer`는 이관됐으나, 대상 조직에 Copilot App 설치가 0건이므로 **실제 동작 여부는 다음 PR에서 확인**해야 한다.
+- 구 경로 `mygithub05253/EST-CAMP-AI-Quant` 이름은 redirect 보존을 위해 재사용하지 않는다.
+
+## 자료 업로드 방침 (사용자 확정 — 2026-07-21)
+
+이전 문서에 "교재 PDF·ZIP은 GitHub 업로드 금지"로 잘못 기록돼 있었다. 사용자 확정 방침은 다음과 같다.
+
+- **데이터 + 교재 PDF·ZIP 모두 Private 보관 레포 이관 대상**이다.
+- 공개 레포에는 여전히 커밋하지 않는다.
+- 강사 배포 코드는 public 커밋 가능 (부트캠프 담당자 확인 목적).
+
+### Stage B 차단 요소 — LFS 용량 초과
+
+| 폴더 | 크기 | 파일 수 |
+|---|---|---|
+| `docs/book` | 538 MB | 20 |
+| `docs/zip` | 480 MB | 1 |
+| `docs/pdf` | 5 MB | 1 |
+| **합계** | **약 1,024 MB** | 22 |
+
+100 MB 초과로 **LFS가 필수인 파일 3개**:
+
+| 크기 | 파일 |
+|---|---|
+| 480 MB | `AI퀀트과정_교재.zip` |
+| 215 MB | `07-3. 투자분석 기초 방법론(기본적 분석).pdf` |
+| 169 MB | `07-4. 투자분석 기초 방법론(기술적 분석).pdf` |
+
+대상 조직 플랜은 **free = LFS 저장 1 GB / 대역폭 1 GB**다. 자료 총량이 약 1,024 MB이므로
+그대로는 들어가지 않았다. **해소 방법: `docs/zip` 제외.**
+
+`AI퀀트과정_교재.zip`(480 MB)은 `docs/book`의 **완전한 중복**임을 확인했다.
+zip 엔트리 20개를 압축 해제 스트림에서 SHA256으로 계산해 `docs/book` 원본과 대조한 결과
+**match=20 / differ=0 / missing=0**이다. 따라서 zip을 제외해도 정보 손실이 없다.
+
+제외 후 실제 이관량은 **551 MB**로 free 쿼터 안에 들어간다. **Data Pack 구매는 불필요했다.**
+
+## Stage B (Private 보관 레포) 완료 기록 — 2026-07-21
+
+`EST-Bootcamp-AI-Quant/est-camp-archive` (**private=true**) 생성 및 최초 등록 완료.
+
+| 경로 | 내용 | 크기 |
+|---|---|---|
+| `book/` | 교재 PDF 20개 (LFS) | 538 MB |
+| `pdf/` | OT 자료 1개 (LFS) | 5 MB |
+| `data/` | 실습 데이터 188개 | 8 MB |
+| **합계** | **209개 파일** | **551 MB** |
+
+`data/` 하위는 공개 저장소의 **원본 상대경로를 유지**한다(`data/` 접두어만 제거하면 복원됨).
+이는 미해결 항목인 "경로 결합"(notebook 경로 리터럴 87회)을 자극하지 않기 위한 선택이다.
+
+### 검증 결과
+
+| 검증 | 결과 |
+|---|---|
+| 원본 → 스테이징 전수 해시 | match=209 / mismatch=0 / missing=0 |
+| LFS 등록 오브젝트 | 24개 (PDF 21 + 데이터 zip 3) |
+| push | 성공, 570 MB 업로드 |
+| 원격 HEAD·tree 해시 | 로컬 빌드와 완전 일치 (`ba95eab1`) |
+| 원격 LFS OID + 경로 | 24/24 완전 일치 |
+| 원격 tracked 파일 수 | 211개 (콘텐츠 209 + README + `.gitattributes`) |
+| private 여부 | true |
+
+원격 검증은 `GIT_LFS_SKIP_SMUDGE=1` 클론으로 수행해 LFS 대역폭을 소모하지 않았다.
+
+> 검증 중 두 번의 **거짓 판정**을 만나 정정했다. 같은 실수를 반복하지 않도록 기록한다.
+> 1. `git rev-parse HEAD^{tree}`를 PowerShell에서 따옴표 없이 쓰면 `^{...}`가 ScriptBlock으로
+>    파싱돼 양쪽 모두 빈 문자열이 되고, 빈 값끼리 비교돼 "일치"로 오판된다. 반드시 `"HEAD^{tree}"`로 인용한다.
+> 2. `git lfs ls-files -l` 출력의 presence 마커(`*` 로컬 보유 / `-` 포인터만)를 그대로 비교하면
+>    skip-smudge 클론에서 항상 불일치로 나온다. OID+경로만 비교해야 한다.
+
+### 남은 제약 — LFS 대역폭
+
+free 조직의 LFS 대역폭은 **월 1 GB**다. 전체 clone 1회에 약 551 MB를 소비하므로
+**월 1~2회가 한계**다. 평소 작업은 기존 로컬 저장소를 사용하고 이 저장소는 보관용으로만 쓴다.
+데이터만 필요하면 `GIT_LFS_SKIP_SMUDGE=1` clone으로 대역폭을 소모하지 않고 받을 수 있다.
+
+### 로컬 산출물
+
+| 경로 | 처리 |
+|---|---|
+| `C:\Users\kik32\est-camp-archive-build` | 푸시한 레포의 로컬 빌드본(551 MB). 삭제 여부는 사용자 판단 대기 |
+| `C:\Users\kik32\est-camp-verify` | 검증용 클론. 삭제 완료 |
+| `docs/zip` (원본, 480 MB) | 사용자 지시에 따라 **로컬 그대로 보존** |
+
+### 확인된 리스크 발현 — Copilot 리뷰어 미동작
+
+이관된 `dynamic/agents/copilot-pull-request-reviewer` workflow가 **PR #33에서 실행되지 않았다.**
+Actions 실행 총계는 여전히 1건(2026-07-02, 이관 전 기록)이다.
+대상 조직에 Copilot App 설치가 0건인 것이 원인으로 보이며, **조직 설정에서 App 설치·승인이 필요**하다.
+과거 실행 이력 자체는 보존됐다.
 
 ## 2026-07-21 해소된 차단 요소
 
