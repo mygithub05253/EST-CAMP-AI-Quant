@@ -48,16 +48,27 @@ Gate A 재시도 과정에서 이 환경 고유의 결함 3건을 확인하고 �
 
 2·3번은 같은 계열(0건·빈 값을 정상 상태로 처리하지 못함)이므로, 3번 수정 시 잔여 `Measure-Object` 사용처를 전수 조사해 함께 고쳤다. 회귀 테스트로 빈 입력에서 예외가 없고 정상 입력의 합계·제외 동작이 유지됨을 확인했다.
 
-## 보존 중인 실패 partial
+## 실패 partial 정리 완료
 
-정책에 따라 삭제하지 않았다. 총 약 1.6 GB.
+완전 백업의 `SHA256SUMS.txt` 36개 항목을 독립 재검증(일치 36 / 불일치 0 / 누락 0)한 뒤,
+사용자 승인을 받아 미완결 partial 4개(약 1.6 GB)를 삭제했다.
 
-| 경로 | 크기 |
+삭제 과정에서도 두 가지 Windows 제약을 만나 조치했다.
+
+| 문제 | 조치 |
 |---|---|
-| `before-transfer-e04abb769740-6f7682ed68e3.partial-30556` | 41 MB |
-| `before-transfer-20260721-103429-8e3546c83d7d.partial-48692` | 139 MB |
-| `before-transfer-20260721-110101-14277f98fb22.partial-26548` | 143 MB |
-| `before-transfer-20260721-110721-14277f98fb22.partial-47988` | 1.3 GB |
+| `Remove-Item`이 `refs/codex/...` 260자 초과 경로를 삭제하지 못함 | `\\?\` extended-length 경로로 `[System.IO.Directory]::Delete` 사용 |
+| git pack `.idx`·`.pack`이 읽기 전용이라 접근 거부 | 삭제 전 ReadOnly 속성 해제(세트당 6개) |
+
+### 현재 보존 중인 백업
+
+| 경로 | 크기 | 상태 |
+|---|---|---|
+| `before-transfer-20260721-111152-14277f98fb22` | 1,248 MB | **COMPLETE — 현행 기준 백업** |
+| `before-transfer-e04abb769740-4c319b33d321` | 40 MB | COMPLETE — 7/20 git 전용 백업(예비) |
+
+삭제 후 기준 백업의 `complete.json` status PASS, bundle verify 통과,
+미러 `main`이 `14277f9`와 일치함을 재확인했다.
 
 5. **Organization·LFS 정책 일부 미확인**
    - `admin:org`, `admin:org_hook`, `read:project` 부족으로 조직 정책 일부를 확인하지 못했다.
