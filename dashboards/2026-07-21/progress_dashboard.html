@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EST AI퀀트 4기 · 작업 대시보드 · 2026-07-21</title>
+  <style>
+    :root {
+      --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
+      --text: #0f172a; --muted: #64748b;
+      --blue: #2563eb; --blue-soft: #eff6ff;
+      --emerald: #059669; --emerald-soft: #ecfdf5;
+      --amber: #d97706; --amber-soft: #fffbeb;
+      --slate-soft: #f1f5f9; --violet: #7c3aed; --violet-soft: #f5f3ff;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; }
+    code { border-radius: 5px; background: var(--slate-soft); padding: 1px 5px; color: #334155; font-size: 0.92em; }
+    header { border-bottom: 1px solid var(--border); background: #fff; }
+    .header-inner { max-width: 1080px; margin: 0 auto; padding: 16px; display: flex; align-items: center; gap: 12px; }
+    .logo-badge { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; background: var(--blue); color: #fff; font-size: 13px; font-weight: 800; }
+    .logo-title { font-size: 15px; font-weight: 800; }
+    .logo-sub { font-size: 12px; color: var(--muted); }
+    main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+    section { margin-top: 30px; }
+    .card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); padding: 20px; }
+    .section-label { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .section-title { margin-top: 4px; font-size: 21px; font-weight: 800; }
+    .section-desc { margin-top: 6px; color: var(--muted); font-size: 14px; }
+    h1 { font-size: 26px; font-weight: 800; line-height: 1.35; margin-top: 8px; }
+    .lede { margin-top: 10px; color: var(--muted); max-width: 760px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .pill { border: 1px solid var(--border); border-radius: 999px; background: #fff; padding: 4px 11px; color: var(--muted); font-size: 12px; }
+    .overall { margin-top: 18px; }
+    .overall-head { display: flex; align-items: baseline; justify-content: space-between; }
+    .overall-pct { font-size: 30px; font-weight: 800; color: var(--blue); }
+    .progress-track { height: 12px; margin-top: 10px; overflow: hidden; border-radius: 999px; background: var(--slate-soft); }
+    .progress-fill { height: 100%; border-radius: 999px; background: var(--blue); transition: width 700ms ease; }
+    .progress-fill.done { background: var(--emerald); }
+    .progress-fill.now { background: var(--blue); }
+    .progress-fill.todo { background: var(--amber); }
+    .task-grid { display: grid; gap: 14px; margin-top: 18px; }
+    @media (min-width: 760px) { .task-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .task-card { border: 1px solid var(--border); border-radius: var(--radius); background: #fff; padding: 16px; }
+    .task-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .task-title { font-size: 15px; font-weight: 800; }
+    .task-pct { font-size: 20px; font-weight: 800; white-space: nowrap; }
+    .task-card.done .task-pct { color: var(--emerald); }
+    .task-card.now .task-pct { color: var(--blue); }
+    .task-card.todo .task-pct { color: var(--amber); }
+    .task-card ul { margin: 10px 0 0 17px; color: var(--muted); font-size: 13px; }
+    .task-card li { margin-top: 3px; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 3px 9px; margin-top: 8px; }
+    .badge.done { background: var(--emerald-soft); color: var(--emerald); }
+    .badge.now { background: var(--blue-soft); color: var(--blue); }
+    .badge.todo { background: var(--amber-soft); color: var(--amber); }
+    .rules { margin-top: 14px; border-left: 4px solid var(--violet); border-radius: 0 10px 10px 0;
+      background: var(--violet-soft); padding: 14px 16px; }
+    .rules h3 { font-size: 14px; font-weight: 800; color: #5b21b6; }
+    .rules ul { margin: 8px 0 0 18px; color: #5b21b6; font-size: 13px; }
+    .rules li { margin-top: 4px; }
+    .log { display: grid; gap: 0; margin-top: 16px; }
+    .log-item { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }
+    .log-rail { display: flex; flex-direction: column; align-items: center; }
+    .log-dot { width: 24px; height: 24px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+      background: var(--emerald); color: #fff; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+    .log-line { width: 2px; flex: 1; margin: 4px 0; background: var(--border); }
+    .log-item:last-child .log-line { display: none; }
+    .log-body { padding-bottom: 16px; }
+    .log-body h3 { font-size: 14px; font-weight: 700; }
+    .log-body p { margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .verify { margin-top: 18px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
+    th, td { border-bottom: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+    th { color: var(--muted); font-size: 12px; font-weight: 700; }
+    td.ok { color: var(--emerald); font-weight: 700; }
+    footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="logo-badge">AQ</span>
+      <span>
+        <div class="logo-title">EST AI퀀트 4기 · 작업 대시보드</div>
+        <div class="logo-sub">기준일 2026-07-21 (KST) · 개발·학습</div>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <p class="section-label">2026-07-21 · 개발·학습</p>
+      <h1>조직 이관(Stage A·B) 완료 및 6단원 크롤링 학습 시작</h1>
+      <p class="lede">
+        저장소를 개인 계정에서 <code>EST-Bootcamp-AI-Quant</code> 조직으로 이관하고,
+        교재·데이터를 별도 Private 보관 저장소로 분리했습니다.
+        이어서 6단원 데이터 크롤링 첫 실습 노트북을 반영했습니다.
+      </p>
+      <div class="pill-row">
+        <span class="pill">AI 퀀트 4기</span>
+        <span class="pill">repo: EST-CAMP-AI-Quant</span>
+        <span class="pill">개발·학습</span>
+        <span class="pill">PR #33 · #34 · #35</span>
+      </div>
+      <div class="overall">
+        <div class="overall-head">
+          <span style="font-weight:700;">전체 진행률</span>
+          <span class="overall-pct">75%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill now" style="width:75%"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Tasks</p>
+      <h2 class="section-title">작업별 진행 현황</h2>
+      <p class="section-desc">한 작업이 끝날 때마다 확인 후 다음으로 진행합니다.</p>
+      <div class="task-grid">
+
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">Stage A · 조직 이관</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li><code>mygithub05253</code> → <code>EST-Bootcamp-AI-Quant</code></li>
+            <li>branch 8개 · workflow · PR 32개 전부 보존</li>
+            <li>구 경로 redirect 동작 확인</li>
+            <li><code>admin:org</code> 스코프 불필요 (조직 admin + <code>repo</code>로 성공)</li>
+          </ul>
+        </article>
+
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">Stage B · Private 보관</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li><code>est-camp-archive</code> 생성 (private)</li>
+            <li>213개 파일 · 554 MB · LFS 28개</li>
+            <li>교재 zip 중복(SHA256 20/20) 제외로 쿼터 해결</li>
+            <li>gitignore 누락 자료 4건 추가 보관</li>
+          </ul>
+        </article>
+
+        <article class="task-card done">
+          <div class="task-head">
+            <span class="task-title">6단원 · 데이터 크롤링</span>
+            <span class="task-pct">100%</span>
+          </div>
+          <span class="badge done">완료</span>
+          <ul>
+            <li><code>1.웹기본지식.ipynb</code> (21 cells)</li>
+            <li>민감정보 스캔 5종 전부 0건</li>
+            <li>PR #35 auto-merge 완료</li>
+          </ul>
+        </article>
+
+        <article class="task-card todo">
+          <div class="task-head">
+            <span class="task-title">Stage C · 저장소 분리</span>
+            <span class="task-pct">0%</span>
+          </div>
+          <span class="badge todo">대기</span>
+          <ul>
+            <li>폴더별 submodule 분리 (별도 승인 필요)</li>
+            <li>선결 과제: notebook 경로 리터럴 87회</li>
+            <li>수업 종료 후 진행 예정</li>
+          </ul>
+        </article>
+
+        <article class="task-card todo">
+          <div class="task-head">
+            <span class="task-title">Copilot 리뷰어</span>
+            <span class="task-pct">0%</span>
+          </div>
+          <span class="badge todo">보류</span>
+          <ul>
+            <li>이관 후 신규 PR에서 미동작 확인</li>
+            <li>조직 App 설치·승인 필요</li>
+            <li>당장 불필요 판단으로 보류</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Verification</p>
+      <h2 class="section-title">이관 검증 결과</h2>
+      <p class="section-desc">이관·업로드는 전 구간 해시로 검증했습니다.</p>
+      <div class="card verify">
+        <table>
+          <thead>
+            <tr><th>검증 항목</th><th>결과</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>branch 이름·SHA (이관 전후)</td><td class="ok">IDENTICAL (8/8)</td></tr>
+            <tr><td>workflow (이관 전후)</td><td class="ok">IDENTICAL</td></tr>
+            <tr><td>PR 보존</td><td class="ok">32개 유지</td></tr>
+            <tr><td>원본 → 보관본 파일 해시</td><td class="ok">match 213 / mismatch 0</td></tr>
+            <tr><td>원격 tree 해시</td><td class="ok">로컬과 일치 (24d8ff29)</td></tr>
+            <tr><td>LFS OID + 경로</td><td class="ok">28/28 일치</td></tr>
+            <tr><td>archive 저장소 공개 여부</td><td class="ok">private = true</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Rules</p>
+      <h2 class="section-title">적용 규칙 (운영진/개인 기준)</h2>
+      <div class="rules">
+        <h3>자료 업로드 방침 (2026-07-21 확정)</h3>
+        <ul>
+          <li>강사 배포 코드는 <strong>public 커밋 가능</strong> — 부트캠프 담당자 확인 목적</li>
+          <li>교재 PDF·ZIP과 데이터는 <strong>공개 레포 커밋 금지 / Private 보관 레포 이관</strong></li>
+          <li>이전 문서의 "교재 GitHub 업로드 금지" 기재는 오기였으며 정정 완료</li>
+        </ul>
+      </div>
+      <div class="rules">
+        <h3>협업 플로우</h3>
+        <ul>
+          <li><code>pull → branch → commit → push → PR → auto-merge</code></li>
+          <li>한 작업 완료 → 대시보드 기록 → 보고 → 확인 → 다음</li>
+          <li>수업 노트북(<code>learning/*.ipynb</code>)은 실습 결과물이므로 항상 커밋</li>
+        </ul>
+      </div>
+      <div class="rules">
+        <h3>운영 제약</h3>
+        <ul>
+          <li>free 조직 LFS 대역폭 <strong>월 1 GB</strong> — 전체 clone은 월 1~2회가 한계</li>
+          <li>평소 작업은 기존 로컬 저장소 사용, archive는 보관 전용</li>
+          <li>구 경로 <code>mygithub05253/EST-CAMP-AI-Quant</code>는 redirect 보존을 위해 재사용 금지</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">Work Log</p>
+      <h2 class="section-title">오늘의 작업 로그</h2>
+      <div class="log">
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>Gate A 완전 백업 확인</h3>
+            <p>1.3 GB 백업 세트 PASS 상태에서 이관 착수. 사전 baseline(branch·workflow·PR) 스냅샷 확보.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>Stage A · 조직 이관 실행</h3>
+            <p>우려했던 <code>admin:org</code> 스코프는 불필요했음. 조직 admin 역할과 기존 <code>repo</code> 스코프로 전송 성공. 재인증 없이 완료.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>자료 방침 정정 · PR #33</h3>
+            <p><code>AGENTS.md</code>가 교재 커밋을 무조건 금지하고 있어 "공개 레포만 금지 / Private 이관 허용"으로 수정.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>교재 zip 중복 검증</h3>
+            <p>자료 총량 1,024 MB가 free LFS 쿼터 1 GB를 초과. zip 엔트리 20개를 SHA256으로 대조해 <code>docs/book</code>과 완전 중복임을 확인, 제외로 551 MB까지 축소. <strong>Data Pack 구매 불필요.</strong></p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>Stage B · Private 보관 저장소 구축 · PR #34</h3>
+            <p><code>est-camp-archive</code> 생성 후 교재·데이터 업로드. 이후 <code>.gitignore</code>로 누락돼 있던 강의 PDF 3개와 테스트 데이터 zip을 전수 조사로 찾아 추가.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>검증 거짓 판정 2건 정정</h3>
+            <p>PowerShell에서 <code>HEAD^{tree}</code> 미인용 시 ScriptBlock으로 파싱돼 빈 값끼리 비교되는 문제와, LFS presence 마커 차이를 불일치로 오판한 문제를 발견해 재검증. 재발 방지용으로 문서화.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>로컬 정리</h3>
+            <p>빌드본·검증 클론 삭제. 원본 자료(<code>docs/book</code> 538 MB, <code>docs/zip</code> 480 MB 등)는 전부 보존 확인.</p>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <div class="log-rail"><div class="log-dot">✓</div><div class="log-line"></div></div>
+          <div class="log-body">
+            <h3>6단원 데이터 크롤링 실습 · PR #35</h3>
+            <p><code>1.웹기본지식.ipynb</code> 반영. 민감정보 스캔 5종 전부 0건, 출력 셀 0개 확인 후 커밋.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      EST AI퀀트 4기 · 작업 대시보드 · 기준일 2026-07-21 (KST)<br />
+      한 작업 완료 시마다 갱신 · 날짜별 폴더로 버전 관리
+    </footer>
+  </main>
+</body>
+</html>
