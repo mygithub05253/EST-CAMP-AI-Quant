@@ -16,16 +16,43 @@
 
 ## 2. 폴더 구조
 
-| 폴더 | 용도 |
-|------|------|
-| `learning/` | 학습 기록 (교재 목차 9단원 단위) |
-| `assignments/` | 과제 (요구사항·기한 포함) |
-| `projects/` | 프로젝트 코드 ([Cookiecutter DS](https://cookiecutter-data-science.drivendata.org/) 표준, `_template/` 복사) |
-| `dashboards/` | 작업 진행 대시보드 (날짜별 폴더) |
-| `docs/` | 교재·자료 (**git 제외** — 저작권) |
-| `.claude/skills/` | 커스텀 작업 스킬 |
+| 폴더 | 용도 | 저장소 |
+|------|------|------|
+| `learning/` | 학습 기록 (교재 목차 9단원 단위) | 이 레포 |
+| `assignments/` | 과제 (요구사항·기한 포함) | 이 레포 |
+| `docs/` | 교재·자료 (**git 제외** — 저작권) | [est-camp-archive](https://github.com/EST-Bootcamp-AI-Quant/est-camp-archive) (Private) |
+| `.claude/skills/` | 커스텀 작업 스킬 | 이 레포 |
+| `projects/` | 프로젝트 코드 ([Cookiecutter DS](https://cookiecutter-data-science.drivendata.org/) 표준, `_template/` 복사) | **submodule** → [est-camp-projects](https://github.com/EST-Bootcamp-AI-Quant/est-camp-projects) |
+| `worklogs/` | TIL·작업 기록 (일자별) | **submodule** → [est-camp-worklogs](https://github.com/EST-Bootcamp-AI-Quant/est-camp-worklogs) |
+| `dashboards/` | 작업 진행 대시보드 (날짜별 폴더) | **submodule** → [est-camp-dashboards](https://github.com/EST-Bootcamp-AI-Quant/est-camp-dashboards) |
 
 상세는 각 폴더의 `README.md` 참고. 구조 변경 시 루트 [`README.md`](README.md)도 갱신.
+
+### 2.1 Submodule 작업 규칙 ★ (2026-07-21 Stage C 적용)
+
+`projects/` · `worklogs/` · `dashboards/` 는 **독립 저장소를 submodule 로 연결**한 것이다.
+폴더는 지금처럼 이 레포 안에 그대로 보이지만, **커밋은 2단계**다.
+
+```bash
+# 1) submodule 안에서 먼저 커밋·푸시
+cd dashboards
+git checkout main          # 중요: submodule 은 기본이 detached HEAD 다
+git add . && git commit -m "docs: ..." && git push
+
+# 2) 부모 레포에서 gitlink(참조 커밋) 갱신
+cd ..
+git add dashboards && git commit -m "chore: dashboards submodule 갱신" && git push
+```
+
+주의사항:
+
+- **`git checkout main` 을 잊지 말 것.** submodule 은 기본적으로 detached HEAD 로 체크아웃되며,
+  이 상태에서 커밋하면 브랜치에 안 붙어 나중에 찾기 어렵다.
+- 최초 clone 시 `git clone --recurse-submodules` 를 쓰거나,
+  이미 clone 했다면 `git submodule update --init --recursive` 를 실행한다.
+- 부모의 gitlink 갱신을 빠뜨리면 다른 곳에서 clone 했을 때 옛 버전이 나온다.
+- `learning/` · `assignments/` 는 **분리하지 않았다.** 수업 중 매일 커밋하는 경로라
+  2단계 커밋 비용이 이득보다 크다고 판단했다.
 
 ---
 

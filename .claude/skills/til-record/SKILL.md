@@ -55,6 +55,10 @@ description: 부트캠프 TIL/작업 기록을 캠프 노션 양식에 맞춰 �
 3. **사용자에게 노션 붙여넣기 안내**: 저장한 파일 내용을 보여주고 "이 내용을 노션 TIL에 붙여넣으세요"라고 안내한다. (Claude는 노션에 직접 쓰지 않는다.)
 4. (연계) GitHub 반영은 `bootcamp-worklog` 또는 `github-flow` 스킬로 처리한다.
 
+> ⚠️ **`worklogs/` 는 submodule 이다** (2026-07-21 Stage C → [est-camp-worklogs](https://github.com/EST-Bootcamp-AI-Quant/est-camp-worklogs)).
+> 저장한 TIL 은 **submodule 안에서 먼저 커밋·푸시**해야 원격에 올라간다.
+> 부모 레포에서 `git add worklogs` 만 하면 gitlink 만 갱신되고 본문은 누락된다.
+
 ## 작성 원칙 (캠프 TIL Tip)
 - 단순 나열이 아니라 **자신의 언어로** 정리한다.
 - 코드·실습 결과물이 있으면 함께 기록한다 (`learning/`·`assignments/` 파일 링크).

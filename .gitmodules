@@ -1,0 +1,9 @@
+[submodule "projects"]
+	path = projects
+	url = https://github.com/EST-Bootcamp-AI-Quant/est-camp-projects.git
+[submodule "worklogs"]
+	path = worklogs
+	url = https://github.com/EST-Bootcamp-AI-Quant/est-camp-worklogs.git
+[submodule "dashboards"]
+	path = dashboards
+	url = https://github.com/EST-Bootcamp-AI-Quant/est-camp-dashboards.git
