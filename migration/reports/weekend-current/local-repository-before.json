@@ -1,0 +1,66 @@
+﻿{
+    "collectedAtKst":  "2026-07-21T09:19:22.0410237+09:00",
+    "repositoryRoot":  "C:\\Users\\kik32\\workspace\\EST-Camp-AI-Quant",
+    "status":  {
+                   "exitCode":  0,
+                   "rawStdout":  "# branch.oid 8e3546c83d7dd874fa67cb02d441076d58a2e615\r\n# branch.head main\r\n# branch.upstream origin/main\r\n# branch.ab +0 -0\r\n? assignments/05-time-series/시계열분석_풀이.ipynb\r\n? docs/image/\r\n? migration/\r\n",
+                   "stdout":  "# branch.oid 8e3546c83d7dd874fa67cb02d441076d58a2e615\r\n# branch.head main\r\n# branch.upstream origin/main\r\n# branch.ab +0 -0\r\n? assignments/05-time-series/시계열분석_풀이.ipynb\r\n? docs/image/\r\n? migration/",
+                   "stderr":  ""
+               },
+    "currentBranch":  {
+                          "exitCode":  0,
+                          "rawStdout":  "main\r\n",
+                          "stdout":  "main",
+                          "stderr":  ""
+                      },
+    "remotes":  {
+                    "exitCode":  0,
+                    "rawStdout":  "origin\thttps://github.com/mygithub05253/EST-CAMP-AI-Quant.git (fetch)\r\norigin\thttps://github.com/mygithub05253/EST-CAMP-AI-Quant.git (push)\r\n",
+                    "stdout":  "origin\thttps://github.com/mygithub05253/EST-CAMP-AI-Quant.git (fetch)\r\norigin\thttps://github.com/mygithub05253/EST-CAMP-AI-Quant.git (push)",
+                    "stderr":  ""
+                },
+    "head":  {
+                 "exitCode":  0,
+                 "rawStdout":  "8e3546c83d7dd874fa67cb02d441076d58a2e615\r\n",
+                 "stdout":  "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+                 "stderr":  ""
+             },
+    "originMain":  {
+                       "exitCode":  0,
+                       "rawStdout":  "8e3546c83d7dd874fa67cb02d441076d58a2e615\r\n",
+                       "stdout":  "8e3546c83d7dd874fa67cb02d441076d58a2e615",
+                       "stderr":  ""
+                   },
+    "refs":  {
+                 "exitCode":  0,
+                 "rawStdout":  "7bd95cb698aa6679a7a41d7d2031ccb85a93d084 refs/heads/assignment/mygithub05253-05-time-series-test\r\n62570d9ba79021d5e6a9293d22dfde8ef95120a9 refs/heads/claude/mystifying-thompson-f3865b\r\nc0fbefe7d2b7f292c85d3d0d4fce042aae8e68cd refs/heads/claude/nervous-snyder-8af509\r\ndb3cd8c5bf4e6438e88861f63e137163ee796da2 refs/heads/claude/quizzical-yonath-c25500\r\nfb557de36c593bfda4b0657a4059c99e9e80fdb8 refs/heads/claude/suspicious-diffie-d7c8ef\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d refs/heads/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2 refs/heads/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615 refs/heads/main\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d refs/heads/study/2026-07-06_07-10-time-series-eda\r\na3778f3ad041bb46d0a12445a3c57f1ea09a763f refs/heads/study/2026-07-13_07-16-time-series-ma-ar-arma\r\n7bd95cb698aa6679a7a41d7d2031ccb85a93d084 refs/remotes/origin/assignment/mygithub05253-05-time-series-test\r\n50598714f4e1888a731c8c3d66b1430d971e3c1c refs/remotes/origin/claude/crazy-galileo-1843d8\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d refs/remotes/origin/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2 refs/remotes/origin/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615 refs/remotes/origin/main\r\nf96ce5fa79924ad1b2b4337345758f5cf83583ea refs/remotes/origin/study/01-python-basic-collections-control\r\ne72d8ebd01539bce23d08f859022e96d1e9934e0 refs/remotes/origin/study/01-python-basic-datatypes\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d refs/remotes/origin/study/2026-07-06_07-10-time-series-eda\r\n",
+                 "stdout":  "7bd95cb698aa6679a7a41d7d2031ccb85a93d084 refs/heads/assignment/mygithub05253-05-time-series-test\r\n62570d9ba79021d5e6a9293d22dfde8ef95120a9 refs/heads/claude/mystifying-thompson-f3865b\r\nc0fbefe7d2b7f292c85d3d0d4fce042aae8e68cd refs/heads/claude/nervous-snyder-8af509\r\ndb3cd8c5bf4e6438e88861f63e137163ee796da2 refs/heads/claude/quizzical-yonath-c25500\r\nfb557de36c593bfda4b0657a4059c99e9e80fdb8 refs/heads/claude/suspicious-diffie-d7c8ef\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d refs/heads/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2 refs/heads/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615 refs/heads/main\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d refs/heads/study/2026-07-06_07-10-time-series-eda\r\na3778f3ad041bb46d0a12445a3c57f1ea09a763f refs/heads/study/2026-07-13_07-16-time-series-ma-ar-arma\r\n7bd95cb698aa6679a7a41d7d2031ccb85a93d084 refs/remotes/origin/assignment/mygithub05253-05-time-series-test\r\n50598714f4e1888a731c8c3d66b1430d971e3c1c refs/remotes/origin/claude/crazy-galileo-1843d8\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d refs/remotes/origin/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2 refs/remotes/origin/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615 refs/remotes/origin/main\r\nf96ce5fa79924ad1b2b4337345758f5cf83583ea refs/remotes/origin/study/01-python-basic-collections-control\r\ne72d8ebd01539bce23d08f859022e96d1e9934e0 refs/remotes/origin/study/01-python-basic-datatypes\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d refs/remotes/origin/study/2026-07-06_07-10-time-series-eda",
+                 "stderr":  ""
+             },
+    "recentLog":  {
+                      "exitCode":  0,
+                      "rawStdout":  "8e3546c (HEAD -\u003e main, origin/main) Merge pull request #28 from mygithub05253/assignment/mygithub05253-05-time-series-test\r\n7bd95cb (origin/assignment/mygithub05253-05-time-series-test, assignment/mygithub05253-05-time-series-test) ✅ Test: 시계열 평가 및 2026-07-20 수업 마감\r\ne04abb7 Merge pull request #27 from mygithub05253/study/2026-07-13_07-16-time-series-ma-ar-arma\r\na3778f3 (study/2026-07-13_07-16-time-series-ma-ar-arma) study: 2026-07-13~07-16 시계열 MA·AR·ARMA·비정상시계열 학습 기록\r\nfedbfce Merge pull request #26 from mygithub05253/study/2026-07-06_07-10-time-series-eda\r\nfb153d6 (origin/study/2026-07-06_07-10-time-series-eda, study/2026-07-06_07-10-time-series-eda) study: 2026-07-06~07-10 학습 타임라인 정정 및 시계열 단원 진행 기록\r\na8de1cd Merge pull request #25 from mygithub05253/study/2026-07-07-eda\r\nfc31068 study: 탐색적 데이터 분석 수업 마감 기록\r\nadd5a58 Merge pull request #24 from mygithub05253/study/04-math-statistics\r\n2cfd794 study: 수학·통계 학습 마감 기록\r\nb7a8321 Merge pull request #23 from mygithub05253/study/2026-06-29_07-01-viz-numpy-linalg\r\na11d991 study: 2026-06-29~07-01 시각화·넘파이·선형대수 + 학습 폴더 구조 개편\r\nfb557de (claude/suspicious-diffie-d7c8ef) Merge pull request #22 from mygithub05253/study/2026-06-26-dataframe-apply-viz\r\nf023cc7 study: 2026-06-26 데이터프레임 응용 + 데이터 시각화 기초 + Day09 과제\r\n14bfaaa Merge pull request #21 from mygithub05253/study/2026-06-25-pandas-preprocessing\r\nba4c5ec study: 2026-06-25 판다스 데이터 전처리 학습 + Day08 과제\r\n7f5a26f Merge pull request #20 from mygithub05253/study/2026-06-24-pandas-io-explore\r\nedd33ab study: 2026-06-24 판다스 데이터 입출력·탐색 학습 + Day07 과제 + 실습데이터\r\ndb3cd8c (claude/quizzical-yonath-c25500) Merge pull request #19 from mygithub05253/study/2026-06-23-pandas-data-structure\r\n8be01c2 study: 2026-06-23 판다스 자료구조(Series·DataFrame) 학습 + 파이썬 기초 테스트\r\n",
+                      "stdout":  "8e3546c (HEAD -\u003e main, origin/main) Merge pull request #28 from mygithub05253/assignment/mygithub05253-05-time-series-test\r\n7bd95cb (origin/assignment/mygithub05253-05-time-series-test, assignment/mygithub05253-05-time-series-test) ✅ Test: 시계열 평가 및 2026-07-20 수업 마감\r\ne04abb7 Merge pull request #27 from mygithub05253/study/2026-07-13_07-16-time-series-ma-ar-arma\r\na3778f3 (study/2026-07-13_07-16-time-series-ma-ar-arma) study: 2026-07-13~07-16 시계열 MA·AR·ARMA·비정상시계열 학습 기록\r\nfedbfce Merge pull request #26 from mygithub05253/study/2026-07-06_07-10-time-series-eda\r\nfb153d6 (origin/study/2026-07-06_07-10-time-series-eda, study/2026-07-06_07-10-time-series-eda) study: 2026-07-06~07-10 학습 타임라인 정정 및 시계열 단원 진행 기록\r\na8de1cd Merge pull request #25 from mygithub05253/study/2026-07-07-eda\r\nfc31068 study: 탐색적 데이터 분석 수업 마감 기록\r\nadd5a58 Merge pull request #24 from mygithub05253/study/04-math-statistics\r\n2cfd794 study: 수학·통계 학습 마감 기록\r\nb7a8321 Merge pull request #23 from mygithub05253/study/2026-06-29_07-01-viz-numpy-linalg\r\na11d991 study: 2026-06-29~07-01 시각화·넘파이·선형대수 + 학습 폴더 구조 개편\r\nfb557de (claude/suspicious-diffie-d7c8ef) Merge pull request #22 from mygithub05253/study/2026-06-26-dataframe-apply-viz\r\nf023cc7 study: 2026-06-26 데이터프레임 응용 + 데이터 시각화 기초 + Day09 과제\r\n14bfaaa Merge pull request #21 from mygithub05253/study/2026-06-25-pandas-preprocessing\r\nba4c5ec study: 2026-06-25 판다스 데이터 전처리 학습 + Day08 과제\r\n7f5a26f Merge pull request #20 from mygithub05253/study/2026-06-24-pandas-io-explore\r\nedd33ab study: 2026-06-24 판다스 데이터 입출력·탐색 학습 + Day07 과제 + 실습데이터\r\ndb3cd8c (claude/quizzical-yonath-c25500) Merge pull request #19 from mygithub05253/study/2026-06-23-pandas-data-structure\r\n8be01c2 study: 2026-06-23 판다스 자료구조(Series·DataFrame) 학습 + 파이썬 기초 테스트",
+                      "stderr":  ""
+                  },
+    "objectCount":  {
+                        "exitCode":  0,
+                        "rawStdout":  "count: 1476\r\nsize: 22.98 MiB\r\nin-pack: 0\r\npacks: 0\r\nsize-pack: 0 bytes\r\nprune-packable: 0\r\ngarbage: 0\r\nsize-garbage: 0 bytes\r\n",
+                        "stdout":  "count: 1476\r\nsize: 22.98 MiB\r\nin-pack: 0\r\npacks: 0\r\nsize-pack: 0 bytes\r\nprune-packable: 0\r\ngarbage: 0\r\nsize-garbage: 0 bytes",
+                        "stderr":  ""
+                    },
+    "submodulesFileExists":  false,
+    "lfsFiles":  {
+                     "exitCode":  0,
+                     "rawStdout":  "",
+                     "stdout":  "",
+                     "stderr":  ""
+                 },
+    "remoteHeadsAndTags":  {
+                               "exitCode":  0,
+                               "rawStdout":  "7bd95cb698aa6679a7a41d7d2031ccb85a93d084\trefs/heads/assignment/mygithub05253-05-time-series-test\r\n50598714f4e1888a731c8c3d66b1430d971e3c1c\trefs/heads/claude/crazy-galileo-1843d8\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d\trefs/heads/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2\trefs/heads/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615\trefs/heads/main\r\nf96ce5fa79924ad1b2b4337345758f5cf83583ea\trefs/heads/study/01-python-basic-collections-control\r\ne72d8ebd01539bce23d08f859022e96d1e9934e0\trefs/heads/study/01-python-basic-datatypes\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d\trefs/heads/study/2026-07-06_07-10-time-series-eda\r\n",
+                               "stdout":  "7bd95cb698aa6679a7a41d7d2031ccb85a93d084\trefs/heads/assignment/mygithub05253-05-time-series-test\r\n50598714f4e1888a731c8c3d66b1430d971e3c1c\trefs/heads/claude/crazy-galileo-1843d8\r\nd5b507283ee89daeda0fccd431aa53b46fd2440d\trefs/heads/docs/manual-notion-and-dashboard-rule\r\n15e121c68cdd29cd192527d53310c90a91328eb2\trefs/heads/docs/til-tips-and-branch-pr-rule\r\n8e3546c83d7dd874fa67cb02d441076d58a2e615\trefs/heads/main\r\nf96ce5fa79924ad1b2b4337345758f5cf83583ea\trefs/heads/study/01-python-basic-collections-control\r\ne72d8ebd01539bce23d08f859022e96d1e9934e0\trefs/heads/study/01-python-basic-datatypes\r\nfb153d69a252df920ef7d5d303a84ec1d5c54e0d\trefs/heads/study/2026-07-06_07-10-time-series-eda",
+                               "stderr":  ""
+                           },
+    "fetchedOrPulled":  false
+}
